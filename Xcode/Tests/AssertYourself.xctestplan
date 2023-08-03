@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "DAB2F872-0DA1-43D8-BED0-6580B7011016",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "0748D1502A7C039E00B3A6DF",
+        "name" : "AssertYourselfTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "0748D15A2A7C039E00B3A6DF",
+        "name" : "AssertYourselfUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

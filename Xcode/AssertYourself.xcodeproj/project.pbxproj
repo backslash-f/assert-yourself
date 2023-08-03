@@ -49,6 +49,7 @@
 		0748D15B2A7C039E00B3A6DF /* AssertYourselfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssertYourselfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0748D15F2A7C039E00B3A6DF /* AssertYourselfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertYourselfUITests.swift; sourceTree = "<group>"; };
 		0748D1612A7C039E00B3A6DF /* AssertYourselfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertYourselfUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		07F9C35C2A7C3E070060C773 /* AssertYourself.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = AssertYourself.xctestplan; path = Tests/AssertYourself.xctestplan; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +83,7 @@
 				0748D16F2A7C03E600B3A6DF /* Support */,
 				0748D16E2A7C03CA00B3A6DF /* View */,
 				0748D1702A7C03F300B3A6DF /* ViewController */,
-				0748D1542A7C039E00B3A6DF /* AssertYourselfTests */,
-				0748D15E2A7C039E00B3A6DF /* AssertYourselfUITests */,
+				0790CE4D2A7C3495009B8A64 /* Tests */,
 				0748D13C2A7C039B00B3A6DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,6 +149,16 @@
 				0748D1402A7C039B00B3A6DF /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		0790CE4D2A7C3495009B8A64 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0748D1542A7C039E00B3A6DF /* AssertYourselfTests */,
+				0748D15E2A7C039E00B3A6DF /* AssertYourselfUITests */,
+				07F9C35C2A7C3E070060C773 /* AssertYourself.xctestplan */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

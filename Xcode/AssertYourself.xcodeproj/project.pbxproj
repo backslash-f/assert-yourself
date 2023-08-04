@@ -14,8 +14,8 @@
 		0748D1482A7C039D00B3A6DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0748D1472A7C039D00B3A6DF /* Assets.xcassets */; };
 		0748D14B2A7C039D00B3A6DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0748D1492A7C039D00B3A6DF /* LaunchScreen.storyboard */; };
 		0748D1562A7C039E00B3A6DF /* AssertYourselfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1552A7C039E00B3A6DF /* AssertYourselfTests.swift */; };
-		0748D1602A7C039E00B3A6DF /* AssertYourselfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D15F2A7C039E00B3A6DF /* AssertYourselfUITests.swift */; };
-		0748D1622A7C039E00B3A6DF /* AssertYourselfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1612A7C039E00B3A6DF /* AssertYourselfUITestsLaunchTests.swift */; };
+		0751D7ED2A7D533500F900BF /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751D7EC2A7D533500F900BF /* MyClass.swift */; };
+		0751D7F72A7D53EA00F900BF /* LifeCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751D7F62A7D53EA00F900BF /* LifeCycleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +26,7 @@
 			remoteGlobalIDString = 0748D13A2A7C039B00B3A6DF;
 			remoteInfo = AssertYourself;
 		};
-		0748D15C2A7C039E00B3A6DF /* PBXContainerItemProxy */ = {
+		0751D7F82A7D53EA00F900BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0748D1332A7C039B00B3A6DF /* Project object */;
 			proxyType = 1;
@@ -46,10 +46,11 @@
 		0748D14C2A7C039D00B3A6DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0748D1512A7C039E00B3A6DF /* AssertYourselfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssertYourselfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0748D1552A7C039E00B3A6DF /* AssertYourselfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertYourselfTests.swift; sourceTree = "<group>"; };
-		0748D15B2A7C039E00B3A6DF /* AssertYourselfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssertYourselfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0748D15F2A7C039E00B3A6DF /* AssertYourselfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertYourselfUITests.swift; sourceTree = "<group>"; };
-		0748D1612A7C039E00B3A6DF /* AssertYourselfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertYourselfUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		07F9C35C2A7C3E070060C773 /* AssertYourself.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = AssertYourself.xctestplan; path = Tests/AssertYourself.xctestplan; sourceTree = SOURCE_ROOT; };
+		0751D7EC2A7D533500F900BF /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
+		0751D7F42A7D53EA00F900BF /* LifeCycleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeCycleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0751D7F62A7D53EA00F900BF /* LifeCycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleTests.swift; sourceTree = "<group>"; };
+		0751D7FD2A7D544800F900BF /* LifeCycle.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = LifeCycle.xctestplan; sourceTree = "<group>"; };
+		07F9C35C2A7C3E070060C773 /* AssertYourself.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = AssertYourself.xctestplan; path = Tests/AssertYourselfTests/AssertYourself.xctestplan; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +68,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0748D1582A7C039E00B3A6DF /* Frameworks */ = {
+		0751D7F12A7D53EA00F900BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,9 +81,10 @@
 		0748D1322A7C039B00B3A6DF = {
 			isa = PBXGroup;
 			children = (
-				0748D16F2A7C03E600B3A6DF /* Support */,
+				0751D7EB2A7D531C00F900BF /* Core */,
 				0748D16E2A7C03CA00B3A6DF /* View */,
 				0748D1702A7C03F300B3A6DF /* ViewController */,
+				0748D16F2A7C03E600B3A6DF /* Support */,
 				0790CE4D2A7C3495009B8A64 /* Tests */,
 				0748D13C2A7C039B00B3A6DF /* Products */,
 			);
@@ -93,7 +95,7 @@
 			children = (
 				0748D13B2A7C039B00B3A6DF /* AssertYourself.app */,
 				0748D1512A7C039E00B3A6DF /* AssertYourselfTests.xctest */,
-				0748D15B2A7C039E00B3A6DF /* AssertYourselfUITests.xctest */,
+				0751D7F42A7D53EA00F900BF /* LifeCycleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,18 +103,10 @@
 		0748D1542A7C039E00B3A6DF /* AssertYourselfTests */ = {
 			isa = PBXGroup;
 			children = (
+				07F9C35C2A7C3E070060C773 /* AssertYourself.xctestplan */,
 				0748D1552A7C039E00B3A6DF /* AssertYourselfTests.swift */,
 			);
 			path = AssertYourselfTests;
-			sourceTree = "<group>";
-		};
-		0748D15E2A7C039E00B3A6DF /* AssertYourselfUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0748D15F2A7C039E00B3A6DF /* AssertYourselfUITests.swift */,
-				0748D1612A7C039E00B3A6DF /* AssertYourselfUITestsLaunchTests.swift */,
-			);
-			path = AssertYourselfUITests;
 			sourceTree = "<group>";
 		};
 		0748D16E2A7C03CA00B3A6DF /* View */ = {
@@ -151,12 +145,28 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
+		0751D7EB2A7D531C00F900BF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0751D7EC2A7D533500F900BF /* MyClass.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0751D7F52A7D53EA00F900BF /* LifeCycleTests */ = {
+			isa = PBXGroup;
+			children = (
+				0751D7FD2A7D544800F900BF /* LifeCycle.xctestplan */,
+				0751D7F62A7D53EA00F900BF /* LifeCycleTests.swift */,
+			);
+			path = LifeCycleTests;
+			sourceTree = "<group>";
+		};
 		0790CE4D2A7C3495009B8A64 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				0748D1542A7C039E00B3A6DF /* AssertYourselfTests */,
-				0748D15E2A7C039E00B3A6DF /* AssertYourselfUITests */,
-				07F9C35C2A7C3E070060C773 /* AssertYourself.xctestplan */,
+				0751D7F52A7D53EA00F900BF /* LifeCycleTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -199,23 +209,23 @@
 			productReference = 0748D1512A7C039E00B3A6DF /* AssertYourselfTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0748D15A2A7C039E00B3A6DF /* AssertYourselfUITests */ = {
+		0751D7F32A7D53EA00F900BF /* LifeCycleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0748D16B2A7C039E00B3A6DF /* Build configuration list for PBXNativeTarget "AssertYourselfUITests" */;
+			buildConfigurationList = 0751D7FA2A7D53EA00F900BF /* Build configuration list for PBXNativeTarget "LifeCycleTests" */;
 			buildPhases = (
-				0748D1572A7C039E00B3A6DF /* Sources */,
-				0748D1582A7C039E00B3A6DF /* Frameworks */,
-				0748D1592A7C039E00B3A6DF /* Resources */,
+				0751D7F02A7D53EA00F900BF /* Sources */,
+				0751D7F12A7D53EA00F900BF /* Frameworks */,
+				0751D7F22A7D53EA00F900BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0748D15D2A7C039E00B3A6DF /* PBXTargetDependency */,
+				0751D7F92A7D53EA00F900BF /* PBXTargetDependency */,
 			);
-			name = AssertYourselfUITests;
-			productName = AssertYourselfUITests;
-			productReference = 0748D15B2A7C039E00B3A6DF /* AssertYourselfUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = LifeCycleTests;
+			productName = LifeCycleTests;
+			productReference = 0751D7F42A7D53EA00F900BF /* LifeCycleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -234,7 +244,7 @@
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 0748D13A2A7C039B00B3A6DF;
 					};
-					0748D15A2A7C039E00B3A6DF = {
+					0751D7F32A7D53EA00F900BF = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 0748D13A2A7C039B00B3A6DF;
 					};
@@ -255,7 +265,7 @@
 			targets = (
 				0748D13A2A7C039B00B3A6DF /* AssertYourself */,
 				0748D1502A7C039E00B3A6DF /* AssertYourselfTests */,
-				0748D15A2A7C039E00B3A6DF /* AssertYourselfUITests */,
+				0751D7F32A7D53EA00F900BF /* LifeCycleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -278,7 +288,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0748D1592A7C039E00B3A6DF /* Resources */ = {
+		0751D7F22A7D53EA00F900BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0751D7ED2A7D533500F900BF /* MyClass.swift in Sources */,
 				0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */,
 				0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */,
 				0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */,
@@ -306,12 +317,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0748D1572A7C039E00B3A6DF /* Sources */ = {
+		0751D7F02A7D53EA00F900BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0748D1602A7C039E00B3A6DF /* AssertYourselfUITests.swift in Sources */,
-				0748D1622A7C039E00B3A6DF /* AssertYourselfUITestsLaunchTests.swift in Sources */,
+				0751D7F72A7D53EA00F900BF /* LifeCycleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,10 +333,10 @@
 			target = 0748D13A2A7C039B00B3A6DF /* AssertYourself */;
 			targetProxy = 0748D1522A7C039E00B3A6DF /* PBXContainerItemProxy */;
 		};
-		0748D15D2A7C039E00B3A6DF /* PBXTargetDependency */ = {
+		0751D7F92A7D53EA00F900BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0748D13A2A7C039B00B3A6DF /* AssertYourself */;
-			targetProxy = 0748D15C2A7C039E00B3A6DF /* PBXContainerItemProxy */;
+			targetProxy = 0751D7F82A7D53EA00F900BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -560,39 +570,39 @@
 			};
 			name = Release;
 		};
-		0748D16C2A7C039E00B3A6DF /* Debug */ = {
+		0751D7FB2A7D53EA00F900BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKS358BH88;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.AssertYourselfUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.LifeCycleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AssertYourself;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AssertYourself.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AssertYourself";
 			};
 			name = Debug;
 		};
-		0748D16D2A7C039E00B3A6DF /* Release */ = {
+		0751D7FC2A7D53EA00F900BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UKS358BH88;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.AssertYourselfUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.LifeCycleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AssertYourself;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AssertYourself.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AssertYourself";
 			};
 			name = Release;
 		};
@@ -626,11 +636,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0748D16B2A7C039E00B3A6DF /* Build configuration list for PBXNativeTarget "AssertYourselfUITests" */ = {
+		0751D7FA2A7D53EA00F900BF /* Build configuration list for PBXNativeTarget "LifeCycleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0748D16C2A7C039E00B3A6DF /* Debug */,
-				0748D16D2A7C039E00B3A6DF /* Release */,
+				0751D7FB2A7D53EA00F900BF /* Debug */,
+				0751D7FC2A7D53EA00F900BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

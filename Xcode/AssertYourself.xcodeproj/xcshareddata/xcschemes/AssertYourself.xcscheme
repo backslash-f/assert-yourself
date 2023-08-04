@@ -29,7 +29,10 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Tests/AssertYourself.xctestplan"
+            reference = "container:Tests/AssertYourselfTests/AssertYourself.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/LifeCycleTests/LifeCycle.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -53,6 +56,17 @@
                BlueprintIdentifier = "0748D15A2A7C039E00B3A6DF"
                BuildableName = "AssertYourselfUITests.xctest"
                BlueprintName = "AssertYourselfUITests"
+               ReferencedContainer = "container:AssertYourself.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0751D7F32A7D53EA00F900BF"
+               BuildableName = "LifeCycleTests.xctest"
+               BlueprintName = "LifeCycleTests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>

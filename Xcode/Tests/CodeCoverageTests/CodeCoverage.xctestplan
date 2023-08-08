@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "E2997AF0-F282-415C-82D7-E9ADAB993A42",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "07BC3BE22A82390800D1B1BA",
+        "name" : "CodeCoverageTests"
+      }
+    }
+  ],
+  "version" : 1
+}

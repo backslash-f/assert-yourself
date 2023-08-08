@@ -32,7 +32,10 @@
             reference = "container:Tests/AssertYourselfTests/AssertYourself.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Tests/LifeCycleTests/LifeCycle.xctestplan"
+            reference = "container:Tests/LifeCycleTests/LifeCycle.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/CodeCoverageTests/CodeCoverage.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -67,6 +70,17 @@
                BlueprintIdentifier = "0751D7F32A7D53EA00F900BF"
                BuildableName = "LifeCycleTests.xctest"
                BlueprintName = "LifeCycleTests"
+               ReferencedContainer = "container:AssertYourself.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07BC3BE22A82390800D1B1BA"
+               BuildableName = "CodeCoverageTests.xctest"
+               BlueprintName = "CodeCoverageTests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "727DF5A0-EEE8-4EED-8F03-305FE577675F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "07EAA49D2A8A2C7D00AE09DD",
+        "name" : "AppLaunchTests"
+      }
+    }
+  ],
+  "version" : 1
+}

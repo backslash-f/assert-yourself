@@ -35,7 +35,10 @@
             reference = "container:Tests/LifeCycleTests/LifeCycle.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Tests/CodeCoverageTests/CodeCoverage.xctestplan"
+            reference = "container:Tests/CodeCoverageTests/CodeCoverage.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/AppLaunchTests/AppLaunch.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -48,17 +51,6 @@
                BlueprintIdentifier = "0748D1502A7C039E00B3A6DF"
                BuildableName = "AssertYourselfTests.xctest"
                BlueprintName = "AssertYourselfTests"
-               ReferencedContainer = "container:AssertYourself.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0748D15A2A7C039E00B3A6DF"
-               BuildableName = "AssertYourselfUITests.xctest"
-               BlueprintName = "AssertYourselfUITests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -81,6 +73,17 @@
                BlueprintIdentifier = "07BC3BE22A82390800D1B1BA"
                BuildableName = "CodeCoverageTests.xctest"
                BlueprintName = "CodeCoverageTests"
+               ReferencedContainer = "container:AssertYourself.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07EAA49D2A8A2C7D00AE09DD"
+               BuildableName = "AppLaunchTests.xctest"
+               BlueprintName = "AppLaunchTests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>

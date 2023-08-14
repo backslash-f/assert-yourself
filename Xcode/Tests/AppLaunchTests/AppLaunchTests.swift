@@ -9,7 +9,7 @@ import XCTest
 
 final class AppLaunchTests: XCTestCase {
 
-    func test_empty() {
+    func test_zero() {
         XCTFail()
     }
 }

@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-let appDelegateClass: AnyClass = NSClassFromString("TestAppDelegate") ?? AppDelegate.self
-
 @main
 struct MainWrapper {
     static func main() {
@@ -17,7 +15,15 @@ struct MainWrapper {
             CommandLine.argc,
             CommandLine.unsafeArgv,
             nil,
-            NSStringFromClass(appDelegateClass)
+            NSStringFromClass(appDelegateClass())
         )
+    }
+}
+
+// MARK: - Private
+
+private extension MainWrapper {
+    static func appDelegateClass() -> AnyClass {
+        NSClassFromString("TestAppDelegate") ?? AppDelegate.self
     }
 }

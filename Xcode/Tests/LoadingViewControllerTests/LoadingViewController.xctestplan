@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "123C8E91-708E-457D-9061-DDC7E14039F3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "075F6C8C2A8D046B00C8269E",
+        "name" : "LoadingViewControllerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

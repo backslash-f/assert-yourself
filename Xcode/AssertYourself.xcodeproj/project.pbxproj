@@ -18,6 +18,9 @@
 		0751D7F72A7D53EA00F900BF /* LifeCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751D7F62A7D53EA00F900BF /* LifeCycleTests.swift */; };
 		075F6C902A8D046B00C8269E /* LoadingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F6C8F2A8D046B00C8269E /* LoadingViewControllerTests.swift */; };
 		075F6C972A8D083C00C8269E /* StoryboardBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F6C962A8D083C00C8269E /* StoryboardBasedViewController.swift */; };
+		075F6C9A2A8D114D00C8269E /* XIBBasedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F6C982A8D114D00C8269E /* XIBBasedViewController.swift */; };
+		075F6C9B2A8D114D00C8269E /* XIBBasedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075F6C992A8D114D00C8269E /* XIBBasedViewController.xib */; };
+		075F6C9E2A8D126100C8269E /* XIBBasedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F6C9C2A8D11EE00C8269E /* XIBBasedViewControllerTests.swift */; };
 		07BC3BE62A82390800D1B1BA /* CodeCoverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC3BE52A82390800D1B1BA /* CodeCoverageTests.swift */; };
 		07BC3BEE2A82742900D1B1BA /* CoveredClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC3BED2A82742900D1B1BA /* CoveredClass.swift */; };
 		07D536B72A8A5C7200F1B152 /* MainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D536B62A8A5C7200F1B152 /* MainWrapper.swift */; };
@@ -82,6 +85,9 @@
 		075F6C8D2A8D046B00C8269E /* LoadingViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadingViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		075F6C8F2A8D046B00C8269E /* LoadingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewControllerTests.swift; sourceTree = "<group>"; };
 		075F6C962A8D083C00C8269E /* StoryboardBasedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBasedViewController.swift; sourceTree = "<group>"; };
+		075F6C982A8D114D00C8269E /* XIBBasedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBBasedViewController.swift; sourceTree = "<group>"; };
+		075F6C992A8D114D00C8269E /* XIBBasedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBBasedViewController.xib; sourceTree = "<group>"; };
+		075F6C9C2A8D11EE00C8269E /* XIBBasedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBBasedViewControllerTests.swift; sourceTree = "<group>"; };
 		07BC3BE32A82390800D1B1BA /* CodeCoverageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeCoverageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BC3BE52A82390800D1B1BA /* CodeCoverageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverageTests.swift; sourceTree = "<group>"; };
 		07BC3BEC2A82398900D1B1BA /* CodeCoverage.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CodeCoverage.xctestplan; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 			children = (
 				0748D1492A7C039D00B3A6DF /* LaunchScreen.storyboard */,
 				0748D1442A7C039B00B3A6DF /* Main.storyboard */,
+				075F6C992A8D114D00C8269E /* XIBBasedViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +205,7 @@
 			children = (
 				0748D1422A7C039B00B3A6DF /* ViewController.swift */,
 				075F6C962A8D083C00C8269E /* StoryboardBasedViewController.swift */,
+				075F6C982A8D114D00C8269E /* XIBBasedViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -236,6 +244,7 @@
 			children = (
 				075F6C882A8D045500C8269E /* LoadingViewController.xctestplan */,
 				075F6C8F2A8D046B00C8269E /* LoadingViewControllerTests.swift */,
+				075F6C9C2A8D11EE00C8269E /* XIBBasedViewControllerTests.swift */,
 			);
 			path = LoadingViewControllerTests;
 			sourceTree = "<group>";
@@ -443,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075F6C9B2A8D114D00C8269E /* XIBBasedViewController.xib in Resources */,
 				0748D14B2A7C039D00B3A6DF /* LaunchScreen.storyboard in Resources */,
 				0748D1482A7C039D00B3A6DF /* Assets.xcassets in Resources */,
 				0748D1462A7C039B00B3A6DF /* Main.storyboard in Resources */,
@@ -491,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075F6C9A2A8D114D00C8269E /* XIBBasedViewController.swift in Sources */,
 				0751D7ED2A7D533500F900BF /* MyClass.swift in Sources */,
 				0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */,
 				0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */,
@@ -521,6 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075F6C9E2A8D126100C8269E /* XIBBasedViewControllerTests.swift in Sources */,
 				075F6C902A8D046B00C8269E /* LoadingViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

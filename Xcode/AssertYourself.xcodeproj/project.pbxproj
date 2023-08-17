@@ -28,6 +28,14 @@
 		078463CA2A8E35D40030E0A8 /* MySingletonAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078463C92A8E35D40030E0A8 /* MySingletonAnalytics.swift */; };
 		078463CC2A8E36720030E0A8 /* InstancePropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078463CB2A8E36720030E0A8 /* InstancePropertyViewController.swift */; };
 		078463CF2A8E36D40030E0A8 /* ClosurePropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078463CE2A8E36D40030E0A8 /* ClosurePropertyViewController.swift */; };
+		078463D22A8E37570030E0A8 /* OverrideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078463D02A8E37570030E0A8 /* OverrideViewController.swift */; };
+		078463D32A8E37570030E0A8 /* OverrideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078463D12A8E37570030E0A8 /* OverrideViewController.xib */; };
+		078463D72A8E37860030E0A8 /* InstanceInitializerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078463D52A8E37860030E0A8 /* InstanceInitializerViewController.swift */; };
+		078463D82A8E37860030E0A8 /* InstanceInitializerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078463D62A8E37860030E0A8 /* InstanceInitializerViewController.xib */; };
+		078463DB2A8E379B0030E0A8 /* ClosureInitializerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078463D92A8E379B0030E0A8 /* ClosureInitializerViewController.swift */; };
+		078463DC2A8E379B0030E0A8 /* ClosureInitializerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078463DA2A8E379B0030E0A8 /* ClosureInitializerViewController.xib */; };
+		078463DF2A8E37B20030E0A8 /* MySingletonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078463DD2A8E37B20030E0A8 /* MySingletonViewController.swift */; };
+		078463E02A8E37B20030E0A8 /* MySingletonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078463DE2A8E37B20030E0A8 /* MySingletonViewController.xib */; };
 		07BC3BE62A82390800D1B1BA /* CodeCoverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC3BE52A82390800D1B1BA /* CodeCoverageTests.swift */; };
 		07BC3BEE2A82742900D1B1BA /* CoveredClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC3BED2A82742900D1B1BA /* CoveredClass.swift */; };
 		07D536B72A8A5C7200F1B152 /* MainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D536B62A8A5C7200F1B152 /* MainWrapper.swift */; };
@@ -111,6 +119,14 @@
 		078463C92A8E35D40030E0A8 /* MySingletonAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingletonAnalytics.swift; sourceTree = "<group>"; };
 		078463CB2A8E36720030E0A8 /* InstancePropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancePropertyViewController.swift; sourceTree = "<group>"; };
 		078463CE2A8E36D40030E0A8 /* ClosurePropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePropertyViewController.swift; sourceTree = "<group>"; };
+		078463D02A8E37570030E0A8 /* OverrideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideViewController.swift; sourceTree = "<group>"; };
+		078463D12A8E37570030E0A8 /* OverrideViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverrideViewController.xib; sourceTree = "<group>"; };
+		078463D52A8E37860030E0A8 /* InstanceInitializerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceInitializerViewController.swift; sourceTree = "<group>"; };
+		078463D62A8E37860030E0A8 /* InstanceInitializerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstanceInitializerViewController.xib; sourceTree = "<group>"; };
+		078463D92A8E379B0030E0A8 /* ClosureInitializerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitializerViewController.swift; sourceTree = "<group>"; };
+		078463DA2A8E379B0030E0A8 /* ClosureInitializerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClosureInitializerViewController.xib; sourceTree = "<group>"; };
+		078463DD2A8E37B20030E0A8 /* MySingletonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingletonViewController.swift; sourceTree = "<group>"; };
+		078463DE2A8E37B20030E0A8 /* MySingletonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySingletonViewController.xib; sourceTree = "<group>"; };
 		07BC3BE32A82390800D1B1BA /* CodeCoverageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeCoverageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BC3BE52A82390800D1B1BA /* CodeCoverageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverageTests.swift; sourceTree = "<group>"; };
 		07BC3BEC2A82398900D1B1BA /* CodeCoverage.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CodeCoverage.xctestplan; sourceTree = "<group>"; };
@@ -214,6 +230,7 @@
 		0748D16E2A7C03CA00B3A6DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				078463D42A8E37700030E0A8 /* Analytics */,
 				0748D1492A7C039D00B3A6DF /* LaunchScreen.storyboard */,
 				0748D1442A7C039B00B3A6DF /* Main.storyboard */,
 				075F6C992A8D114D00C8269E /* XIBBasedViewController.xib */,
@@ -307,6 +324,21 @@
 			children = (
 				078463CB2A8E36720030E0A8 /* InstancePropertyViewController.swift */,
 				078463CE2A8E36D40030E0A8 /* ClosurePropertyViewController.swift */,
+				078463D02A8E37570030E0A8 /* OverrideViewController.swift */,
+				078463D52A8E37860030E0A8 /* InstanceInitializerViewController.swift */,
+				078463D92A8E379B0030E0A8 /* ClosureInitializerViewController.swift */,
+				078463DD2A8E37B20030E0A8 /* MySingletonViewController.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		078463D42A8E37700030E0A8 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				078463D12A8E37570030E0A8 /* OverrideViewController.xib */,
+				078463D62A8E37860030E0A8 /* InstanceInitializerViewController.xib */,
+				078463DA2A8E379B0030E0A8 /* ClosureInitializerViewController.xib */,
+				078463DE2A8E37B20030E0A8 /* MySingletonViewController.xib */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -538,9 +570,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078463D82A8E37860030E0A8 /* InstanceInitializerViewController.xib in Resources */,
 				075F6C9B2A8D114D00C8269E /* XIBBasedViewController.xib in Resources */,
 				0748D14B2A7C039D00B3A6DF /* LaunchScreen.storyboard in Resources */,
 				0748D1482A7C039D00B3A6DF /* Assets.xcassets in Resources */,
+				078463DC2A8E379B0030E0A8 /* ClosureInitializerViewController.xib in Resources */,
+				078463D32A8E37570030E0A8 /* OverrideViewController.xib in Resources */,
+				078463E02A8E37B20030E0A8 /* MySingletonViewController.xib in Resources */,
 				0748D1462A7C039B00B3A6DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,11 +631,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				075F6C9A2A8D114D00C8269E /* XIBBasedViewController.swift in Sources */,
+				078463DB2A8E379B0030E0A8 /* ClosureInitializerViewController.swift in Sources */,
 				078463CF2A8E36D40030E0A8 /* ClosurePropertyViewController.swift in Sources */,
+				078463DF2A8E37B20030E0A8 /* MySingletonViewController.swift in Sources */,
 				0751D7ED2A7D533500F900BF /* MyClass.swift in Sources */,
 				075F6CA02A8D1E7700C8269E /* CodeBaseViewController.swift in Sources */,
+				078463D22A8E37570030E0A8 /* OverrideViewController.swift in Sources */,
 				0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */,
 				078463CC2A8E36720030E0A8 /* InstancePropertyViewController.swift in Sources */,
+				078463D72A8E37860030E0A8 /* InstanceInitializerViewController.swift in Sources */,
 				0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */,
 				07BC3BEE2A82742900D1B1BA /* CoveredClass.swift in Sources */,
 				07D536B72A8A5C7200F1B152 /* MainWrapper.swift in Sources */,

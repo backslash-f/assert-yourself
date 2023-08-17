@@ -24,6 +24,8 @@
 		075F6CA02A8D1E7700C8269E /* CodeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F6C9F2A8D1E7700C8269E /* CodeBaseViewController.swift */; };
 		075F6CA42A8D1E9100C8269E /* CodeBaseViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F6CA12A8D1E8A00C8269E /* CodeBaseViewControllerTests.swift */; };
 		078463BF2A8E238A0030E0A8 /* HardDependenciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078463BE2A8E238A0030E0A8 /* HardDependenciesTests.swift */; };
+		078463C72A8E35540030E0A8 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078463C62A8E35540030E0A8 /* Analytics.swift */; };
+		078463CA2A8E35D40030E0A8 /* MySingletonAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078463C92A8E35D40030E0A8 /* MySingletonAnalytics.swift */; };
 		07BC3BE62A82390800D1B1BA /* CodeCoverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC3BE52A82390800D1B1BA /* CodeCoverageTests.swift */; };
 		07BC3BEE2A82742900D1B1BA /* CoveredClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC3BED2A82742900D1B1BA /* CoveredClass.swift */; };
 		07D536B72A8A5C7200F1B152 /* MainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D536B62A8A5C7200F1B152 /* MainWrapper.swift */; };
@@ -103,6 +105,8 @@
 		078463BC2A8E238A0030E0A8 /* HardDependenciesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HardDependenciesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		078463BE2A8E238A0030E0A8 /* HardDependenciesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardDependenciesTests.swift; sourceTree = "<group>"; };
 		078463C52A8E239D0030E0A8 /* HardDependencies.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = HardDependencies.xctestplan; sourceTree = "<group>"; };
+		078463C62A8E35540030E0A8 /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
+		078463C92A8E35D40030E0A8 /* MySingletonAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySingletonAnalytics.swift; sourceTree = "<group>"; };
 		07BC3BE32A82390800D1B1BA /* CodeCoverageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeCoverageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BC3BE52A82390800D1B1BA /* CodeCoverageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverageTests.swift; sourceTree = "<group>"; };
 		07BC3BEC2A82398900D1B1BA /* CodeCoverage.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CodeCoverage.xctestplan; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 		0751D7EB2A7D531C00F900BF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				078463C82A8E35C40030E0A8 /* Analytics */,
 				0751D7EC2A7D533500F900BF /* MyClass.swift */,
 				07BC3BED2A82742900D1B1BA /* CoveredClass.swift */,
 			);
@@ -281,6 +286,15 @@
 				078463BE2A8E238A0030E0A8 /* HardDependenciesTests.swift */,
 			);
 			path = HardDependenciesTests;
+			sourceTree = "<group>";
+		};
+		078463C82A8E35C40030E0A8 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				078463C62A8E35540030E0A8 /* Analytics.swift */,
+				078463C92A8E35D40030E0A8 /* MySingletonAnalytics.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 		0790CE4D2A7C3495009B8A64 /* Tests */ = {
@@ -574,7 +588,9 @@
 				07BC3BEE2A82742900D1B1BA /* CoveredClass.swift in Sources */,
 				07D536B72A8A5C7200F1B152 /* MainWrapper.swift in Sources */,
 				075F6C972A8D083C00C8269E /* StoryboardBasedViewController.swift in Sources */,
+				078463C72A8E35540030E0A8 /* Analytics.swift in Sources */,
 				0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */,
+				078463CA2A8E35D40030E0A8 /* MySingletonAnalytics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

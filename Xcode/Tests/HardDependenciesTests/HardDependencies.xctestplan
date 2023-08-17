@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "C2DECEB2-743F-4CFF-B112-C7118E4B6427",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "078463BB2A8E238A0030E0A8",
+        "name" : "HardDependenciesTests"
+      }
+    }
+  ],
+  "version" : 1
+}

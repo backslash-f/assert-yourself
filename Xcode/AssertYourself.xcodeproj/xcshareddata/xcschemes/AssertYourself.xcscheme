@@ -41,7 +41,10 @@
             reference = "container:Tests/AppLaunchTests/AppLaunch.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Tests/LoadingViewControllerTests/LoadingViewController.xctestplan"
+            reference = "container:Tests/LoadingViewControllerTests/LoadingViewController.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/HardDependenciesTests/HardDependencies.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -98,6 +101,17 @@
                BlueprintIdentifier = "075F6C8C2A8D046B00C8269E"
                BuildableName = "LoadingViewControllerTests.xctest"
                BlueprintName = "LoadingViewControllerTests"
+               ReferencedContainer = "container:AssertYourself.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "078463BB2A8E238A0030E0A8"
+               BuildableName = "HardDependenciesTests.xctest"
+               BlueprintName = "HardDependenciesTests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>

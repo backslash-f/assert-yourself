@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070C1CFF2A8FAD7600800D89 /* OverrideViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1CFD2A8FAD7100800D89 /* OverrideViewControllerTests.swift */; };
 		0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D13E2A7C039B00B3A6DF /* AppDelegate.swift */; };
 		0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1402A7C039B00B3A6DF /* SceneDelegate.swift */; };
 		0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1422A7C039B00B3A6DF /* ViewController.swift */; };
@@ -94,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070C1CFD2A8FAD7100800D89 /* OverrideViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideViewControllerTests.swift; sourceTree = "<group>"; };
 		0748D13B2A7C039B00B3A6DF /* AssertYourself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssertYourself.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0748D13E2A7C039B00B3A6DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0748D1402A7C039B00B3A6DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 			children = (
 				078463C52A8E239D0030E0A8 /* HardDependencies.xctestplan */,
 				078C5BB42A8E75A600D4EBE0 /* MySingletonViewControllerTests.swift */,
+				070C1CFD2A8FAD7100800D89 /* OverrideViewControllerTests.swift */,
 			);
 			path = HardDependenciesTests;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 			files = (
 				078C5BB82A8E76B500D4EBE0 /* TestAppDelegate.swift in Sources */,
 				078C5BB62A8E75F100D4EBE0 /* MySingletonViewControllerTests.swift in Sources */,
+				070C1CFF2A8FAD7600800D89 /* OverrideViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

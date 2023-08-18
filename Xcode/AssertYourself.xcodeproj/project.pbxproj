@@ -10,6 +10,8 @@
 		070C1CFF2A8FAD7600800D89 /* OverrideViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1CFD2A8FAD7100800D89 /* OverrideViewControllerTests.swift */; };
 		070C1D012A8FBA4600800D89 /* InstanceInitializerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D002A8FBA4600800D89 /* InstanceInitializerViewControllerTests.swift */; };
 		070C1D032A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D022A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift */; };
+		070C1D052A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D042A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift */; };
+		070C1D072A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */; };
 		0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D13E2A7C039B00B3A6DF /* AppDelegate.swift */; };
 		0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1402A7C039B00B3A6DF /* SceneDelegate.swift */; };
 		0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1422A7C039B00B3A6DF /* ViewController.swift */; };
@@ -100,6 +102,8 @@
 		070C1CFD2A8FAD7100800D89 /* OverrideViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideViewControllerTests.swift; sourceTree = "<group>"; };
 		070C1D002A8FBA4600800D89 /* InstanceInitializerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceInitializerViewControllerTests.swift; sourceTree = "<group>"; };
 		070C1D022A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancePropertyViewControllerTests.swift; sourceTree = "<group>"; };
+		070C1D042A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitializerViewControllerTests.swift; sourceTree = "<group>"; };
+		070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePropertyViewControllerTests.swift; sourceTree = "<group>"; };
 		0748D13B2A7C039B00B3A6DF /* AssertYourself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssertYourself.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0748D13E2A7C039B00B3A6DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0748D1402A7C039B00B3A6DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -320,6 +324,8 @@
 				070C1CFD2A8FAD7100800D89 /* OverrideViewControllerTests.swift */,
 				070C1D002A8FBA4600800D89 /* InstanceInitializerViewControllerTests.swift */,
 				070C1D022A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift */,
+				070C1D042A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift */,
+				070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */,
 			);
 			path = HardDependenciesTests;
 			sourceTree = "<group>";
@@ -697,7 +703,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070C1D072A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift in Sources */,
 				070C1D032A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift in Sources */,
+				070C1D052A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift in Sources */,
 				078C5BB82A8E76B500D4EBE0 /* TestAppDelegate.swift in Sources */,
 				078C5BB62A8E75F100D4EBE0 /* MySingletonViewControllerTests.swift in Sources */,
 				070C1D012A8FBA4600800D89 /* InstanceInitializerViewControllerTests.swift in Sources */,

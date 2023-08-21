@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "6C8733D5-B498-44B9-85A3-5116CBCAEE4C",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "074E68212A934D49000B675E",
+        "name" : "OutletConnectionTests"
+      }
+    }
+  ],
+  "version" : 1
+}

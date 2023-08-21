@@ -20,6 +20,8 @@
 		0748D14B2A7C039D00B3A6DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0748D1492A7C039D00B3A6DF /* LaunchScreen.storyboard */; };
 		0748D1562A7C039E00B3A6DF /* AssertYourselfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1552A7C039E00B3A6DF /* AssertYourselfTests.swift */; };
 		074E68252A934D49000B675E /* OutletConnectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E68242A934D49000B675E /* OutletConnectionTests.swift */; };
+		074E682E2A934E2E000B675E /* OutletConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074E682C2A934E2E000B675E /* OutletConnectionsViewController.swift */; };
+		074E682F2A934E2E000B675E /* OutletConnectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 074E682D2A934E2E000B675E /* OutletConnectionsViewController.xib */; };
 		0751D7ED2A7D533500F900BF /* MyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751D7EC2A7D533500F900BF /* MyClass.swift */; };
 		0751D7F72A7D53EA00F900BF /* LifeCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0751D7F62A7D53EA00F900BF /* LifeCycleTests.swift */; };
 		075F6C902A8D046B00C8269E /* LoadingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F6C8F2A8D046B00C8269E /* LoadingViewControllerTests.swift */; };
@@ -125,6 +127,8 @@
 		074E68222A934D49000B675E /* OutletConnectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutletConnectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		074E68242A934D49000B675E /* OutletConnectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionTests.swift; sourceTree = "<group>"; };
 		074E682B2A934D70000B675E /* OutletConnection.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = OutletConnection.xctestplan; sourceTree = "<group>"; };
+		074E682C2A934E2E000B675E /* OutletConnectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletConnectionsViewController.swift; sourceTree = "<group>"; };
+		074E682D2A934E2E000B675E /* OutletConnectionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OutletConnectionsViewController.xib; sourceTree = "<group>"; };
 		0751D7EC2A7D533500F900BF /* MyClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyClass.swift; sourceTree = "<group>"; };
 		0751D7F42A7D53EA00F900BF /* LifeCycleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeCycleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0751D7F62A7D53EA00F900BF /* LifeCycleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleTests.swift; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 				0748D1492A7C039D00B3A6DF /* LaunchScreen.storyboard */,
 				0748D1442A7C039B00B3A6DF /* Main.storyboard */,
 				075F6C992A8D114D00C8269E /* XIBBasedViewController.xib */,
+				074E682D2A934E2E000B675E /* OutletConnectionsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				075F6C962A8D083C00C8269E /* StoryboardBasedViewController.swift */,
 				075F6C982A8D114D00C8269E /* XIBBasedViewController.swift */,
 				075F6C9F2A8D1E7700C8269E /* CodeBaseViewController.swift */,
+				074E682C2A934E2E000B675E /* OutletConnectionsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -649,6 +655,7 @@
 				078463DC2A8E379B0030E0A8 /* ClosureInitializerViewController.xib in Resources */,
 				078463D32A8E37570030E0A8 /* OverrideViewController.xib in Resources */,
 				078463E02A8E37B20030E0A8 /* MySingletonViewController.xib in Resources */,
+				074E682F2A934E2E000B675E /* OutletConnectionsViewController.xib in Resources */,
 				0748D1462A7C039B00B3A6DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,6 +721,7 @@
 				078463CF2A8E36D40030E0A8 /* ClosurePropertyViewController.swift in Sources */,
 				078463DF2A8E37B20030E0A8 /* MySingletonViewController.swift in Sources */,
 				0751D7ED2A7D533500F900BF /* MyClass.swift in Sources */,
+				074E682E2A934E2E000B675E /* OutletConnectionsViewController.swift in Sources */,
 				075F6CA02A8D1E7700C8269E /* CodeBaseViewController.swift in Sources */,
 				078463D22A8E37570030E0A8 /* OverrideViewController.swift in Sources */,
 				0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */,

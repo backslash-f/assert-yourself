@@ -7,4 +7,54 @@
 
 import UIKit
 
-class ViewController: UIViewController {}
+class ViewController: UIViewController {
+
+    @IBOutlet private(set) var button: UIButton!
+
+    private var dataTask: URLSessionDataTask?
+}
+
+// MARK: - Private
+
+private extension ViewController {
+
+    @IBAction func buttonTapped() {
+        Task {
+            await searchForBook(terms: "out from boneville")
+        }
+    }
+
+    func searchForBook(terms: String) async {
+        if let encodedTerms = terms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+           let url = URL(string: "https://itunes.apple.com/search?" + "media=ebook&term=\(encodedTerms)") {
+
+            let request = URLRequest(url: url)
+
+            await updateButton(isEnable: false)
+
+            do {
+                let (data, response) = try await URLSession.shared.data(for: request)
+
+                let decoded = String(data: data, encoding: .utf8)
+
+                print(">> response: \(String(describing: response))")
+                print(">> data: \(String(describing: decoded))")
+            } catch {
+                print(">> error: \(String(describing: error))")
+            }
+
+            await nullifyDataTask()
+            await updateButton(isEnable: true)
+        }
+    }
+
+    @MainActor
+    func updateButton(isEnable: Bool) async {
+        button.isEnabled = isEnable
+    }
+
+    @MainActor
+    func nullifyDataTask() async {
+        dataTask = nil
+    }
+}

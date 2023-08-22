@@ -57,6 +57,7 @@
 		07FE63742A949C5400F5BCDA /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FE63732A949C5400F5BCDA /* NetworkRequestTests.swift */; };
 		07FE637B2A949D1600F5BCDA /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		07FE637C2A949D1600F5BCDA /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
+		07FE637E2A94BA9800F5BCDA /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FE637D2A94BA9800F5BCDA /* MockURLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +181,7 @@
 		07FE63712A949C5400F5BCDA /* NetworkRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07FE63732A949C5400F5BCDA /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
 		07FE637A2A949C7700F5BCDA /* NetworkRequest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NetworkRequest.xctestplan; sourceTree = "<group>"; };
+		07FE637D2A94BA9800F5BCDA /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +458,7 @@
 			children = (
 				07FE637A2A949C7700F5BCDA /* NetworkRequest.xctestplan */,
 				07FE63732A949C5400F5BCDA /* NetworkRequestTests.swift */,
+				07FE637D2A94BA9800F5BCDA /* MockURLSession.swift */,
 			);
 			path = NetworkRequestTests;
 			sourceTree = "<group>";
@@ -872,6 +875,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FE637E2A94BA9800F5BCDA /* MockURLSession.swift in Sources */,
 				07FE637C2A949D1600F5BCDA /* TestAppDelegate.swift in Sources */,
 				07FE63742A949C5400F5BCDA /* NetworkRequestTests.swift in Sources */,
 			);

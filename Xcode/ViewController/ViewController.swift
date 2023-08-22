@@ -7,11 +7,19 @@
 
 import UIKit
 
+protocol URLSessionProtocol {
+    func data(for request: URLRequest, delegate: URLSessionTaskDelegate?) async throws -> (Data, URLResponse)
+}
+
+extension URLSession: URLSessionProtocol {}
+
 class ViewController: UIViewController {
 
     @IBOutlet private(set) var button: UIButton!
 
     private var dataTask: URLSessionDataTask?
+
+    var session = URLSession.shared
 }
 
 // MARK: - Private
@@ -33,7 +41,7 @@ private extension ViewController {
             await updateButton(isEnable: false)
 
             do {
-                let (data, response) = try await URLSession.shared.data(for: request)
+                let (data, response) = try await session.data(for: request)
 
                 let decoded = String(data: data, encoding: .utf8)
 

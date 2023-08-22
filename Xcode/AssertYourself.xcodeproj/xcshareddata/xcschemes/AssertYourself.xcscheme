@@ -47,7 +47,10 @@
             reference = "container:Tests/HardDependenciesTests/HardDependencies.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Tests/OutletConnectionTests/OutletConnection.xctestplan"
+            reference = "container:Tests/OutletConnectionTests/OutletConnection.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/NetworkRequestTests/NetworkRequest.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -126,6 +129,17 @@
                BlueprintIdentifier = "074E68212A934D49000B675E"
                BuildableName = "OutletConnectionTests.xctest"
                BlueprintName = "OutletConnectionTests"
+               ReferencedContainer = "container:AssertYourself.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07FE63702A949C5400F5BCDA"
+               BuildableName = "NetworkRequestTests.xctest"
+               BlueprintName = "NetworkRequestTests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -19,19 +19,14 @@ class ViewController: UIViewController {
 
     private var dataTask: URLSessionDataTask?
 
-    var session = URLSession.shared
+    var session: URLSessionProtocol = URLSession.shared
+
+    let hardcodedSearchTerm = "out from boneville"
 }
 
-// MARK: - Private
+// MARK: - Interface
 
-private extension ViewController {
-
-    @IBAction func buttonTapped() {
-        Task {
-            await searchForBook(terms: "out from boneville")
-        }
-    }
-
+extension ViewController {
     func searchForBook(terms: String) async {
         if let encodedTerms = terms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
            let url = URL(string: "https://itunes.apple.com/search?" + "media=ebook&term=\(encodedTerms)") {
@@ -41,7 +36,7 @@ private extension ViewController {
             await updateButton(isEnable: false)
 
             do {
-                let (data, response) = try await session.data(for: request)
+                let (data, response) = try await session.data(for: request, delegate: nil)
 
                 let decoded = String(data: data, encoding: .utf8)
 
@@ -53,6 +48,17 @@ private extension ViewController {
 
             await nullifyDataTask()
             await updateButton(isEnable: true)
+        }
+    }
+}
+
+// MARK: - Private
+
+private extension ViewController {
+
+    @IBAction func buttonTapped() {
+        Task {
+            await searchForBook(terms: hardcodedSearchTerm)
         }
     }
 

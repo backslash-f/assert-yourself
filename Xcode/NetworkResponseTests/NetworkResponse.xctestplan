@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "6656FCB8-7345-4750-818C-3A700ACA1025",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "078ED8A62A9A5B950023982D",
+        "name" : "NetworkResponseTests"
+      }
+    }
+  ],
+  "version" : 1
+}

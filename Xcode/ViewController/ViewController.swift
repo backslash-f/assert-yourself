@@ -19,7 +19,15 @@ class ViewController: UIViewController {
 
     private var dataTask: URLSessionDataTask?
 
-    var session: URLSessionProtocol = URLSession.shared
+    private(set) var results: [SearchResult] = [] {
+        didSet {
+            print(">> Results: \(results)")
+        }
+    }
+
+    var session: URLSessionProtocol = {
+        URLSession(configuration: .ephemeral) // Disable caching.
+    }()
 
     let hardcodedSearchTerm = "out from boneville"
 }
@@ -35,19 +43,39 @@ extension ViewController {
 
             await updateButton(isEnable: false)
 
+            var statusCode: String?
+
             do {
                 let (data, response) = try await session.data(for: request, delegate: nil)
 
-                let decoded = String(data: data, encoding: .utf8)
+                if let httpURLResponse = response as? HTTPURLResponse {
+                    statusCode = "\(HTTPURLResponse.localizedString(forStatusCode: httpURLResponse.statusCode))"
+                }
 
-                print(">> response: \(String(describing: response))")
-                print(">> data: \(String(describing: decoded))")
+                await parseSearch(from: data)
+
             } catch {
-                print(">> error: \(String(describing: error))")
+                let errorMessage = error.localizedDescription
+                if let statusCode {
+                    showError("\(statusCode + " " + errorMessage)")
+                } else {
+                    showError("\(errorMessage)")
+                }
             }
 
             await nullifyDataTask()
             await updateButton(isEnable: true)
+        }
+    }
+
+    func parseSearch(from data: Data) async {
+        do {
+            let search = try JSONDecoder().decode(Search.self, from: data)
+            await MainActor.run {
+                results = search.results
+            }
+        } catch {
+            showError(error.localizedDescription)
         }
     }
 }
@@ -71,4 +99,35 @@ private extension ViewController {
     func nullifyDataTask() async {
         dataTask = nil
     }
+
+    func showError(_ message: String) {
+        let title = "Network problem"
+        print(">> \(title): \(message)")
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(
+            title: "OK",
+            style: .default
+        )
+
+        alert.addAction(okAction)
+        alert.preferredAction = okAction
+        present(alert, animated: true)
+    }
+}
+
+// MARK: - Response
+
+struct Search: Decodable {
+    let results: [SearchResult]
+}
+
+struct SearchResult: Decodable, Equatable {
+    let artistName: String
+    let trackName: String
+    let averageUserRating: Float
+    let genres: [String]
 }

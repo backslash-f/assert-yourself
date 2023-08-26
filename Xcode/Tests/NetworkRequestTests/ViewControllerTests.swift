@@ -25,7 +25,6 @@ final class ViewControllerTests: XCTestCase {
         await sut.searchForBook(terms: sut.hardcodedSearchTerm)
 
         let url = URL(string: "https://itunes.apple.com/search?media=ebook&term=out%20from%20boneville")!
-        XCTAssertEqual(mockURLSession.dataForRequestArgsRequest.first, URLRequest(url: url), "request")
-        XCTAssertEqual(mockURLSession.dataForRequestCallCount, 1, "call count")
+        mockURLSession.verifyDataTask(with: URLRequest(url: url))
     }
 }

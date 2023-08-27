@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "viewcontrollerpresentationspy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jonreid/ViewControllerPresentationSpy",
+      "state" : {
+        "branch" : "main",
+        "revision" : "07d461cd05c3206fb68cad71e2dcaccdf278f56a"
+      }
+    }
+  ],
+  "version" : 2
+}

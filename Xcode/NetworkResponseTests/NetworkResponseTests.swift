@@ -5,6 +5,7 @@
 //  Created by Fernando Fernandes on 26.08.23.
 //
 
+import ViewControllerPresentationSpy
 import XCTest
 
 @testable import AssertYourself

@@ -12,6 +12,7 @@
 		070C1D032A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D022A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift */; };
 		070C1D052A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D042A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift */; };
 		070C1D072A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */; };
+		0728DA332A9BE456000F5F01 /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 0728DA322A9BE456000F5F01 /* ViewControllerPresentationSpy */; };
 		0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D13E2A7C039B00B3A6DF /* AppDelegate.swift */; };
 		0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1402A7C039B00B3A6DF /* SceneDelegate.swift */; };
 		0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1422A7C039B00B3A6DF /* ViewController.swift */; };
@@ -254,6 +255,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0728DA332A9BE456000F5F01 /* ViewControllerPresentationSpy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +640,9 @@
 				078ED8AC2A9A5B960023982D /* PBXTargetDependency */,
 			);
 			name = NetworkResponseTests;
+			packageProductDependencies = (
+				0728DA322A9BE456000F5F01 /* ViewControllerPresentationSpy */,
+			);
 			productName = NetworkResponseTests;
 			productReference = 078ED8A72A9A5B950023982D /* NetworkResponseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -756,6 +761,9 @@
 				Base,
 			);
 			mainGroup = 0748D1322A7C039B00B3A6DF;
+			packageReferences = (
+				0728DA312A9BE456000F5F01 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */,
+			);
 			productRefGroup = 0748D13C2A7C039B00B3A6DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1651,6 +1659,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0728DA312A9BE456000F5F01 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonreid/ViewControllerPresentationSpy";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0728DA322A9BE456000F5F01 /* ViewControllerPresentationSpy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0728DA312A9BE456000F5F01 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */;
+			productName = ViewControllerPresentationSpy;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0748D1332A7C039B00B3A6DF /* Project object */;
 }

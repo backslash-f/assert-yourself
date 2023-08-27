@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 
     private(set) var results: [SearchResult] = [] {
         didSet {
+            print(">> Number of results: \(results.count)")
             print(">> Results: \(results)")
         }
     }

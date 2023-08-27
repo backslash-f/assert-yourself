@@ -59,12 +59,13 @@
 		078C5BBB2A8E76B800D4EBE0 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		078ED8AA2A9A5B960023982D /* NetworkResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078ED8A92A9A5B960023982D /* NetworkResponseTests.swift */; };
 		078ED8B12A9A70A80023982D /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
+		078ED8B32A9B66D30023982D /* SpyURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078ED8B22A9B66D30023982D /* SpyURLSession.swift */; };
 		07BC3BE62A82390800D1B1BA /* CodeCoverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC3BE52A82390800D1B1BA /* CodeCoverageTests.swift */; };
 		07BC3BEE2A82742900D1B1BA /* CoveredClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC3BED2A82742900D1B1BA /* CoveredClass.swift */; };
 		07D536B72A8A5C7200F1B152 /* MainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D536B62A8A5C7200F1B152 /* MainWrapper.swift */; };
 		07EAA4A12A8A2C7D00AE09DD /* AppLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A02A8A2C7D00AE09DD /* AppLaunchTests.swift */; };
 		07EAA4A82A8A305600AE09DD /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
-		07FE63742A949C5400F5BCDA /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FE63732A949C5400F5BCDA /* ViewControllerTests.swift */; };
+		07FE63742A949C5400F5BCDA /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FE63732A949C5400F5BCDA /* NetworkRequestTests.swift */; };
 		07FE637B2A949D1600F5BCDA /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		07FE637C2A949D1600F5BCDA /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		07FE637E2A94BA9800F5BCDA /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FE637D2A94BA9800F5BCDA /* MockURLSession.swift */; };
@@ -189,6 +190,7 @@
 		078ED8A72A9A5B950023982D /* NetworkResponseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkResponseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		078ED8A92A9A5B960023982D /* NetworkResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseTests.swift; sourceTree = "<group>"; };
 		078ED8B02A9A5BBB0023982D /* NetworkResponse.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NetworkResponse.xctestplan; sourceTree = "<group>"; };
+		078ED8B22A9B66D30023982D /* SpyURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyURLSession.swift; sourceTree = "<group>"; };
 		07BC3BE32A82390800D1B1BA /* CodeCoverageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeCoverageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BC3BE52A82390800D1B1BA /* CodeCoverageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverageTests.swift; sourceTree = "<group>"; };
 		07BC3BEC2A82398900D1B1BA /* CodeCoverage.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CodeCoverage.xctestplan; sourceTree = "<group>"; };
@@ -200,7 +202,7 @@
 		07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppDelegate.swift; sourceTree = "<group>"; };
 		07F9C35C2A7C3E070060C773 /* AssertYourself.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = AssertYourself.xctestplan; path = Tests/AssertYourselfTests/AssertYourself.xctestplan; sourceTree = SOURCE_ROOT; };
 		07FE63712A949C5400F5BCDA /* NetworkRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07FE63732A949C5400F5BCDA /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		07FE63732A949C5400F5BCDA /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
 		07FE637A2A949C7700F5BCDA /* NetworkRequest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NetworkRequest.xctestplan; sourceTree = "<group>"; };
 		07FE637D2A94BA9800F5BCDA /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -463,6 +465,7 @@
 			children = (
 				078ED8B02A9A5BBB0023982D /* NetworkResponse.xctestplan */,
 				078ED8A92A9A5B960023982D /* NetworkResponseTests.swift */,
+				078ED8B22A9B66D30023982D /* SpyURLSession.swift */,
 			);
 			path = NetworkResponseTests;
 			sourceTree = "<group>";
@@ -505,7 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				07FE637A2A949C7700F5BCDA /* NetworkRequest.xctestplan */,
-				07FE63732A949C5400F5BCDA /* ViewControllerTests.swift */,
+				07FE63732A949C5400F5BCDA /* NetworkRequestTests.swift */,
 				07FE637D2A94BA9800F5BCDA /* MockURLSession.swift */,
 			);
 			path = NetworkRequestTests;
@@ -940,6 +943,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078ED8B32A9B66D30023982D /* SpyURLSession.swift in Sources */,
 				078ED8B12A9A70A80023982D /* TestAppDelegate.swift in Sources */,
 				078ED8AA2A9A5B960023982D /* NetworkResponseTests.swift in Sources */,
 			);
@@ -971,7 +975,7 @@
 			files = (
 				07FE637E2A94BA9800F5BCDA /* MockURLSession.swift in Sources */,
 				07FE637C2A949D1600F5BCDA /* TestAppDelegate.swift in Sources */,
-				07FE63742A949C5400F5BCDA /* ViewControllerTests.swift in Sources */,
+				07FE63742A949C5400F5BCDA /* NetworkRequestTests.swift in Sources */,
 				07794AAC2A967D25001C8CF1 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

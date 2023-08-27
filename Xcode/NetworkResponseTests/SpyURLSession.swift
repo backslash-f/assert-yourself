@@ -10,22 +10,18 @@ import XCTest
 
 @testable import AssertYourself
 
-enum SpyURLSessionError: Error {
-    case somethingWentWrong
-}
-
 class SpyURLSession {
     var dataForRequestCallCount = 0
     var dataForRequestArgsRequest: [URLRequest] = []
 
-    var error: SpyURLSessionError?
+    var error: Error?
     var data: Data?
 
     private var response: URLResponse?
 
     // MARK: - Lifecycle
 
-    init(error: SpyURLSessionError? = nil,
+    init(error: Error? = nil,
          data: Data? = nil,
          responseStatusCode: Int? = nil) {
         self.error = error
@@ -46,7 +42,7 @@ extension SpyURLSession: URLSessionProtocol {
         dataForRequestArgsRequest.append(request)
 
         if let error { throw error }
-
+        
         return (data ?? Data(), response ?? URLResponse())
     }
 }

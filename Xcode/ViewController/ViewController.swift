@@ -15,7 +15,9 @@ extension URLSession: URLSessionProtocol {}
 
 class ViewController: UIViewController {
 
-    @IBOutlet private(set) var button: UIButton!
+    @IBOutlet private(set) var searchForButton: UIButton!
+
+    @IBOutlet private(set) var tapsButton: UIButton!
 
     private var dataTask: URLSessionDataTask?
 
@@ -85,15 +87,19 @@ extension ViewController {
 
 private extension ViewController {
 
-    @IBAction func buttonTapped() {
+    @IBAction func searchForButtonTapped() {
         Task {
             await searchForBook(terms: hardcodedSearchTerm)
         }
     }
 
+    @IBAction func tapsButtonTapped() {
+        print(">> Button was tapped")
+    }
+
     @MainActor
     func updateButton(isEnable: Bool) async {
-        button.isEnabled = isEnable
+        searchForButton.isEnabled = isEnable
     }
 
     @MainActor

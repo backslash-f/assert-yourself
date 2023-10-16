@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,24 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-aM-3jw">
-                                <rect key="frame" x="159" y="408.66666666666669" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="buttonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYR-2K-vCQ"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-D6-yDD">
+                                <rect key="frame" x="96.333333333333329" y="388.33333333333331" width="200.66666666666669" height="75.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-aM-3jw">
+                                        <rect key="frame" x="0.0" y="0.0" width="200.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Search for Book Button"/>
+                                        <connections>
+                                            <action selector="searchForButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYR-2K-vCQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bq-r5-lao">
+                                        <rect key="frame" x="0.0" y="41.333333333333371" width="200.66666666666666" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Taps Button"/>
+                                        <connections>
+                                            <action selector="tapsButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqj-8d-fos"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SHA-aM-3jw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QIL-N4-GwG"/>
-                            <constraint firstItem="SHA-aM-3jw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aVf-ui-QQp"/>
+                            <constraint firstItem="uDs-D6-yDD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YAF-fi-qyu"/>
+                            <constraint firstItem="uDs-D6-yDD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wW1-CS-OCn"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button" destination="SHA-aM-3jw" id="Qrf-ud-Ta5"/>
+                        <outlet property="searchForButton" destination="SHA-aM-3jw" id="Qrf-ud-Ta5"/>
+                        <outlet property="tapsButton" destination="0Bq-r5-lao" id="Pii-pW-trm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

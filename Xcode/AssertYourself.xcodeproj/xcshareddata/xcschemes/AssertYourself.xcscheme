@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1430"
+   LastUpgradeVersion = "1500"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -53,7 +53,10 @@
             reference = "container:Tests/NetworkRequestTests/NetworkRequest.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:NetworkResponseTests/NetworkResponse.xctestplan"
+            reference = "container:NetworkResponseTests/NetworkResponse.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/ButtonTapsTests/ButtonTapsTests.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -154,6 +157,17 @@
                BlueprintIdentifier = "078ED8A62A9A5B950023982D"
                BuildableName = "NetworkResponseTests.xctest"
                BlueprintName = "NetworkResponseTests"
+               ReferencedContainer = "container:AssertYourself.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "073541162ADD1D2E00506146"
+               BuildableName = "ButtonTapsTests.xctest"
+               BlueprintName = "ButtonTapsTests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "10FA3102-B361-4921-971F-B767A56F8222",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "073541162ADD1D2E00506146",
+        "name" : "ButtonTapsTests"
+      }
+    }
+  ],
+  "version" : 1
+}

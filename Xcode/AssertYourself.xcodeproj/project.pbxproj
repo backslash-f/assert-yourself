@@ -12,6 +12,7 @@
 		070C1D032A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D022A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift */; };
 		070C1D052A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D042A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift */; };
 		070C1D072A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */; };
+		071BF3632AE905420011AA9B /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071BF3622AE905410011AA9B /* TestHelpers.swift */; };
 		0728DA332A9BE456000F5F01 /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 0728DA322A9BE456000F5F01 /* ViewControllerPresentationSpy */; };
 		0728DA352A9BE593000F5F01 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728DA342A9BE593000F5F01 /* TestError.swift */; };
 		073541212ADD1D5C00506146 /* ButtonTapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073541202ADD1D5C00506146 /* ButtonTapsTests.swift */; };
@@ -154,6 +155,7 @@
 		070C1D022A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancePropertyViewControllerTests.swift; sourceTree = "<group>"; };
 		070C1D042A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitializerViewControllerTests.swift; sourceTree = "<group>"; };
 		070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePropertyViewControllerTests.swift; sourceTree = "<group>"; };
+		071BF3622AE905410011AA9B /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		0728DA342A9BE593000F5F01 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		073541172ADD1D2E00506146 /* ButtonTapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonTapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		073541202ADD1D5C00506146 /* ButtonTapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTapsTests.swift; sourceTree = "<group>"; };
@@ -304,6 +306,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071BF3612AE9051F0011AA9B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				071BF3622AE905410011AA9B /* TestHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		073541122ADD1CDC00506146 /* ButtonTapsTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				078463C82A8E35C40030E0A8 /* Analytics */,
+				071BF3612AE9051F0011AA9B /* Helpers */,
 				0751D7EC2A7D533500F900BF /* MyClass.swift */,
 				07BC3BED2A82742900D1B1BA /* CoveredClass.swift */,
 			);
@@ -945,6 +956,7 @@
 				078463DB2A8E379B0030E0A8 /* ClosureInitializerViewController.swift in Sources */,
 				078463CF2A8E36D40030E0A8 /* ClosurePropertyViewController.swift in Sources */,
 				078463DF2A8E37B20030E0A8 /* MySingletonViewController.swift in Sources */,
+				071BF3632AE905420011AA9B /* TestHelpers.swift in Sources */,
 				0751D7ED2A7D533500F900BF /* MyClass.swift in Sources */,
 				074E682E2A934E2E000B675E /* OutletConnectionsViewController.swift in Sources */,
 				075F6CA02A8D1E7700C8269E /* CodeBaseViewController.swift in Sources */,

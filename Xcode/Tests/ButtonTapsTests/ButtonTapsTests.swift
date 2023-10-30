@@ -11,7 +11,13 @@ import XCTest
 
 final class ButonTapsTests: XCTestCase {
 
-    func test_zero() {
-        XCTFail("NHANHA")
+    func test_tappingButton() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sut: ViewController = storyboard.instantiateViewController(
+            withIdentifier: String(describing: ViewController.self)
+        ) as! ViewController
+        sut.loadViewIfNeeded()
+
+        tap(sut.tapsButton)
     }
 }

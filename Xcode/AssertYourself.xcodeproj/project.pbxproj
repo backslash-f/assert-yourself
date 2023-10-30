@@ -19,6 +19,7 @@
 		073541232ADD1FBB00506146 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		073DAAC92AEFFB7700BC854C /* AlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073DAAC82AEFFB7700BC854C /* AlertTests.swift */; };
 		073DAACF2AEFFBA300BC854C /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
+		073DAAD32AF0036F00BC854C /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 073DAAD22AF0036F00BC854C /* ViewControllerPresentationSpy */; };
 		0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D13E2A7C039B00B3A6DF /* AppDelegate.swift */; };
 		0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1402A7C039B00B3A6DF /* SceneDelegate.swift */; };
 		0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1422A7C039B00B3A6DF /* ViewController.swift */; };
@@ -248,6 +249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073DAAD32AF0036F00BC854C /* ViewControllerPresentationSpy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +353,13 @@
 			path = AlertTests;
 			sourceTree = "<group>";
 		};
+		073DAAD12AF0036F00BC854C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0748D1322A7C039B00B3A6DF = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +370,7 @@
 				0790CE4D2A7C3495009B8A64 /* Tests */,
 				078ED8A82A9A5B960023982D /* NetworkResponseTests */,
 				0748D13C2A7C039B00B3A6DF /* Products */,
+				073DAAD12AF0036F00BC854C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -625,6 +635,9 @@
 				073DAACB2AEFFB7700BC854C /* PBXTargetDependency */,
 			);
 			name = AlertTests;
+			packageProductDependencies = (
+				073DAAD22AF0036F00BC854C /* ViewControllerPresentationSpy */,
+			);
 			productName = AlertTests;
 			productReference = 073DAAC62AEFFB7700BC854C /* AlertTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1949,6 +1962,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		0728DA322A9BE456000F5F01 /* ViewControllerPresentationSpy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0728DA312A9BE456000F5F01 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */;
+			productName = ViewControllerPresentationSpy;
+		};
+		073DAAD22AF0036F00BC854C /* ViewControllerPresentationSpy */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0728DA312A9BE456000F5F01 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */;
 			productName = ViewControllerPresentationSpy;

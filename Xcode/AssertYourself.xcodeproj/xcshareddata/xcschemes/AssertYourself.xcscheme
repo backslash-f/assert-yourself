@@ -56,7 +56,10 @@
             reference = "container:NetworkResponseTests/NetworkResponse.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Tests/ButtonTapsTests/ButtonTapsTests.xctestplan"
+            reference = "container:Tests/ButtonTapsTests/ButtonTapsTests.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/AlertTests/AlertTests.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -168,6 +171,17 @@
                BlueprintIdentifier = "073541162ADD1D2E00506146"
                BuildableName = "ButtonTapsTests.xctest"
                BlueprintName = "ButtonTapsTests"
+               ReferencedContainer = "container:AssertYourself.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "073DAAC52AEFFB7700BC854C"
+               BuildableName = "AlertTests.xctest"
+               BlueprintName = "AlertTests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>

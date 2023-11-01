@@ -42,7 +42,7 @@ extension SpyURLSession: URLSessionProtocol {
         dataForRequestArgsRequest.append(request)
 
         if let error { throw error }
-        
+
         return (data ?? Data(), response ?? URLResponse())
     }
 }

@@ -1,0 +1,10 @@
+---
+identifier_name:
+  allowed_symbols:
+    - "_"
+
+disabled_rules:
+  - nesting
+  - identifier_name
+  - xctfail_message
+  - force_cast

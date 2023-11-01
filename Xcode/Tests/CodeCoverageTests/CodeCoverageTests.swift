@@ -13,7 +13,7 @@ final class CodeCoverageTests: XCTestCase {
 
     func test_max_with1And2_shouldReturn2() {
         let result = CoveredClass.max(1, 2)
-        
+
         XCTAssertEqual(result, 2)
     }
 

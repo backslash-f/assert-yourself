@@ -50,7 +50,7 @@ final class NavigationTests: XCTestCase {
             .rootViewController = sut
 
         tap(sut.codeModalButton)
-        
+
         let presentedVC = sut.presentedViewController
         guard let codeNextVC = presentedVC as? CodeNextViewController else {
             XCTFail("Expected CodeNextViewController, "

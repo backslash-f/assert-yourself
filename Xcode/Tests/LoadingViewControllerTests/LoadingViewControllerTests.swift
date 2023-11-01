@@ -16,7 +16,7 @@ final class LoadingViewControllerTests: XCTestCase {
             identifier: String(describing: StoryboardBasedViewController.self)
         )
         sut.loadViewIfNeeded()
-        
+
         XCTAssertNotNil(sut.label)
     }
 }

@@ -9,7 +9,7 @@ import XCTest
 @testable import AssertYourself
 
 final class AssertYourselfTests: XCTestCase {
-    
+
     func test_fail() {
         XCTFail()
     }

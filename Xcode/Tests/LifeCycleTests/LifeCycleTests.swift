@@ -25,7 +25,7 @@ final class LifeCycleTests: XCTestCase {
 
     func test_methodOne() {
         sut.methodOne()
-        
+
         // Normally, assert something
     }
 

@@ -73,7 +73,6 @@
 		079C4CD92AF244C800E18D5B /* CodeNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C4CD82AF244C800E18D5B /* CodeNextViewController.swift */; };
 		079C4CDB2AF246BB00E18D5B /* SegueNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C4CDA2AF246BB00E18D5B /* SegueNextViewController.swift */; };
 		079C4CDD2AF258D700E18D5B /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 079C4CDC2AF258D700E18D5B /* ViewControllerPresentationSpy */; };
-		079C4CE02AF259A500E18D5B /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C4CDE2AF2592F00E18D5B /* ViewControllerTests.swift */; };
 		07BC3BE62A82390800D1B1BA /* CodeCoverageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC3BE52A82390800D1B1BA /* CodeCoverageTests.swift */; };
 		07BC3BEE2A82742900D1B1BA /* CoveredClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BC3BED2A82742900D1B1BA /* CoveredClass.swift */; };
 		07D536B72A8A5C7200F1B152 /* MainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D536B62A8A5C7200F1B152 /* MainWrapper.swift */; };
@@ -239,7 +238,6 @@
 		079C4CD52AF240D500E18D5B /* NavigationTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NavigationTests.xctestplan; sourceTree = "<group>"; };
 		079C4CD82AF244C800E18D5B /* CodeNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeNextViewController.swift; sourceTree = "<group>"; };
 		079C4CDA2AF246BB00E18D5B /* SegueNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueNextViewController.swift; sourceTree = "<group>"; };
-		079C4CDE2AF2592F00E18D5B /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		07BC3BE32A82390800D1B1BA /* CodeCoverageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeCoverageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BC3BE52A82390800D1B1BA /* CodeCoverageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeCoverageTests.swift; sourceTree = "<group>"; };
 		07BC3BEC2A82398900D1B1BA /* CodeCoverage.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CodeCoverage.xctestplan; sourceTree = "<group>"; };
@@ -607,7 +605,6 @@
 			children = (
 				079C4CD52AF240D500E18D5B /* NavigationTests.xctestplan */,
 				079C4CCE2AF240A400E18D5B /* NavigationTests.swift */,
-				079C4CDE2AF2592F00E18D5B /* ViewControllerTests.swift */,
 			);
 			path = NavigationTests;
 			sourceTree = "<group>";
@@ -1235,7 +1232,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				079C4CE02AF259A500E18D5B /* ViewControllerTests.swift in Sources */,
 				079C4CD62AF241A400E18D5B /* TestAppDelegate.swift in Sources */,
 				079C4CCF2AF240A400E18D5B /* NavigationTests.swift in Sources */,
 			);

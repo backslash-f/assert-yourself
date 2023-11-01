@@ -25,6 +25,7 @@ final class NavigationTests: XCTestCase {
     }
 
     override func tearDown() {
+        executeRunLoop()
         sut = nil
         super.tearDown()
     }
@@ -77,5 +78,38 @@ final class NavigationTests: XCTestCase {
             presentingViewController: sut
         )
         XCTAssertEqual(codeNextVC?.label.text, "Modal from code")
+    }
+
+    @MainActor
+    func test_tappingSeguePushButton_shouldShowSegueNextViewController() {
+        let presentationVerifier = PresentationVerifier()
+
+        putInWindow(sut)
+
+        tap(sut.seguePushButton)
+
+        let segueNextVC: SegueNextViewController? = presentationVerifier.verify(
+            animated: true,
+            presentingViewController: sut
+        )
+
+        XCTAssertEqual(segueNextVC?.labelText, "Pushed from segue")
+    }
+}
+
+// We can't use this for a view controller that comes from a storyboard.
+private class TestableViewController: ViewController {
+    var presentCallCount = 0
+    var presentArgsViewController: [UIViewController] = []
+    var presentArgsAnimated: [Bool] = []
+    var presentArgsClosure: [(() -> Void)?] = []
+
+    override func present(_ viewControllerToPresent: UIViewController,
+                          animated flag: Bool,
+                          completion: (() -> Void)? = nil) {
+        presentCallCount += 1
+        presentArgsViewController.append(viewControllerToPresent)
+        presentArgsAnimated.append(flag)
+        presentArgsClosure.append(completion)
     }
 }

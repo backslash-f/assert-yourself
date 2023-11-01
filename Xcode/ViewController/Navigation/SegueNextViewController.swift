@@ -17,4 +17,8 @@ class SegueNextViewController: UIViewController {
         super.viewDidLoad()
         label.text = labelText
     }
+
+    deinit {
+        print(">> SegueNextViewController.deinit")
+    }
 }

@@ -53,16 +53,16 @@
             reference = "container:Tests/NetworkRequestTests/NetworkRequest.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:NetworkResponseTests/NetworkResponse.xctestplan">
-         </TestPlanReference>
-         <TestPlanReference
             reference = "container:Tests/ButtonTapsTests/ButtonTapsTests.xctestplan">
          </TestPlanReference>
          <TestPlanReference
             reference = "container:Tests/AlertTests/AlertTests.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:NavigationTests/NavigationTests.xctestplan"
+            reference = "container:Tests/NetworkResponseTests/NetworkResponse.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/NavigationTests/NavigationTests.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

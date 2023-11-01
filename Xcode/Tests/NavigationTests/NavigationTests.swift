@@ -12,12 +12,24 @@ import XCTest
 
 final class NavigationTests: XCTestCase {
 
-    func test_tappingCodePushButton_shouldPushCodeNextViewController() throws {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut: ViewController = storyboard.instantiateViewController(
-            withIdentifier: String(describing: ViewController.self)
-        ) as! ViewController
+    private var sut: ViewController!
+
+    @MainActor
+    override func setUp() {
+        super.setUp()
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        sut = sb.instantiateViewController(
+            identifier: String(describing: ViewController.self)
+        ) as? ViewController
         sut.loadViewIfNeeded()
+    }
+
+    override func tearDown() {
+        sut = nil
+        super.tearDown()
+    }
+
+    func test_tappingCodePushButton_shouldPushCodeNextViewController() throws {
         let navigation = UINavigationController(rootViewController: sut)
 
         tap(sut.codePushButton)
@@ -38,12 +50,6 @@ final class NavigationTests: XCTestCase {
     }
 
     func test_INCORRECT_tappingCodeModalButton_shouldPresentCodeNextViewController() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut: ViewController = storyboard.instantiateViewController(
-            withIdentifier: String(describing: ViewController.self)
-        ) as! ViewController
-        sut.loadViewIfNeeded()
-
         (UIApplication.shared.connectedScenes.first as? UIWindowScene)?
             .windows
             .first?
@@ -63,12 +69,6 @@ final class NavigationTests: XCTestCase {
     @MainActor
     func test_tappingCodeModalButton_shouldPresentCodeNextViewController() {
         let presentationVerifier = PresentationVerifier()
-
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut: ViewController = storyboard.instantiateViewController(
-            withIdentifier: String(describing: ViewController.self)
-        ) as! ViewController
-        sut.loadViewIfNeeded()
 
         tap(sut.codeModalButton)
 

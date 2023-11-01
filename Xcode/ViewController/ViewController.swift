@@ -21,6 +21,12 @@ class ViewController: UIViewController {
 
     @IBOutlet private(set) var alertButton: UIButton!
 
+    // MARK: Navigation tests
+    @IBOutlet private(set) var codePushButton: UIButton!
+    @IBOutlet private(set) var codeModalButton: UIButton!
+    @IBOutlet private(set) var seguePushButton: UIButton!
+    @IBOutlet private(set) var segueModalButton: UIButton!
+
     private var dataTask: URLSessionDataTask?
 
     private(set) var results: [SearchResult] = [] {
@@ -109,16 +115,26 @@ private extension ViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
             print(">> Cancel")
         }
-        
+
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             print(">> OK")
         }
-        
+
         alert.addAction(cancelAction)
         alert.addAction(okAction)
         alert.preferredAction = okAction
 
         present(alert, animated: true)
+    }
+
+    @IBAction private func pushNextViewController() {
+        let nextVC = CodeNextViewController(labelText: "Pushed from code")
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+
+    @IBAction private func presentModalNextViewController() {
+        let nextVC = CodeNextViewController(labelText: "Modal from code")
+        self.present(nextVC, animated: true)
     }
 
     @MainActor

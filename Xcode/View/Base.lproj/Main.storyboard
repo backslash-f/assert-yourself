@@ -64,11 +64,17 @@
                                         <rect key="frame" x="0.0" y="206.66666666666669" width="200.66666666666666" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
+                                        <connections>
+                                            <segue destination="wIG-xX-c7G" kind="show" identifier="pushNext" id="Qms-tc-Gci"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYH-hk-P9B" userLabel="Segue Modal Button">
                                         <rect key="frame" x="0.0" y="248.00000000000003" width="200.66666666666666" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Segue Modal Button"/>
+                                        <connections>
+                                            <segue destination="wIG-xX-c7G" kind="presentation" identifier="modalNext" id="Ejl-iS-oaa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -94,6 +100,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="933.58778625954199" y="24.647887323943664"/>
+        </scene>
+        <!--Segue Next View Controller-->
+        <scene sceneID="h4l-zG-eun">
+            <objects>
+                <viewController id="wIG-xX-c7G" customClass="SegueNextViewController" customModule="AssertYourself" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WAI-wv-4DZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-GT-TR8">
+                                <rect key="frame" x="175.66666666666666" y="410.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2gZ-jf-5Zx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WKc-GT-TR8" firstAttribute="centerX" secondItem="WAI-wv-4DZ" secondAttribute="centerX" id="7Jj-Eb-Gkq"/>
+                            <constraint firstItem="WKc-GT-TR8" firstAttribute="centerY" secondItem="WAI-wv-4DZ" secondAttribute="centerY" id="tq1-xt-i34"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KIb-fh-3TR"/>
+                    <connections>
+                        <outlet property="label" destination="WKc-GT-TR8" id="TFe-gq-yiP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ShL-qo-2h4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="754"/>
         </scene>
         <!--Storyboard Based View Controller-->
         <scene sceneID="F1l-LA-AeC">
@@ -174,6 +211,9 @@
             <point key="canvasLocation" x="6.8702290076335872" y="24.647887323943664"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ejl-iS-oaa"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

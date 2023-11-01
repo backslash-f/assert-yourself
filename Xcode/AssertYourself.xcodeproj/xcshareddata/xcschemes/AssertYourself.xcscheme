@@ -59,7 +59,10 @@
             reference = "container:Tests/ButtonTapsTests/ButtonTapsTests.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Tests/AlertTests/AlertTests.xctestplan"
+            reference = "container:Tests/AlertTests/AlertTests.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:NavigationTests/NavigationTests.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -182,6 +185,17 @@
                BlueprintIdentifier = "073DAAC52AEFFB7700BC854C"
                BuildableName = "AlertTests.xctest"
                BlueprintName = "AlertTests"
+               ReferencedContainer = "container:AssertYourself.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "079C4CCB2AF240A300E18D5B"
+               BuildableName = "NavigationTests.xctest"
+               BlueprintName = "NavigationTests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>

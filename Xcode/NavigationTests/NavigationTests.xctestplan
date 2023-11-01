@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "2C350339-0E8A-476D-B63A-6BE9152AE080",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "079C4CCB2AF240A300E18D5B",
+        "name" : "NavigationTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -42,4 +42,8 @@ class CodeNextViewController: UIViewController {
         )
         .isActive = true
     }
+
+    deinit {
+        print(">> CodeNextViewController.deinit")
+    }
 }

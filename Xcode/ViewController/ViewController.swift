@@ -41,6 +41,10 @@ class ViewController: UIViewController {
     }()
 
     let hardcodedSearchTerm = "out from boneville"
+
+    deinit {
+        print(">> ViewController.deinit")
+    }
 }
 
 // MARK: - Interface

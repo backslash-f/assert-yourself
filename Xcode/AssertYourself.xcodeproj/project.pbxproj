@@ -391,8 +391,6 @@
 				0748D1702A7C03F300B3A6DF /* ViewController */,
 				0748D16F2A7C03E600B3A6DF /* Support */,
 				0790CE4D2A7C3495009B8A64 /* Tests */,
-				078ED8A82A9A5B960023982D /* NetworkResponseTests */,
-				079C4CCD2AF240A400E18D5B /* NavigationTests */,
 				0748D13C2A7C039B00B3A6DF /* Products */,
 				073DAAD12AF0036F00BC854C /* Frameworks */,
 			);
@@ -594,6 +592,8 @@
 				073541122ADD1CDC00506146 /* ButtonTapsTests */,
 				073DAAC12AEFFB1400BC854C /* AlertTests */,
 				07FE63722A949C5400F5BCDA /* NetworkRequestTests */,
+				078ED8A82A9A5B960023982D /* NetworkResponseTests */,
+				079C4CCD2AF240A400E18D5B /* NavigationTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";

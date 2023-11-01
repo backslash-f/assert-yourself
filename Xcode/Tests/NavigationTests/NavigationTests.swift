@@ -9,7 +9,7 @@ import XCTest
 
 final class NavigationTests: XCTestCase {
 
-    func testZero() throws {
+    func test_tappingCodePushButton_shouldPushCodeNextViewController() throws {
         XCTFail()
     }
 }

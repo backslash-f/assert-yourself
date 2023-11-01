@@ -95,6 +95,20 @@ final class NavigationTests: XCTestCase {
 
         XCTAssertEqual(segueNextVC?.labelText, "Pushed from segue")
     }
+
+    @MainActor
+    func test_tappingSegueModalButton_shouldShowSegueNextViewController() {
+        let presentationVerifier = PresentationVerifier()
+
+        tap(sut.segueModalButton)
+
+        let segueNextVC: SegueNextViewController? = presentationVerifier.verify(
+            animated: true,
+            presentingViewController: sut
+        )
+
+        XCTAssertEqual(segueNextVC?.labelText, "Modal from segue")
+    }
 }
 
 // We can't use this for a view controller that comes from a storyboard.

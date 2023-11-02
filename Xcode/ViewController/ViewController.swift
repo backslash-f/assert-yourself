@@ -27,6 +27,10 @@ class ViewController: UIViewController {
     @IBOutlet private(set) var seguePushButton: UIButton!
     @IBOutlet private(set) var segueModalButton: UIButton!
 
+    // MARK: UserDefaults tests
+    @IBOutlet private(set) var counterLabel: UILabel!
+    @IBOutlet private(set) var incrementButton: UIButton!
+
     private var dataTask: URLSessionDataTask?
 
     private(set) var results: [SearchResult] = [] {
@@ -36,11 +40,23 @@ class ViewController: UIViewController {
         }
     }
 
+    private var count = 0 {
+        didSet {
+            counterLabel.text = "\(count)"
+            UserDefaults.standard.set(count, forKey: "count")
+        }
+    }
+
     var session: URLSessionProtocol = {
         URLSession(configuration: .ephemeral) // Disable caching.
     }()
 
     let hardcodedSearchTerm = "out from boneville"
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        count = UserDefaults.standard.integer(forKey: "count")
+    }
 
     deinit {
         print(">> ViewController.deinit")
@@ -155,6 +171,10 @@ private extension ViewController {
     @IBAction private func presentModalNextViewController() {
         let nextVC = CodeNextViewController(labelText: "Modal from code")
         self.present(nextVC, animated: true)
+    }
+
+    @IBAction private func incrementButtonTapped() {
+        count += 1
     }
 
     @MainActor

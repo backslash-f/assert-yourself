@@ -17,80 +17,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-D6-yDD">
-                                <rect key="frame" x="96.333333333333329" y="285" width="200.66666666666669" height="282.33333333333326"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qnm-7x-ZZI">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-aM-3jw">
-                                        <rect key="frame" x="0.0" y="0.0" width="200.66666666666666" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Search for Book Button"/>
-                                        <connections>
-                                            <action selector="searchForButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYR-2K-vCQ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bq-r5-lao">
-                                        <rect key="frame" x="0.0" y="41.333333333333314" width="200.66666666666666" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Taps Button"/>
-                                        <connections>
-                                            <action selector="tapsButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqj-8d-fos"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMz-kO-RDn">
-                                        <rect key="frame" x="0.0" y="82.666666666666686" width="200.66666666666666" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Alert Button"/>
-                                        <connections>
-                                            <action selector="alertButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rd0-fN-L3P"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-3M-aOA" userLabel="Code Push Button">
-                                        <rect key="frame" x="0.0" y="123.99999999999999" width="200.66666666666666" height="34.333333333333329"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Code Push Button"/>
-                                        <connections>
-                                            <action selector="pushNextViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFo-FS-hGJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-Hd-C79" userLabel="Code Modal Button">
-                                        <rect key="frame" x="0.0" y="165.33333333333331" width="200.66666666666666" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Code Modal Button"/>
-                                        <connections>
-                                            <action selector="presentModalNextViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="2fs-tZ-7Mk"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTO-Fs-jrB" userLabel="Segue Push Button">
-                                        <rect key="frame" x="0.0" y="206.66666666666669" width="200.66666666666666" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
-                                        <connections>
-                                            <segue destination="wIG-xX-c7G" kind="show" identifier="pushNext" id="Qms-tc-Gci"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYH-hk-P9B" userLabel="Segue Modal Button">
-                                        <rect key="frame" x="0.0" y="248.00000000000003" width="200.66666666666666" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Segue Modal Button"/>
-                                        <connections>
-                                            <segue destination="wIG-xX-c7G" kind="presentation" identifier="modalNext" id="Ejl-iS-oaa"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-D6-yDD">
+                                        <rect key="frame" x="40" y="-23" width="313" height="692"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-aM-3jw">
+                                                <rect key="frame" x="56.333333333333329" y="0.0" width="200.66666666666669" height="86.666666666666671"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Search for Book Button"/>
+                                                <connections>
+                                                    <action selector="searchForButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYR-2K-vCQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bq-r5-lao">
+                                                <rect key="frame" x="99" y="86.666666666666657" width="115.33333333333331" height="86.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Taps Button"/>
+                                                <connections>
+                                                    <action selector="tapsButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqj-8d-fos"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMz-kO-RDn">
+                                                <rect key="frame" x="99" y="173" width="115.33333333333331" height="86.666666666666686"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Alert Button"/>
+                                                <connections>
+                                                    <action selector="alertButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rd0-fN-L3P"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-3M-aOA" userLabel="Code Push Button">
+                                                <rect key="frame" x="75.666666666666686" y="259.66666666666669" width="162" height="86.333333333333314"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Code Push Button"/>
+                                                <connections>
+                                                    <action selector="pushNextViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFo-FS-hGJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-Hd-C79" userLabel="Code Modal Button">
+                                                <rect key="frame" x="71" y="346" width="171" height="86.666666666666686"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Code Modal Button"/>
+                                                <connections>
+                                                    <action selector="presentModalNextViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="2fs-tZ-7Mk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTO-Fs-jrB" userLabel="Segue Push Button">
+                                                <rect key="frame" x="71.666666666666671" y="432.66666666666663" width="169.66666666666663" height="86.333333333333371"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
+                                                <connections>
+                                                    <segue destination="wIG-xX-c7G" kind="show" identifier="pushNext" id="Qms-tc-Gci"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYH-hk-P9B" userLabel="Segue Modal Button">
+                                                <rect key="frame" x="67.333333333333329" y="519" width="178.66666666666669" height="86.666666666666629"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Segue Modal Button"/>
+                                                <connections>
+                                                    <segue destination="wIG-xX-c7G" kind="presentation" identifier="modalNext" id="Ejl-iS-oaa"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8I3-9Q-nS0">
+                                                <rect key="frame" x="78.666666666666686" y="605.66666666666663" width="156" height="86.333333333333371"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYG-xv-7Bg" userLabel="Counter Label">
+                                                        <rect key="frame" x="57.333333333333329" y="0.0" width="41.333333333333329" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-XS-9Jj" userLabel="Increment Button">
+                                                        <rect key="frame" x="0.0" y="20.333333333333371" width="156" height="66"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Increment Button"/>
+                                                        <connections>
+                                                            <action selector="incrementButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVh-A8-WlX"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="uLR-Fj-qHh" firstAttribute="trailing" secondItem="uDs-D6-yDD" secondAttribute="trailing" constant="40" id="KSV-We-AGn"/>
+                                    <constraint firstItem="uDs-D6-yDD" firstAttribute="leading" secondItem="uLR-Fj-qHh" secondAttribute="leading" constant="40" id="R0G-TC-1pt"/>
+                                    <constraint firstItem="uLR-Fj-qHh" firstAttribute="bottom" secondItem="uDs-D6-yDD" secondAttribute="bottom" constant="80" id="ny4-XK-OaY"/>
+                                    <constraint firstItem="uDs-D6-yDD" firstAttribute="top" secondItem="uLR-Fj-qHh" secondAttribute="top" constant="80" id="pyk-vZ-phD"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Lfc-Dl-daL"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="uLR-Fj-qHh"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="uDs-D6-yDD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YAF-fi-qyu"/>
-                            <constraint firstItem="uDs-D6-yDD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wW1-CS-OCn"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HwG-kT-awJ"/>
                     <connections>
                         <outlet property="alertButton" destination="eMz-kO-RDn" id="qRV-SM-yhy"/>
                         <outlet property="codeModalButton" destination="wdM-Hd-C79" id="rIA-Bn-5he"/>
                         <outlet property="codePushButton" destination="AMa-3M-aOA" id="lHB-IT-Ode"/>
+                        <outlet property="counterLabel" destination="HYG-xv-7Bg" id="lHI-7E-AXP"/>
+                        <outlet property="incrementButton" destination="0fg-XS-9Jj" id="xug-VJ-kCj"/>
                         <outlet property="searchForButton" destination="SHA-aM-3jw" id="Qrf-ud-Ta5"/>
                         <outlet property="segueModalButton" destination="RYH-hk-P9B" id="zQq-p9-izf"/>
                         <outlet property="seguePushButton" destination="DTO-Fs-jrB" id="HWe-fW-od1"/>
@@ -106,11 +137,11 @@
             <objects>
                 <viewController id="wIG-xX-c7G" customClass="SegueNextViewController" customModule="AssertYourself" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WAI-wv-4DZ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-GT-TR8">
-                                <rect key="frame" x="175.66666666666666" y="410.66666666666669" width="42" height="21"/>
+                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -212,7 +243,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ejl-iS-oaa"/>
+        <segue reference="Qms-tc-Gci"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

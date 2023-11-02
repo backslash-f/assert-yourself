@@ -17,6 +17,7 @@
 		0728DA352A9BE593000F5F01 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728DA342A9BE593000F5F01 /* TestError.swift */; };
 		073541212ADD1D5C00506146 /* ButtonTapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073541202ADD1D5C00506146 /* ButtonTapsTests.swift */; };
 		073541232ADD1FBB00506146 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
+		073D6B492AF40617003771CC /* FakeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D6B482AF40617003771CC /* FakeUserDefaults.swift */; };
 		073DAAC92AEFFB7700BC854C /* AlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073DAAC82AEFFB7700BC854C /* AlertTests.swift */; };
 		073DAACF2AEFFBA300BC854C /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		073DAAD32AF0036F00BC854C /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 073DAAD22AF0036F00BC854C /* ViewControllerPresentationSpy */; };
@@ -191,6 +192,7 @@
 		073541172ADD1D2E00506146 /* ButtonTapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonTapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		073541202ADD1D5C00506146 /* ButtonTapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTapsTests.swift; sourceTree = "<group>"; };
 		073541222ADD1E7F00506146 /* ButtonTapsTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ButtonTapsTests.xctestplan; sourceTree = "<group>"; };
+		073D6B482AF40617003771CC /* FakeUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserDefaults.swift; sourceTree = "<group>"; };
 		073DAAC62AEFFB7700BC854C /* AlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		073DAAC82AEFFB7700BC854C /* AlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTests.swift; sourceTree = "<group>"; };
 		073DAAD02AEFFBC400BC854C /* AlertTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AlertTests.xctestplan; sourceTree = "<group>"; };
@@ -662,6 +664,7 @@
 			children = (
 				07FAE0952AF378A60032DD2C /* UserDefaults.xctestplan */,
 				07FAE08E2AF378770032DD2C /* UserDefaultsTests.swift */,
+				073D6B482AF40617003771CC /* FakeUserDefaults.swift */,
 			);
 			path = UserDefaultsTests;
 			sourceTree = "<group>";
@@ -1322,6 +1325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07FAE0962AF378BF0032DD2C /* TestAppDelegate.swift in Sources */,
+				073D6B492AF40617003771CC /* FakeUserDefaults.swift in Sources */,
 				07FAE08F2AF378770032DD2C /* UserDefaultsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

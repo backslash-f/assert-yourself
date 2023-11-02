@@ -13,6 +13,13 @@ protocol URLSessionProtocol {
 
 extension URLSession: URLSessionProtocol {}
 
+protocol UserDefaultsProtocol {
+    func set(_ value: Int, forKey defaultName: String)
+    func integer(forKey defaultName: String) -> Int
+}
+
+extension UserDefaults: UserDefaultsProtocol {}
+
 class ViewController: UIViewController {
 
     @IBOutlet private(set) var searchForButton: UIButton!
@@ -43,7 +50,7 @@ class ViewController: UIViewController {
     private var count = 0 {
         didSet {
             counterLabel.text = "\(count)"
-            UserDefaults.standard.set(count, forKey: "count")
+            userDefaults.set(count, forKey: "count")
         }
     }
 
@@ -51,11 +58,13 @@ class ViewController: UIViewController {
         URLSession(configuration: .ephemeral) // Disable caching.
     }()
 
+    var userDefaults: UserDefaultsProtocol = UserDefaults.standard
+
     let hardcodedSearchTerm = "out from boneville"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        count = UserDefaults.standard.integer(forKey: "count")
+        count = userDefaults.integer(forKey: "count")
     }
 
     deinit {

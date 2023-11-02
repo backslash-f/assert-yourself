@@ -62,7 +62,10 @@
             reference = "container:Tests/NetworkResponseTests/NetworkResponse.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Tests/NavigationTests/NavigationTests.xctestplan"
+            reference = "container:Tests/NavigationTests/NavigationTests.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/UserDefaultsTests/UserDefaults.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -196,6 +199,17 @@
                BlueprintIdentifier = "079C4CCB2AF240A300E18D5B"
                BuildableName = "NavigationTests.xctest"
                BlueprintName = "NavigationTests"
+               ReferencedContainer = "container:AssertYourself.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07FAE08B2AF378770032DD2C"
+               BuildableName = "UserDefaultsTests.xctest"
+               BlueprintName = "UserDefaultsTests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>

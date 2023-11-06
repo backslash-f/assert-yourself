@@ -19,16 +19,34 @@ final class TextFieldTests: XCTestCase {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let identifier = String(describing: ViewController.self)
         sut = sb.instantiateViewController(identifier: identifier)
+        sut.loadViewIfNeeded()
     }
 
     override func tearDown() {
+        executeRunLoop()
         sut = nil
         super.tearDown()
     }
 
     func test_outlets_shouldBeConnected() throws {
-        sut.loadViewIfNeeded()
         XCTAssertNotNil(sut.usernameField, "usernameField")
         XCTAssertNotNil(sut.passwordField, "passwordField")
+    }
+
+    func test_usernameField_attributesShouldBeSet() throws {
+        guard let textField = sut.usernameField else {
+            XCTFail("Expected username field, got nil")
+            return
+        }
+        XCTAssertEqual(textField.textContentType, .username, "textContentType")
+        XCTAssertEqual(textField.autocorrectionType, .no, "autocorrectionType")
+        XCTAssertEqual(textField.returnKeyType, .next, "returnKeyType")
+    }
+
+    func test_passwordField_attributesShouldBeSet() {
+        let textField = sut.passwordField!
+        XCTAssertEqual(textField.textContentType, .password, "textContentType")
+        XCTAssertEqual(textField.returnKeyType, .go, "returnKeyType")
+        XCTAssertTrue(textField.isSecureTextEntry, "isSecureTextEntry")
     }
 }

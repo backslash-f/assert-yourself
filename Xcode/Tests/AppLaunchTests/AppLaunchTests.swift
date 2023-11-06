@@ -10,6 +10,6 @@ import XCTest
 final class AppLaunchTests: XCTestCase {
 
     func test_zero() {
-        XCTFail()
+        XCTFail("AppLaunchTests test_zero")
     }
 }

@@ -13,9 +13,12 @@ final class ButonTapsTests: XCTestCase {
 
     func test_tappingButton() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut: ViewController = storyboard.instantiateViewController(
+        guard let sut: ViewController = storyboard.instantiateViewController(
             withIdentifier: String(describing: ViewController.self)
-        ) as! ViewController
+        ) as? ViewController else {
+            XCTFail("Couldn't cast sut to ViewController")
+            return
+        }
         sut.loadViewIfNeeded()
 
         tap(sut.tapsButton)

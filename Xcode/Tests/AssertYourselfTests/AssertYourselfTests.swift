@@ -11,6 +11,7 @@ import XCTest
 final class AssertYourselfTests: XCTestCase {
 
     func test_fail() {
+        // swiftlint:disable:next xctfail_message
         XCTFail()
     }
 

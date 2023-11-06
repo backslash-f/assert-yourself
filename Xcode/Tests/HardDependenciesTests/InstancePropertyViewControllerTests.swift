@@ -13,12 +13,15 @@ final class InstancePropertyViewControllerTests: XCTestCase {
 
     func test_viewDidAppear() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut: InstancePropertyViewController = storyboard
+        guard let sut: InstancePropertyViewController = storyboard
             .instantiateViewController(
                 withIdentifier: String(
                     describing: InstancePropertyViewController.self
                 )
-            ) as! InstancePropertyViewController
+            ) as? InstancePropertyViewController else {
+            XCTFail("Couldn't cast sut to InstancePropertyViewController")
+            return
+        }
         sut.analytics = Analytics()
         sut.loadViewIfNeeded()
 

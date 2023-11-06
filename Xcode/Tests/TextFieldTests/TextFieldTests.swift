@@ -10,6 +10,6 @@ import XCTest
 final class TextFieldTests: XCTestCase {
 
     func testZero() throws {
-        XCTFail()
+        XCTFail("test_zero")
     }
 }

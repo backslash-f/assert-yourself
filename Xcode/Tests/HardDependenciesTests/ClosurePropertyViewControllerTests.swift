@@ -13,12 +13,15 @@ final class ClosurePropertyViewControllerTests: XCTestCase {
 
     func test_viewDidAppear() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut: ClosurePropertyViewController = storyboard
+        guard let sut: ClosurePropertyViewController = storyboard
             .instantiateViewController(
                 withIdentifier: String(
                     describing: ClosurePropertyViewController.self
                 )
-            ) as! ClosurePropertyViewController
+            ) as? ClosurePropertyViewController else {
+            XCTFail("Couldn't cast sut to ClosurePropertyViewController")
+            return
+        }
         sut.loadViewIfNeeded()
 
         sut.makeAnalytics = { Analytics() }

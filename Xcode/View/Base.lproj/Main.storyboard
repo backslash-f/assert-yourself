@@ -21,76 +21,59 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-D6-yDD">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-D6-yDD">
                                         <rect key="frame" x="40" y="-23" width="313" height="692"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-aM-3jw">
-                                                <rect key="frame" x="56.333333333333329" y="0.0" width="200.66666666666669" height="86.666666666666671"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Search for Book Button"/>
-                                                <connections>
-                                                    <action selector="searchForButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYR-2K-vCQ"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bq-r5-lao">
-                                                <rect key="frame" x="99" y="86.666666666666657" width="115.33333333333331" height="86.333333333333343"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Taps Button"/>
-                                                <connections>
-                                                    <action selector="tapsButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqj-8d-fos"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMz-kO-RDn">
-                                                <rect key="frame" x="99" y="173" width="115.33333333333331" height="86.666666666666686"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Alert Button"/>
-                                                <connections>
-                                                    <action selector="alertButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rd0-fN-L3P"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-3M-aOA" userLabel="Code Push Button">
-                                                <rect key="frame" x="75.666666666666686" y="259.66666666666669" width="162" height="86.333333333333314"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Code Push Button"/>
-                                                <connections>
-                                                    <action selector="pushNextViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFo-FS-hGJ"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-Hd-C79" userLabel="Code Modal Button">
-                                                <rect key="frame" x="71" y="346" width="171" height="86.666666666666686"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Code Modal Button"/>
-                                                <connections>
-                                                    <action selector="presentModalNextViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="2fs-tZ-7Mk"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTO-Fs-jrB" userLabel="Segue Push Button">
-                                                <rect key="frame" x="71.666666666666671" y="432.66666666666663" width="169.66666666666663" height="86.333333333333371"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
-                                                <connections>
-                                                    <segue destination="wIG-xX-c7G" kind="show" identifier="pushNext" id="Qms-tc-Gci"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYH-hk-P9B" userLabel="Segue Modal Button">
-                                                <rect key="frame" x="67.333333333333329" y="519" width="178.66666666666669" height="86.666666666666629"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Segue Modal Button"/>
-                                                <connections>
-                                                    <segue destination="wIG-xX-c7G" kind="presentation" identifier="modalNext" id="Ejl-iS-oaa"/>
-                                                </connections>
-                                            </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8I3-9Q-nS0">
-                                                <rect key="frame" x="78.666666666666686" y="605.66666666666663" width="156" height="86.333333333333371"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bM4-Gs-RLD" userLabel="Text Field Stack">
+                                                <rect key="frame" x="0.0" y="0.0" width="313" height="120.33333333333333"/>
                                                 <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextField Tests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auu-zW-HbD" userLabel="TextField Tests">
+                                                        <rect key="frame" x="0.0" y="0.0" width="313" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FHX-vO-HJq">
+                                                        <rect key="frame" x="0.0" y="30.333333333333329" width="313" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="bLg-mL-Pm6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" textContentType="username"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="mHv-ng-XOM"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="748" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jpz-fW-5dL">
+                                                        <rect key="frame" x="0.0" y="80.333333333333343" width="313" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Sa8-b7-1Ho"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ktr-rA-dfU"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8I3-9Q-nS0" userLabel="User Defaults Stack">
+                                                <rect key="frame" x="78.666666666666686" y="217.33333333333331" width="156" height="103"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserDefaults Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqi-PE-tJp" userLabel="UserDefaults Tests">
+                                                        <rect key="frame" x="2.6666666666666572" y="0.0" width="150.66666666666666" height="34.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYG-xv-7Bg" userLabel="Counter Label">
-                                                        <rect key="frame" x="57.333333333333329" y="0.0" width="41.333333333333329" height="20.333333333333332"/>
+                                                        <rect key="frame" x="57.333333333333329" y="34.333333333333371" width="41.333333333333329" height="34.333333333333343"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-XS-9Jj" userLabel="Increment Button">
-                                                        <rect key="frame" x="0.0" y="20.333333333333371" width="156" height="66"/>
+                                                        <rect key="frame" x="0.0" y="68.666666666666686" width="156" height="34.333333333333343"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Increment Button"/>
                                                         <connections>
@@ -99,7 +82,78 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vtd-m4-GfM" userLabel="Buttons Stack">
+                                                <rect key="frame" x="56.333333333333329" y="417.33333333333326" width="200.66666666666669" height="274.66666666666674"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvp-dN-PeO" userLabel="Button Tests">
+                                                        <rect key="frame" x="50.000000000000021" y="0.0" width="100.33333333333331" height="34.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHA-aM-3jw">
+                                                        <rect key="frame" x="0.0" y="34.333333333333314" width="200.66666666666666" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Search for Book Button"/>
+                                                        <connections>
+                                                            <action selector="searchForButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYR-2K-vCQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bq-r5-lao">
+                                                        <rect key="frame" x="42.666666666666679" y="68.666666666666686" width="115.33333333333331" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Taps Button"/>
+                                                        <connections>
+                                                            <action selector="tapsButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqj-8d-fos"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMz-kO-RDn">
+                                                        <rect key="frame" x="42.666666666666679" y="103.00000000000006" width="115.33333333333331" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Alert Button"/>
+                                                        <connections>
+                                                            <action selector="alertButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rd0-fN-L3P"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-3M-aOA" userLabel="Code Push Button">
+                                                        <rect key="frame" x="19.333333333333343" y="137.33333333333331" width="162" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Code Push Button"/>
+                                                        <connections>
+                                                            <action selector="pushNextViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFo-FS-hGJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-Hd-C79" userLabel="Code Modal Button">
+                                                        <rect key="frame" x="14.666666666666671" y="171.66666666666669" width="171" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Code Modal Button"/>
+                                                        <connections>
+                                                            <action selector="presentModalNextViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="2fs-tZ-7Mk"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTO-Fs-jrB" userLabel="Segue Push Button">
+                                                        <rect key="frame" x="15.333333333333343" y="206.00000000000006" width="169.66666666666666" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
+                                                        <connections>
+                                                            <segue destination="wIG-xX-c7G" kind="show" identifier="pushNext" id="Qms-tc-Gci"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYH-hk-P9B" userLabel="Segue Modal Button">
+                                                        <rect key="frame" x="11" y="240.33333333333334" width="178.66666666666666" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Segue Modal Button"/>
+                                                        <connections>
+                                                            <segue destination="wIG-xX-c7G" kind="presentation" identifier="modalNext" id="Ejl-iS-oaa"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bM4-Gs-RLD" secondAttribute="trailing" id="3Sm-WU-OtS"/>
+                                            <constraint firstItem="bM4-Gs-RLD" firstAttribute="leading" secondItem="uDs-D6-yDD" secondAttribute="leading" id="TlG-vw-kBp"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -122,10 +176,12 @@
                         <outlet property="codePushButton" destination="AMa-3M-aOA" id="lHB-IT-Ode"/>
                         <outlet property="counterLabel" destination="HYG-xv-7Bg" id="lHI-7E-AXP"/>
                         <outlet property="incrementButton" destination="0fg-XS-9Jj" id="xug-VJ-kCj"/>
+                        <outlet property="passwordField" destination="jpz-fW-5dL" id="Kgg-xJ-u4b"/>
                         <outlet property="searchForButton" destination="SHA-aM-3jw" id="Qrf-ud-Ta5"/>
                         <outlet property="segueModalButton" destination="RYH-hk-P9B" id="zQq-p9-izf"/>
                         <outlet property="seguePushButton" destination="DTO-Fs-jrB" id="HWe-fW-od1"/>
                         <outlet property="tapsButton" destination="0Bq-r5-lao" id="Pii-pW-trm"/>
+                        <outlet property="usernameField" destination="FHX-vO-HJq" id="Qow-Zg-QMs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

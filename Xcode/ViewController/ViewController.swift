@@ -38,6 +38,10 @@ class ViewController: UIViewController {
     @IBOutlet private(set) var counterLabel: UILabel!
     @IBOutlet private(set) var incrementButton: UIButton!
 
+    // MARK: TextField tests
+    @IBOutlet private(set) var usernameField: UITextField!
+    @IBOutlet private(set) var passwordField: UITextField!
+
     private var dataTask: URLSessionDataTask?
 
     private(set) var results: [SearchResult] = [] {
@@ -133,6 +137,38 @@ extension ViewController {
             nextVC.labelText = "Modal from segue"
         default: return
         }
+    }
+}
+
+// MARK: - Text Field Delegate
+
+extension ViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        if textField === usernameField {
+            return !string.contains(" ") } else {
+                return true
+            }
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField === usernameField {
+            passwordField.becomeFirstResponder()
+        } else {
+            guard let username = usernameField.text,
+                  let password = passwordField.text else {
+                return false
+            }
+            passwordField.resignFirstResponder()
+            performLogin(username: username, password: password)
+        }
+        return false
+    }
+
+    private func performLogin(username: String, password: String) {
+        print(">> Username: \(username)")
+        print(">> Password: \(password)")
     }
 }
 

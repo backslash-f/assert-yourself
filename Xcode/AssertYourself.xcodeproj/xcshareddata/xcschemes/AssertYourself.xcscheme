@@ -65,7 +65,10 @@
             reference = "container:Tests/NavigationTests/NavigationTests.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Tests/UserDefaultsTests/UserDefaults.xctestplan"
+            reference = "container:Tests/UserDefaultsTests/UserDefaults.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/TextFieldTests/TestFieldTests.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -210,6 +213,17 @@
                BlueprintIdentifier = "07FAE08B2AF378770032DD2C"
                BuildableName = "UserDefaultsTests.xctest"
                BlueprintName = "UserDefaultsTests"
+               ReferencedContainer = "container:AssertYourself.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "07EFAF1A2AF8DDB100DEAC53"
+               BuildableName = "TextFieldTests.xctest"
+               BlueprintName = "TextFieldTests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>

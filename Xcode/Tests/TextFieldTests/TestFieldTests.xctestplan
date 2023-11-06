@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "F2FB83DC-297A-436F-B4A1-276708BA4E9D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "07EFAF1A2AF8DDB100DEAC53",
+        "name" : "TextFieldTests"
+      }
+    }
+  ],
+  "version" : 1
+}

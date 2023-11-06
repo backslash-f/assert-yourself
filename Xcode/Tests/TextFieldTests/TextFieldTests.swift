@@ -74,4 +74,29 @@ final class TextFieldTests: XCTestCase {
         let allowChange = shouldChangeCharacters(in: sut.passwordField, replacement: "abc")
         XCTAssertEqual(allowChange, true)
     }
+
+    func test_shouldReturn_withPassword_shouldPerformLogin() {
+        sut.usernameField.text = "USERNAME"
+        sut.passwordField.text = "PASSWORD"
+
+        shouldReturn(in: sut.passwordField)
+
+        // Normally, assert something
+    }
+
+    func test_shouldReturn_withUsername_shouldMoveInputFocusToPassword() {
+        putInViewHierarchy(sut)
+        shouldReturn(in: sut.usernameField)
+        XCTAssertTrue(sut.passwordField.isFirstResponder)
+    }
+
+    func test_shouldReturn_withPassword_shouldDismissKeyboard() {
+        putInViewHierarchy(sut)
+        sut.passwordField.becomeFirstResponder()
+        XCTAssertTrue(sut.passwordField.isFirstResponder, "precondition")
+
+        shouldReturn(in: sut.passwordField)
+
+        XCTAssertFalse(sut.passwordField.isFirstResponder)
+    }
 }

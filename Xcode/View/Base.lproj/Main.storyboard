@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="103" width="430" height="795"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-D6-yDD" userLabel="Content Stack View">
-                                        <rect key="frame" x="40" y="20" width="350" height="956"/>
+                                        <rect key="frame" x="40" y="20" width="350" height="1054.6666666666667"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bM4-Gs-RLD" userLabel="Text Field Stack">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="120.33333333333333"/>
@@ -87,8 +87,27 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="A8U-lg-EBE" userLabel="Table View Stack">
+                                                <rect key="frame" x="0.0" y="283.33333333333331" width="350" height="58.666666666666686"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TableView Tests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXQ-dH-fyg" userLabel="TableView Tests">
+                                                        <rect key="frame" x="111.33333333333334" y="0.0" width="127.33333333333334" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZ0-Eq-bT3" userLabel="Open Table View">
+                                                        <rect key="frame" x="99.333333333333357" y="24.333333333333375" width="151.66666666666663" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Open Table View"/>
+                                                        <connections>
+                                                            <segue destination="6Bj-SG-rcc" kind="show" id="Ydn-kv-6wF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vtd-m4-GfM" userLabel="Buttons Stack">
-                                                <rect key="frame" x="0.0" y="283.33333333333331" width="350" height="672.66666666666674"/>
+                                                <rect key="frame" x="0.0" y="381.99999999999994" width="350" height="672.66666666666652"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Button Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvp-dN-PeO" userLabel="Button Tests">
                                                         <rect key="frame" x="125" y="0.0" width="100.33333333333331" height="20.333333333333332"/>
@@ -105,7 +124,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bq-r5-lao">
-                                                        <rect key="frame" x="117.33333333333334" y="54.666666666666686" width="115.33333333333334" height="34.333333333333343"/>
+                                                        <rect key="frame" x="117.33333333333334" y="54.666666666666629" width="115.33333333333334" height="34.333333333333343"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Taps Button"/>
                                                         <connections>
@@ -121,7 +140,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-3M-aOA" userLabel="Code Push Button">
-                                                        <rect key="frame" x="94" y="123.3333333333333" width="162" height="34.333333333333329"/>
+                                                        <rect key="frame" x="94" y="123.33333333333336" width="162" height="34.333333333333329"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Code Push Button"/>
                                                         <connections>
@@ -129,7 +148,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdM-Hd-C79" userLabel="Code Modal Button">
-                                                        <rect key="frame" x="89.666666666666657" y="157.66666666666669" width="170.99999999999997" height="34.333333333333343"/>
+                                                        <rect key="frame" x="89.666666666666657" y="157.66666666666663" width="170.99999999999997" height="34.333333333333343"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Code Modal Button"/>
                                                         <connections>
@@ -137,7 +156,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTO-Fs-jrB" userLabel="Segue Push Button">
-                                                        <rect key="frame" x="90.333333333333357" y="192.00000000000006" width="169.66666666666663" height="34.333333333333343"/>
+                                                        <rect key="frame" x="90.333333333333357" y="192" width="169.66666666666663" height="34.333333333333343"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                         <connections>
@@ -145,47 +164,47 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhF-ew-eU0" userLabel="Segue Push Button">
-                                                        <rect key="frame" x="90.333333333333357" y="226.33333333333331" width="169.66666666666663" height="34.333333333333314"/>
+                                                        <rect key="frame" x="90.333333333333357" y="226.33333333333337" width="169.66666666666663" height="34.333333333333314"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8A-KW-dGC" userLabel="Segue Push Button">
-                                                        <rect key="frame" x="90.333333333333357" y="260.66666666666669" width="169.66666666666663" height="34.333333333333314"/>
+                                                        <rect key="frame" x="90.333333333333357" y="260.66666666666663" width="169.66666666666663" height="34.333333333333314"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOc-mA-M5b" userLabel="Segue Push Button">
-                                                        <rect key="frame" x="90.333333333333357" y="295.00000000000006" width="169.66666666666663" height="34.333333333333314"/>
+                                                        <rect key="frame" x="90.333333333333357" y="295" width="169.66666666666663" height="34.333333333333314"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYC-U1-1HE" userLabel="Segue Push Button">
-                                                        <rect key="frame" x="90.333333333333357" y="329.33333333333331" width="169.66666666666663" height="34.333333333333314"/>
+                                                        <rect key="frame" x="90.333333333333357" y="329.33333333333337" width="169.66666666666663" height="34.333333333333314"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjz-HL-PF5" userLabel="Segue Push Button">
-                                                        <rect key="frame" x="90.333333333333357" y="363.66666666666669" width="169.66666666666663" height="34.333333333333314"/>
+                                                        <rect key="frame" x="90.333333333333357" y="363.66666666666663" width="169.66666666666663" height="34.333333333333314"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqn-cY-pPE" userLabel="Segue Push Button">
-                                                        <rect key="frame" x="90.333333333333357" y="398.00000000000006" width="169.66666666666663" height="34.333333333333314"/>
+                                                        <rect key="frame" x="90.333333333333357" y="398" width="169.66666666666663" height="34.333333333333314"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dd1-Ah-gDe" userLabel="Segue Push Button">
-                                                        <rect key="frame" x="90.333333333333357" y="432.33333333333331" width="169.66666666666663" height="34.333333333333314"/>
+                                                        <rect key="frame" x="90.333333333333357" y="432.33333333333337" width="169.66666666666663" height="34.333333333333314"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5F-lS-Lqh" userLabel="Segue Push Button">
-                                                        <rect key="frame" x="90.333333333333357" y="466.66666666666669" width="169.66666666666663" height="34.333333333333314"/>
+                                                        <rect key="frame" x="90.333333333333357" y="466.66666666666663" width="169.66666666666663" height="34.333333333333314"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcx-9i-29C" userLabel="Segue Push Button">
-                                                        <rect key="frame" x="90.333333333333357" y="501.00000000000006" width="169.66666666666663" height="34.333333333333314"/>
+                                                        <rect key="frame" x="90.333333333333357" y="500.99999999999994" width="169.66666666666663" height="34.333333333333314"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                     </button>
@@ -205,7 +224,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tR-Ti-UwO" userLabel="Segue Push Button">
-                                                        <rect key="frame" x="90.333333333333357" y="638.33333333333348" width="169.66666666666663" height="34.333333333333371"/>
+                                                        <rect key="frame" x="90.333333333333357" y="638.33333333333326" width="169.66666666666663" height="34.333333333333371"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Segue Push Button"/>
                                                     </button>
@@ -252,6 +271,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="931.875" y="24.295774647887324"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Jhd-8V-KQp">
+            <objects>
+                <tableViewController storyboardIdentifier="TableViewController" id="6Bj-SG-rcc" customClass="TableViewController" customModule="AssertYourself" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IIA-Ci-5gZ">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="6G7-2C-7BO">
+                                <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6G7-2C-7BO" id="sW4-Uu-RjF">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6Bj-SG-rcc" id="Nm5-Gh-lvQ"/>
+                            <outlet property="delegate" destination="6Bj-SG-rcc" id="MeD-Pi-nd6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2Go-09-qGx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IoC-bx-rTr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870" y="24"/>
         </scene>
         <!--Segue Next View Controller-->
         <scene sceneID="h4l-zG-eun">
@@ -312,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s65-Ue-oRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823.6641221374045" y="24.647887323943664"/>
+            <point key="canvasLocation" x="1870" y="828"/>
         </scene>
         <!--Instance Property View Controller-->
         <scene sceneID="IJp-fc-1c1">
@@ -327,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfp-zu-ZD3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2727.4809160305344" y="24.647887323943664"/>
+            <point key="canvasLocation" x="2803" y="828"/>
         </scene>
         <!--Closure Property View Controller-->
         <scene sceneID="Jdd-rI-NoV">
@@ -342,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8NN-Wa-pNY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3623.6641221374043" y="24.647887323943664"/>
+            <point key="canvasLocation" x="3756" y="828"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="t59-fu-TDX">

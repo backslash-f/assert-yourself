@@ -376,10 +376,10 @@
             </objects>
             <point key="canvasLocation" x="6.8702290076335872" y="24.647887323943664"/>
         </scene>
-        <!--View Controller-->
+        <!--Snapshots View Controller-->
         <scene sceneID="FN3-6o-0Hm">
             <objects>
-                <viewController id="zWQ-3K-pQg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SnapshotsViewController" id="zWQ-3K-pQg" customClass="SnapshotsViewController" customModule="AssertYourself" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sAr-wu-2YK">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

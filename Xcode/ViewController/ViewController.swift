@@ -68,6 +68,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Assert Yourself"
         count = userDefaults.integer(forKey: "count")
     }
 

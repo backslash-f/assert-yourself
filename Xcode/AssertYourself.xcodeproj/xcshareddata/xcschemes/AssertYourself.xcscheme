@@ -71,7 +71,10 @@
             reference = "container:Tests/TextFieldTests/TestFieldTests.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:Tests/TableViewTests/TableView.xctestplan"
+            reference = "container:Tests/TableViewTests/TableViewTests.xctestplan">
+         </TestPlanReference>
+         <TestPlanReference
+            reference = "container:Tests/SnapshotTests/SnapshotTests.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -238,6 +241,17 @@
                BlueprintIdentifier = "0773538C2B0167DE009C0D98"
                BuildableName = "TableViewTests.xctest"
                BlueprintName = "TableViewTests"
+               ReferencedContainer = "container:AssertYourself.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0773539E2B017C42009C0D98"
+               BuildableName = "SnapshotTests.xctest"
+               BlueprintName = "SnapshotTests"
                ReferencedContainer = "container:AssertYourself.xcodeproj">
             </BuildableReference>
          </TestableReference>

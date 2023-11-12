@@ -131,11 +131,13 @@ extension ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "pushNext"?:
-            guard let nextVC = segue.destination as? SegueNextViewController else { return }
-            nextVC.labelText = "Pushed from segue"
+            if let nextVC = segue.destination as? SegueNextViewController {
+                nextVC.labelText = "Pushed from segue"
+            }
         case "modalNext"?:
-            guard let nextVC = segue.destination as? SegueNextViewController else { return }
-            nextVC.labelText = "Modal from segue"
+            if let nextVC = segue.destination as? SegueNextViewController {
+                nextVC.labelText = "Modal from segue"
+            }
         default: return
         }
     }

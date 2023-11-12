@@ -46,6 +46,8 @@
 		077353A22B017C42009C0D98 /* SnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077353A12B017C42009C0D98 /* SnapshotTests.swift */; };
 		077353A82B017C4E009C0D98 /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		077353A92B017C55009C0D98 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794AA42A967D25001C8CF1 /* TestHelpers.swift */; };
+		077353AD2B018773009C0D98 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 077353AC2B018773009C0D98 /* iOSSnapshotTestCase */; };
+		077353B12B01893C009C0D98 /* SnapshotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077353B02B01893C009C0D98 /* SnapshotsViewController.swift */; };
 		07794AA52A967D25001C8CF1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794AA42A967D25001C8CF1 /* TestHelpers.swift */; };
 		07794AA62A967D25001C8CF1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794AA42A967D25001C8CF1 /* TestHelpers.swift */; };
 		07794AA72A967D25001C8CF1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794AA42A967D25001C8CF1 /* TestHelpers.swift */; };
@@ -265,6 +267,7 @@
 		0773539F2B017C42009C0D98 /* SnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		077353A12B017C42009C0D98 /* SnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTests.swift; sourceTree = "<group>"; };
 		077353AA2B017C7C009C0D98 /* SnapshotTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SnapshotTests.xctestplan; sourceTree = "<group>"; };
+		077353B02B01893C009C0D98 /* SnapshotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotsViewController.swift; sourceTree = "<group>"; };
 		07794AA42A967D25001C8CF1 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		078463BC2A8E238A0030E0A8 /* HardDependenciesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HardDependenciesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		078463C52A8E239D0030E0A8 /* HardDependencies.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = HardDependencies.xctestplan; sourceTree = "<group>"; };
@@ -374,6 +377,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077353AD2B018773009C0D98 /* iOSSnapshotTestCase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +546,7 @@
 				075F6C9F2A8D1E7700C8269E /* CodeBaseViewController.swift */,
 				074E682C2A934E2E000B675E /* OutletConnectionsViewController.swift */,
 				077353982B016C91009C0D98 /* TableViewController.swift */,
+				077353B02B01893C009C0D98 /* SnapshotsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -933,6 +938,9 @@
 				077353A42B017C43009C0D98 /* PBXTargetDependency */,
 			);
 			name = SnapshotTests;
+			packageProductDependencies = (
+				077353AC2B018773009C0D98 /* iOSSnapshotTestCase */,
+			);
 			productName = SnapshotTests;
 			productReference = 0773539F2B017C42009C0D98 /* SnapshotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1177,6 +1185,7 @@
 			mainGroup = 0748D1322A7C039B00B3A6DF;
 			packageReferences = (
 				0728DA312A9BE456000F5F01 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */,
+				077353AB2B018773009C0D98 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
 			);
 			productRefGroup = 0748D13C2A7C039B00B3A6DF /* Products */;
 			projectDirPath = "";
@@ -1397,6 +1406,7 @@
 				0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */,
 				07BC3BEE2A82742900D1B1BA /* CoveredClass.swift in Sources */,
 				07D536B72A8A5C7200F1B152 /* MainWrapper.swift in Sources */,
+				077353B12B01893C009C0D98 /* SnapshotsViewController.swift in Sources */,
 				075F6C972A8D083C00C8269E /* StoryboardBasedViewController.swift in Sources */,
 				078463C72A8E35540030E0A8 /* Analytics.swift in Sources */,
 				079C4CDB2AF246BB00E18D5B /* SegueNextViewController.swift in Sources */,
@@ -2666,6 +2676,14 @@
 				kind = branch;
 			};
 		};
+		077353AB2B018773009C0D98 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/ios-snapshot-test-case.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2678,6 +2696,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0728DA312A9BE456000F5F01 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */;
 			productName = ViewControllerPresentationSpy;
+		};
+		077353AC2B018773009C0D98 /* iOSSnapshotTestCase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 077353AB2B018773009C0D98 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
+			productName = iOSSnapshotTestCase;
 		};
 		079C4CDC2AF258D700E18D5B /* ViewControllerPresentationSpy */ = {
 			isa = XCSwiftPackageProductDependency;

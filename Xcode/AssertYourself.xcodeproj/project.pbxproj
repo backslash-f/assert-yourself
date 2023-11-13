@@ -48,6 +48,7 @@
 		077353A92B017C55009C0D98 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794AA42A967D25001C8CF1 /* TestHelpers.swift */; };
 		077353AD2B018773009C0D98 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 077353AC2B018773009C0D98 /* iOSSnapshotTestCase */; };
 		077353B12B01893C009C0D98 /* SnapshotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077353B02B01893C009C0D98 /* SnapshotsViewController.swift */; };
+		077353B32B0266C8009C0D98 /* PasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077353B22B0266C8009C0D98 /* PasswordChanger.swift */; };
 		07794AA52A967D25001C8CF1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794AA42A967D25001C8CF1 /* TestHelpers.swift */; };
 		07794AA62A967D25001C8CF1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794AA42A967D25001C8CF1 /* TestHelpers.swift */; };
 		07794AA72A967D25001C8CF1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794AA42A967D25001C8CF1 /* TestHelpers.swift */; };
@@ -268,6 +269,7 @@
 		077353A12B017C42009C0D98 /* SnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTests.swift; sourceTree = "<group>"; };
 		077353AA2B017C7C009C0D98 /* SnapshotTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SnapshotTests.xctestplan; sourceTree = "<group>"; };
 		077353B02B01893C009C0D98 /* SnapshotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotsViewController.swift; sourceTree = "<group>"; };
+		077353B22B0266C8009C0D98 /* PasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChanger.swift; sourceTree = "<group>"; };
 		07794AA42A967D25001C8CF1 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		078463BC2A8E238A0030E0A8 /* HardDependenciesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HardDependenciesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		078463C52A8E239D0030E0A8 /* HardDependencies.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = HardDependencies.xctestplan; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 				078463C82A8E35C40030E0A8 /* Analytics */,
 				0751D7EC2A7D533500F900BF /* MyClass.swift */,
 				07BC3BED2A82742900D1B1BA /* CoveredClass.swift */,
+				077353B22B0266C8009C0D98 /* PasswordChanger.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1395,6 +1398,7 @@
 				075F6C9A2A8D114D00C8269E /* XIBBasedViewController.swift in Sources */,
 				078463DB2A8E379B0030E0A8 /* ClosureInitializerViewController.swift in Sources */,
 				078463CF2A8E36D40030E0A8 /* ClosurePropertyViewController.swift in Sources */,
+				077353B32B0266C8009C0D98 /* PasswordChanger.swift in Sources */,
 				078463DF2A8E37B20030E0A8 /* MySingletonViewController.swift in Sources */,
 				0751D7ED2A7D533500F900BF /* MyClass.swift in Sources */,
 				074E682E2A934E2E000B675E /* OutletConnectionsViewController.swift in Sources */,

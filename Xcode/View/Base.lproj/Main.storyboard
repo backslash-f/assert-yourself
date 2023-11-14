@@ -76,7 +76,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Change My Password"/>
                                                         <connections>
-                                                            <segue destination="OfN-Iu-o9A" kind="presentation" id="5zX-SZ-jMv"/>
+                                                            <segue destination="OfN-Iu-o9A" kind="presentation" identifier="changePassword" id="5zX-SZ-jMv"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -441,7 +441,7 @@
         <!--Change Password-->
         <scene sceneID="eJy-c8-mD0">
             <objects>
-                <viewController title="Change Password" id="OfN-Iu-o9A" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangePasswordViewController" title="Change Password" id="OfN-Iu-o9A" customClass="ChangePasswordViewController" customModule="AssertYourself" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FR9-LS-V0M">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -450,47 +450,78 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="56"/>
                                 <items>
                                     <navigationItem title="Change Password" id="Em7-DM-JtB">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="uDX-oG-1RB"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="uDX-oG-1RB">
+                                            <connections>
+                                                <action selector="cancel" destination="OfN-Iu-o9A" id="zyB-eH-rfG"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-HP-qeI" userLabel="Content Stack">
-                                <rect key="frame" x="0.0" y="56.000000000000014" width="430" height="160.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sJe-HP-qeI" userLabel="Content Stack">
+                                <rect key="frame" x="0.0" y="76.000000000000014" width="430" height="160.33333333333337"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XS9-uZ-rpa">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="34"/>
+                                        <rect key="frame" x="20" y="0.0" width="390" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="OfN-Iu-o9A" id="pNL-T7-7BC"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jMf-70-16l">
-                                        <rect key="frame" x="0.0" y="42" width="430" height="34"/>
+                                        <rect key="frame" x="20" y="42" width="390" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="OfN-Iu-o9A" id="DrD-3Q-TnK"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dyz-Kc-NBa">
-                                        <rect key="frame" x="0.0" y="84" width="430" height="34"/>
+                                        <rect key="frame" x="20" y="84" width="390" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="OfN-Iu-o9A" id="4rs-fO-O3w"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehN-Eb-nTq">
-                                        <rect key="frame" x="0.0" y="125.99999999999999" width="430" height="34.333333333333329"/>
+                                        <rect key="frame" x="176" y="125.99999999999999" width="78" height="34.333333333333329"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                        <connections>
+                                            <action selector="changePassword" destination="OfN-Iu-o9A" eventType="touchUpInside" id="7rw-mO-9d8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XS9-uZ-rpa" secondAttribute="trailing" constant="20" id="72P-Ws-DsM"/>
+                                    <constraint firstItem="dyz-Kc-NBa" firstAttribute="leading" secondItem="sJe-HP-qeI" secondAttribute="leading" constant="20" id="750-br-IdE"/>
+                                    <constraint firstItem="XS9-uZ-rpa" firstAttribute="leading" secondItem="sJe-HP-qeI" secondAttribute="leading" constant="20" id="RwE-u5-4bc"/>
+                                    <constraint firstAttribute="trailing" secondItem="dyz-Kc-NBa" secondAttribute="trailing" constant="20" id="XKq-rk-BZ2"/>
+                                    <constraint firstAttribute="trailing" secondItem="jMf-70-16l" secondAttribute="trailing" constant="20" id="jgi-WO-gpy"/>
+                                    <constraint firstItem="jMf-70-16l" firstAttribute="leading" secondItem="sJe-HP-qeI" secondAttribute="leading" constant="20" id="wVj-pR-0Wg"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uz1-gx-rRn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sJe-HP-qeI" firstAttribute="top" secondItem="KPh-MZ-ho7" secondAttribute="bottom" id="0o0-6k-8TT"/>
                             <constraint firstItem="KPh-MZ-ho7" firstAttribute="trailing" secondItem="uz1-gx-rRn" secondAttribute="trailing" id="5fr-eU-JLn"/>
                             <constraint firstItem="sJe-HP-qeI" firstAttribute="leading" secondItem="uz1-gx-rRn" secondAttribute="leading" id="Cl3-Vw-IlZ"/>
+                            <constraint firstItem="sJe-HP-qeI" firstAttribute="top" secondItem="KPh-MZ-ho7" secondAttribute="bottom" constant="20" id="X8X-Xj-Xxs"/>
                             <constraint firstItem="uz1-gx-rRn" firstAttribute="trailing" secondItem="sJe-HP-qeI" secondAttribute="trailing" id="YVq-pO-dc1"/>
                             <constraint firstItem="KPh-MZ-ho7" firstAttribute="leading" secondItem="uz1-gx-rRn" secondAttribute="leading" id="gEQ-el-i9D"/>
                             <constraint firstItem="KPh-MZ-ho7" firstAttribute="top" secondItem="uz1-gx-rRn" secondAttribute="top" id="h5y-eG-W8g"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelBarButton" destination="uDX-oG-1RB" id="wc6-s0-RVh"/>
+                        <outlet property="confirmPasswordTextField" destination="dyz-Kc-NBa" id="vfS-7h-Lz4"/>
+                        <outlet property="newPasswordTextField" destination="jMf-70-16l" id="lte-DN-bf4"/>
+                        <outlet property="oldPasswordTextField" destination="XS9-uZ-rpa" id="tm3-fH-Eyx"/>
+                        <outlet property="submitButton" destination="ehN-Eb-nTq" id="q7M-6K-gSS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJf-1N-mK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

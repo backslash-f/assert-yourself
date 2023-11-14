@@ -138,6 +138,9 @@ extension ViewController {
             if let nextVC = segue.destination as? SegueNextViewController {
                 nextVC.labelText = "Modal from segue"
             }
+        case "changePassword"?:
+            (segue.destination as? ChangePasswordViewController)?
+                .securityToken = "TOKEN"
         default: return
         }
     }

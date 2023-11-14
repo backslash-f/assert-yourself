@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "A9B661A3-A8E7-45A1-92E9-051871C01ED5",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssertYourself.xcodeproj",
+        "identifier" : "0792B1002B041B8200FC022C",
+        "name" : "RefactoringTests"
+      }
+    }
+  ],
+  "version" : 1
+}

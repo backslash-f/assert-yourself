@@ -79,6 +79,10 @@
 		078ED8B12A9A70A80023982D /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		078ED8B32A9B66D30023982D /* SpyURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078ED8B22A9B66D30023982D /* SpyURLSession.swift */; };
 		0792B0FC2B04102F00FC022C /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0792B0FB2B04102F00FC022C /* ChangePasswordViewController.swift */; };
+		0792B1042B041B8200FC022C /* RefactoringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0792B1032B041B8200FC022C /* RefactoringTests.swift */; };
+		0792B10B2B041BE900FC022C /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
+		0792B10C2B041BEE00FC022C /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07794AA42A967D25001C8CF1 /* TestHelpers.swift */; };
+		0792B1102B041D4E00FC022C /* MockPasswordChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0792B10E2B041D4500FC022C /* MockPasswordChanger.swift */; };
 		079C4CCF2AF240A400E18D5B /* NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C4CCE2AF240A400E18D5B /* NavigationTests.swift */; };
 		079C4CD62AF241A400E18D5B /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		079C4CD92AF244C800E18D5B /* CodeNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079C4CD82AF244C800E18D5B /* CodeNextViewController.swift */; };
@@ -170,6 +174,13 @@
 			remoteInfo = AssertYourself;
 		};
 		078ED8AB2A9A5B960023982D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0748D1332A7C039B00B3A6DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0748D13A2A7C039B00B3A6DF;
+			remoteInfo = AssertYourself;
+		};
+		0792B1052B041B8200FC022C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0748D1332A7C039B00B3A6DF /* Project object */;
 			proxyType = 1;
@@ -292,6 +303,10 @@
 		078ED8B02A9A5BBB0023982D /* NetworkResponse.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NetworkResponse.xctestplan; sourceTree = "<group>"; };
 		078ED8B22A9B66D30023982D /* SpyURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyURLSession.swift; sourceTree = "<group>"; };
 		0792B0FB2B04102F00FC022C /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		0792B1012B041B8200FC022C /* RefactoringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RefactoringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0792B1032B041B8200FC022C /* RefactoringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactoringTests.swift; sourceTree = "<group>"; };
+		0792B10A2B041BA000FC022C /* RefactoringTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RefactoringTests.xctestplan; sourceTree = "<group>"; };
+		0792B10E2B041D4500FC022C /* MockPasswordChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasswordChanger.swift; sourceTree = "<group>"; };
 		079C4CCC2AF240A300E18D5B /* NavigationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		079C4CCE2AF240A400E18D5B /* NavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTests.swift; sourceTree = "<group>"; };
 		079C4CD52AF240D500E18D5B /* NavigationTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NavigationTests.xctestplan; sourceTree = "<group>"; };
@@ -400,6 +415,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0792B0FE2B041B8200FC022C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		079C4CC92AF240A300E18D5B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,6 +526,7 @@
 				07EFAF1B2AF8DDB100DEAC53 /* TextFieldTests.xctest */,
 				0773538D2B0167DE009C0D98 /* TableViewTests.xctest */,
 				0773539F2B017C42009C0D98 /* SnapshotTests.xctest */,
+				0792B1012B041B8200FC022C /* RefactoringTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -711,8 +734,19 @@
 				07EFAF1C2AF8DDB100DEAC53 /* TextFieldTests */,
 				0773538E2B0167DE009C0D98 /* TableViewTests */,
 				077353A02B017C42009C0D98 /* SnapshotTests */,
+				0792B1022B041B8200FC022C /* RefactoringTests */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		0792B1022B041B8200FC022C /* RefactoringTests */ = {
+			isa = PBXGroup;
+			children = (
+				0792B10A2B041BA000FC022C /* RefactoringTests.xctestplan */,
+				0792B1032B041B8200FC022C /* RefactoringTests.swift */,
+				0792B10E2B041D4500FC022C /* MockPasswordChanger.swift */,
+			);
+			path = RefactoringTests;
 			sourceTree = "<group>";
 		};
 		079C4CCD2AF240A400E18D5B /* NavigationTests */ = {
@@ -990,6 +1024,24 @@
 			productReference = 078ED8A72A9A5B950023982D /* NetworkResponseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		0792B1002B041B8200FC022C /* RefactoringTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0792B1072B041B8200FC022C /* Build configuration list for PBXNativeTarget "RefactoringTests" */;
+			buildPhases = (
+				0792B0FD2B041B8200FC022C /* Sources */,
+				0792B0FE2B041B8200FC022C /* Frameworks */,
+				0792B0FF2B041B8200FC022C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0792B1062B041B8200FC022C /* PBXTargetDependency */,
+			);
+			name = RefactoringTests;
+			productName = RefactoringTests;
+			productReference = 0792B1012B041B8200FC022C /* RefactoringTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		079C4CCB2AF240A300E18D5B /* NavigationTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 079C4CD42AF240A400E18D5B /* Build configuration list for PBXNativeTarget "NavigationTests" */;
@@ -1154,6 +1206,10 @@
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = 0748D13A2A7C039B00B3A6DF;
 					};
+					0792B1002B041B8200FC022C = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 0748D13A2A7C039B00B3A6DF;
+					};
 					079C4CCB2AF240A300E18D5B = {
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = 0748D13A2A7C039B00B3A6DF;
@@ -1214,6 +1270,7 @@
 				07EFAF1A2AF8DDB100DEAC53 /* TextFieldTests */,
 				0773538C2B0167DE009C0D98 /* TableViewTests */,
 				0773539E2B017C42009C0D98 /* SnapshotTests */,
+				0792B1002B041B8200FC022C /* RefactoringTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1299,6 +1356,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		078ED8A52A9A5B950023982D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0792B0FF2B041B8200FC022C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1512,6 +1576,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0792B0FD2B041B8200FC022C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0792B10B2B041BE900FC022C /* TestAppDelegate.swift in Sources */,
+				0792B1102B041D4E00FC022C /* MockPasswordChanger.swift in Sources */,
+				0792B1042B041B8200FC022C /* RefactoringTests.swift in Sources */,
+				0792B10C2B041BEE00FC022C /* TestHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		079C4CC82AF240A300E18D5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1626,6 +1701,11 @@
 			isa = PBXTargetDependency;
 			target = 0748D13A2A7C039B00B3A6DF /* AssertYourself */;
 			targetProxy = 078ED8AB2A9A5B960023982D /* PBXContainerItemProxy */;
+		};
+		0792B1062B041B8200FC022C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0748D13A2A7C039B00B3A6DF /* AssertYourself */;
+			targetProxy = 0792B1052B041B8200FC022C /* PBXContainerItemProxy */;
 		};
 		079C4CD12AF240A400E18D5B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2259,6 +2339,53 @@
 			};
 			name = Release;
 		};
+		0792B1082B041B8200FC022C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UKS358BH88;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.RefactoringTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AssertYourself.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AssertYourself";
+			};
+			name = Debug;
+		};
+		0792B1092B041B8200FC022C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UKS358BH88;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.backslash-f.RefactoringTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AssertYourself.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AssertYourself";
+			};
+			name = Release;
+		};
 		079C4CD22AF240A400E18D5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2615,6 +2742,15 @@
 			buildConfigurations = (
 				078ED8AD2A9A5B960023982D /* Debug */,
 				078ED8AE2A9A5B960023982D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0792B1072B041B8200FC022C /* Build configuration list for PBXNativeTarget "RefactoringTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0792B1082B041B8200FC022C /* Debug */,
+				0792B1092B041B8200FC022C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

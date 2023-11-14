@@ -6,6 +6,26 @@
 //
 
 import UIKit
+import XCTest
+
+// MARK: - UIKit
+
+func executeRunLoop() {
+    RunLoop.current.run(until: Date())
+}
+
+func putInViewHierarchy(_ vc: UIViewController) {
+    let window = UIWindow()
+    window.addSubview(vc.view)
+}
+
+func putInWindow(_ vc: UIViewController) {
+    let window = UIWindow()
+    window.rootViewController = vc
+    window.isHidden = false
+}
+
+// MARK: UIButton
 
 func tap(_ button: UIButton) {
     button.sendActions(for: .touchUpInside)
@@ -15,15 +35,7 @@ func tap(_ button: UIBarButtonItem) {
     _ = button.target?.perform(button.action, with: nil)
 }
 
-func executeRunLoop() {
-    RunLoop.current.run(until: Date())
-}
-
-func putInWindow(_ vc: UIViewController) {
-    let window = UIWindow()
-    window.rootViewController = vc
-    window.isHidden = false
-}
+// MARK: UITextField
 
 extension UITextContentType: CustomStringConvertible {
     public var description: String { rawValue }
@@ -88,13 +100,11 @@ func shouldChangeCharacters(in textField: UITextField,
 }
 
 @discardableResult
-func shouldReturn(in textField: UITextField) -> Bool? { textField.delegate?.textFieldShouldReturn?(textField)
+func shouldReturn(in textField: UITextField) -> Bool? {
+    textField.delegate?.textFieldShouldReturn?(textField)
 }
 
-func putInViewHierarchy(_ vc: UIViewController) {
-    let window = UIWindow()
-    window.addSubview(vc.view)
-}
+// MARK: UITableView
 
 func numberOfRows(in tableView: UITableView, section: Int = 0) -> Int? {
     tableView.dataSource?.tableView(
@@ -111,4 +121,41 @@ func cellForRow(in tableView: UITableView, row: Int, section: Int = 0) -> UITabl
 func didSelectRow(in tableView: UITableView, row: Int, section: Int = 0) {
     let indexPath = IndexPath(row: row, section: section)
     tableView.delegate?.tableView?(tableView, didSelectRowAt: indexPath)
+}
+
+// MARK: - Method Verifier
+
+func verifyMethodCalledOnce(methodName: String,
+                            callCount: Int,
+                            describeArguments: @autoclosure () -> String,
+                            file: StaticString = #file,
+                            line: UInt = #line) -> Bool {
+    if callCount == 0 {
+        XCTFail("Wanted but not invoked: \(methodName)",
+                file: file, line: line)
+        return false
+    }
+
+    if callCount > 1 {
+        XCTFail("Wanted 1 time but was called \(callCount) times. " + "\(methodName) with \(describeArguments())",
+                file: file, line: line)
+        return false
+    }
+
+    return true
+}
+
+func verifyMethodNeverCalled(methodName: String,
+                             callCount: Int,
+                             describeArguments: @autoclosure () -> String,
+                             file: StaticString = #file,
+                             line: UInt = #line) {
+    let times = callCount == 1 ? "time" : "times"
+
+    if callCount > 0 {
+        XCTFail("Never wanted but was called \(callCount) \(times). " + "\(methodName) with \(describeArguments())",
+                file: file,
+                line: line
+        )
+    }
 }

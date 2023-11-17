@@ -272,6 +272,36 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         tap(sut.submitButton)
         XCTAssertFalse(sut.cancelBarButton.isEnabled)
     }
+
+    // MARK: - Waiting State
+
+    func test_tappingSubmit_withValidFields_shouldShowBlurView() {
+        setUpPasswordEntries()
+        XCTAssertNil(sut.blurView.superview, "precondition")
+        tap(sut.submitButton)
+        XCTAssertNotNil(sut.blurView.superview)
+    }
+
+    func test_tappingSubmit_withValidFields_shouldShowActivityIndicator() {
+        setUpPasswordEntries()
+        XCTAssertNil(sut.activityIndicator.superview, "precondition")
+        tap(sut.submitButton)
+        XCTAssertNotNil(sut.activityIndicator.superview)
+    }
+
+    func test_tappingSubmit_withValidFields_shouldStartActivityAnimation() {
+        setUpPasswordEntries()
+        XCTAssertFalse(sut.activityIndicator.isAnimating, "precondition")
+        tap(sut.submitButton)
+        XCTAssertTrue(sut.activityIndicator.isAnimating)
+    }
+
+    func test_tappingSubmit_withValidFields_shouldClearBackgroundColorForBlur() {
+        setUpPasswordEntries()
+        XCTAssertNotEqual(sut.view.backgroundColor, .clear, "precondition")
+        tap(sut.submitButton)
+        XCTAssertEqual(sut.view.backgroundColor, .clear)
+    }
 }
 
 private extension ChangePasswordViewControllerTests {

@@ -20,8 +20,8 @@ class ChangePasswordViewController: UIViewController {
 
     var securityToken = ""
 
-    private let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
-    private let activityIndicator = UIActivityIndicatorView(style: .large)
+    let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+    let activityIndicator = UIActivityIndicatorView(style: .large)
 
     override func viewDidLoad() {
         super.viewDidLoad()

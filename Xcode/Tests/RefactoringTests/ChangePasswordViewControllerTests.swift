@@ -425,6 +425,51 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         try alertVerifier.executeAction(forButton: "OK")
         XCTAssertEqual(dismissalVerifier.dismissedCount, 0)
     }
+
+    // MARK: - Text Field
+
+    func test_textFieldDelegates_shouldBeConnected() {
+        XCTAssertNotNil(sut.oldPasswordTextField.delegate, "oldPasswordTextField")
+        XCTAssertNotNil(sut.newPasswordTextField.delegate, "updatedPasswordTextField")
+        XCTAssertNotNil(sut.confirmPasswordTextField.delegate, "confirmPasswordTextField")
+    }
+
+    func test_hittingReturnFromOldPassword_shouldPutFocusOnNewPassword() {
+        putInViewHierarchy(sut)
+        shouldReturn(in: sut.oldPasswordTextField)
+        XCTAssertTrue(sut.newPasswordTextField.isFirstResponder)
+    }
+
+    func test_hittingReturnFromNewPassword_shouldPutFocusOnConfirmPassword() {
+        putInViewHierarchy(sut)
+        shouldReturn(in: sut.newPasswordTextField)
+        XCTAssertTrue(sut.confirmPasswordTextField.isFirstResponder)
+    }
+
+    func test_hittingReturnFromConfirmPassword_shouldRequestPasswordChange() {
+        sut.securityToken = "TOKEN"
+        sut.oldPasswordTextField.text = "OLD456"
+        sut.newPasswordTextField.text = "NEW456"
+        sut.confirmPasswordTextField.text = sut.newPasswordTextField.text
+        shouldReturn(in: sut.confirmPasswordTextField)
+        passwordChanger.verifyChange(
+            securityToken: "TOKEN",
+            oldPassword: "OLD456",
+            newPassword: "NEW456"
+        )
+    }
+
+    func test_hittingReturnFromOldPassword_shouldNotRequestPasswordChange() {
+        setUpPasswordEntries()
+        shouldReturn(in: sut.oldPasswordTextField)
+        passwordChanger.verifyChangeNeverCalled()
+    }
+
+    func test_hittingReturnFromNewPassword_shouldNotRequestPasswordChange() {
+        setUpPasswordEntries()
+        shouldReturn(in: sut.newPasswordTextField)
+        passwordChanger.verifyChangeNeverCalled()
+    }
 }
 
 private extension ChangePasswordViewControllerTests {

@@ -241,6 +241,37 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         try alertVerifier.executeAction(forButton: "OK")
         XCTAssertTrue(sut.newPasswordTextField.isFirstResponder)
     }
+
+    func test_tappingSubmit_withValidFieldsFocusedOnOldPassword_resignsFocus() {
+        setUpPasswordEntries()
+        putFocusOn(textField: sut.oldPasswordTextField)
+        XCTAssertTrue(sut.oldPasswordTextField.isFirstResponder, "precondition")
+        tap(sut.submitButton)
+        XCTAssertFalse(sut.oldPasswordTextField.isFirstResponder)
+    }
+
+    func test_tappingSubmit_withValidFieldsFocusedOnNewPassword_resignsFocus() {
+        setUpPasswordEntries()
+        putFocusOn(textField: sut.newPasswordTextField)
+        XCTAssertTrue(sut.newPasswordTextField.isFirstResponder, "precondition")
+        tap(sut.submitButton)
+        XCTAssertFalse(sut.newPasswordTextField.isFirstResponder)
+    }
+
+    func test_tappingSubmit_withValidFieldsFocusedOnConfirmPassword_resignsFocus() {
+        setUpPasswordEntries()
+        putFocusOn(textField: sut.confirmPasswordTextField)
+        XCTAssertTrue(sut.confirmPasswordTextField.isFirstResponder, "precondition")
+        tap(sut.submitButton)
+        XCTAssertFalse(sut.confirmPasswordTextField.isFirstResponder)
+    }
+
+    func test_tappingSubmit_withValidFields_shouldDisableCancelBarButton() {
+        setUpPasswordEntries()
+        XCTAssertTrue(sut.cancelBarButton.isEnabled, "precondition")
+        tap(sut.submitButton)
+        XCTAssertFalse(sut.cancelBarButton.isEnabled)
+    }
 }
 
 private extension ChangePasswordViewControllerTests {

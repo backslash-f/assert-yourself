@@ -64,7 +64,22 @@ final class MockPasswordChanger: PasswordChanging {
         changeWasNeverCalled(file: file, line: line)
     }
 
-    private func changeWasCalledOnce(file: StaticString = #file, line: UInt = #line) -> Bool {
+    func changeCallSuccess(file: StaticString = #file,
+                           line: UInt = #line) {
+        guard changeWasCalledOnce(file: file, line: line) else { return }
+        changeArgsOnSuccess.last!()
+    }
+
+    func changeCallFailure(message: String,
+                           file: StaticString = #file,
+                           line: UInt = #line) {
+        guard changeWasCalledOnce(file: file, line: line) else { return }
+        changeArgsOnFailure.last!(message)
+    }
+}
+
+private extension MockPasswordChanger {
+    func changeWasCalledOnce(file: StaticString = #file, line: UInt = #line) -> Bool {
         verifyMethodCalledOnce(
             methodName: changeMethodName,
             callCount: changeCallCount,
@@ -74,7 +89,7 @@ final class MockPasswordChanger: PasswordChanging {
         )
     }
 
-    private func changeWasNeverCalled(file: StaticString = #file, line: UInt = #line) {
+    func changeWasNeverCalled(file: StaticString = #file, line: UInt = #line) {
         verifyMethodNeverCalled(
             methodName: changeMethodName,
             callCount: changeCallCount,
@@ -84,11 +99,11 @@ final class MockPasswordChanger: PasswordChanging {
         )
     }
 
-    private var changeMethodName: String {
+    var changeMethodName: String {
         "change(securityToken:oldPassword:newPassword:onSuccess:onFailure:)"
     }
 
-    private var changeMethodArguments: String {
+    var changeMethodArguments: String {
         "oldPasswords: \(changeArgsOldPassword), " +
         "newPasswords: \(changeArgsNewPassword)"
     }

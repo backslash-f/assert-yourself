@@ -159,6 +159,7 @@
 		07D9F3D32B07A94700EA1C18 /* TestHelpers+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D9F3C42B07A94700EA1C18 /* TestHelpers+UITableView.swift */; };
 		07D9F3D42B07A94700EA1C18 /* TestHelpers+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D9F3C42B07A94700EA1C18 /* TestHelpers+UITableView.swift */; };
 		07D9F3D52B07A94700EA1C18 /* TestHelpers+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D9F3C42B07A94700EA1C18 /* TestHelpers+UITableView.swift */; };
+		07E9529B2B07AC6600BA703E /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 07E9529A2B07AC6600BA703E /* ViewControllerPresentationSpy */; };
 		07EAA4A12A8A2C7D00AE09DD /* AppLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A02A8A2C7D00AE09DD /* AppLaunchTests.swift */; };
 		07EAA4A82A8A305600AE09DD /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		07EFAF1E2AF8DDB100DEAC53 /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EFAF1D2AF8DDB100DEAC53 /* TextFieldTests.swift */; };
@@ -491,6 +492,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E9529B2B07AC6600BA703E /* ViewControllerPresentationSpy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1114,6 +1116,9 @@
 				0792B1062B041B8200FC022C /* PBXTargetDependency */,
 			);
 			name = RefactoringTests;
+			packageProductDependencies = (
+				07E9529A2B07AC6600BA703E /* ViewControllerPresentationSpy */,
+			);
 			productName = RefactoringTests;
 			productReference = 0792B1012B041B8200FC022C /* RefactoringTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -2991,6 +2996,11 @@
 			productName = iOSSnapshotTestCase;
 		};
 		079C4CDC2AF258D700E18D5B /* ViewControllerPresentationSpy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0728DA312A9BE456000F5F01 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */;
+			productName = ViewControllerPresentationSpy;
+		};
+		07E9529A2B07AC6600BA703E /* ViewControllerPresentationSpy */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0728DA312A9BE456000F5F01 /* XCRemoteSwiftPackageReference "ViewControllerPresentationSpy" */;
 			productName = ViewControllerPresentationSpy;

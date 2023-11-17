@@ -2,9 +2,23 @@
   "configurations" : [
     {
       "id" : "A9B661A3-A8E7-45A1-92E9-051871C01ED5",
-      "name" : "Configuration 1",
+      "name" : "Snapshot Tests",
       "options" : {
-
+        "environmentVariableEntries" : [
+          {
+            "key" : "IMAGE_DIFF_DIR",
+            "value" : "$(SOURCE_ROOT)\/Tests\/RefactoringTests\/FailureDiffs"
+          },
+          {
+            "key" : "FB_REFERENCE_IMAGE_DIR",
+            "value" : "$(SOURCE_ROOT)\/Tests\/RefactoringTests\/ReferenceImages"
+          }
+        ],
+        "targetForVariableExpansion" : {
+          "containerPath" : "container:AssertYourself.xcodeproj",
+          "identifier" : "0748D13A2A7C039B00B3A6DF",
+          "name" : "AssertYourself"
+        }
       }
     }
   ],

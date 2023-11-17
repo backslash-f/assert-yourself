@@ -216,6 +216,31 @@ final class ChangePasswordViewControllerTests: XCTestCase {
             message: "The new password and the confirmation password " + "don’t match. Please try again."
         )
     }
+
+    @MainActor
+    func test_tappingOKInMismatchAlert_shouldClearNewAndConfirmation() throws {
+        setUpPasswordEntries(isMismatch: true)
+        tap(sut.submitButton)
+        try alertVerifier.executeAction(forButton: "OK")
+        XCTAssertEqual(sut.newPasswordTextField.text?.isEmpty, true, "new")
+        XCTAssertEqual(sut.confirmPasswordTextField.text?.isEmpty, true, "confirmation")
+    }
+
+    @MainActor
+    func test_tappingOKInMismatchAlert_shouldNotClearOldPasswordField() throws {
+        setUpPasswordEntries(isMismatch: true)
+        tap(sut.submitButton)
+        try alertVerifier.executeAction(forButton: "OK")
+        XCTAssertEqual(sut.oldPasswordTextField.text?.isEmpty, false)
+    }
+
+    @MainActor
+    func test_tappingOKInMismatchAlert_shouldPutFocusOnNewPassword() throws { setUpPasswordEntries(isMismatch: true)
+        tap(sut.submitButton)
+        putInViewHierarchy(sut)
+        try alertVerifier.executeAction(forButton: "OK")
+        XCTAssertTrue(sut.newPasswordTextField.isFirstResponder)
+    }
 }
 
 private extension ChangePasswordViewControllerTests {

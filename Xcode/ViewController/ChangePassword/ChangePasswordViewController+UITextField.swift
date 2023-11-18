@@ -11,9 +11,9 @@ import UIKit
 extension ChangePasswordViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField === oldPasswordTextField {
-            newPasswordTextField.becomeFirstResponder()
+            viewModel.inputFocus = .newPassword
         } else if textField === newPasswordTextField {
-            confirmPasswordTextField.becomeFirstResponder()
+            viewModel.inputFocus = .confirmPassword
         } else if textField === confirmPasswordTextField {
             changePassword()
         }

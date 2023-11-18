@@ -22,9 +22,12 @@ class ChangePasswordViewController: UIViewController {
 
     lazy var viewModel = ChangePasswordViewModel() {
         didSet {
-            if isViewLoaded,
-               oldValue.isCancelButtonEnabled != viewModel.isCancelButtonEnabled {
+            guard isViewLoaded else { return }
+            if oldValue.isCancelButtonEnabled != viewModel.isCancelButtonEnabled {
                 cancelBarButton.isEnabled = viewModel.isCancelButtonEnabled
+            }
+            if oldValue.inputFocus != viewModel.inputFocus {
+                updateInputFocus()
             }
         }
     }
@@ -52,7 +55,7 @@ class ChangePasswordViewController: UIViewController {
 
 private extension ChangePasswordViewController {
     @IBAction private func cancel() {
-        view.endEditing(true)
+        viewModel.inputFocus = .noKeyboard
         dismiss(animated: true)
     }
 
@@ -73,7 +76,7 @@ private extension ChangePasswordViewController {
     }
 
     func setupWaitingAppearance() {
-        view.endEditing(true)
+        viewModel.inputFocus = .noKeyboard
         viewModel.isCancelButtonEnabled = false
         view.backgroundColor = .clear
         view.addSubview(blurView)
@@ -156,20 +159,16 @@ private extension ChangePasswordViewController {
         }
     }
 
-    func showAlert(message: String, okAction: @escaping (UIAlertAction) -> Void) {
-        let alertController = UIAlertController(
-            title: nil,
-            message: message,
-            preferredStyle: .alert)
-
-        let okButton = UIAlertAction(
-            title: viewModel.okButtonLabel,
-            style: .default,
-            handler: okAction
-        )
-
-        alertController.addAction(okButton)
-        alertController.preferredAction = okButton
-        self.present(alertController, animated: true)
+    func updateInputFocus() {
+        switch viewModel.inputFocus {
+        case .noKeyboard:
+            view.endEditing(true)
+        case .oldPassword:
+            oldPasswordTextField.becomeFirstResponder()
+        case .newPassword:
+            newPasswordTextField.becomeFirstResponder()
+        case .confirmPassword:
+            confirmPasswordTextField.becomeFirstResponder()
+        }
     }
 }

@@ -20,30 +20,10 @@ class ChangePasswordViewController: UIViewController {
 
     var securityToken = ""
 
+    let viewModel: ChangePasswordViewModel!
+
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     let activityIndicator = UIActivityIndicatorView(style: .large)
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        submitButton.layer.borderWidth = 1
-        submitButton.layer.borderColor = UIColor(
-            red: 55/255.0,
-            green: 147/255.0,
-            blue: 251/255.0,
-            alpha: 1
-        ).cgColor
-        submitButton.layer.cornerRadius = 8
-
-        blurView.translatesAutoresizingMaskIntoConstraints = false
-
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.color = .white
-    }
-
-    @IBAction private func cancel() {
-        view.endEditing(true)
-        dismiss(animated: true)
-    }
 
     @IBAction func changePassword() {
         if validateInputs() {
@@ -51,9 +31,33 @@ class ChangePasswordViewController: UIViewController {
             attemptToChangePassword()
         }
     }
+
+    // MARK: - Lifecycle
+
+    init(viewModel: ChangePasswordViewModel = ChangePasswordViewModel()) {
+        self.viewModel = viewModel
+        super.init()
+    }
+
+    required init?(coder: NSCoder) {
+        self.viewModel = ChangePasswordViewModel()
+        super.init(coder: coder)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupSubmitButton()
+        setupBlurView()
+        setupActivityIndicator()
+    }
 }
 
 private extension ChangePasswordViewController {
+    @IBAction private func cancel() {
+        view.endEditing(true)
+        dismiss(animated: true)
+    }
+
     func attemptToChangePassword() {
         passwordChanger.change(
             securityToken: securityToken,
@@ -148,6 +152,26 @@ private extension ChangePasswordViewController {
         view.backgroundColor = .white
         blurView.removeFromSuperview()
         cancelBarButton.isEnabled = true
+    }
+
+    func setupSubmitButton() {
+        submitButton.layer.borderWidth = 1
+        submitButton.layer.borderColor = UIColor(
+            red: 55/255.0,
+            green: 147/255.0,
+            blue: 251/255.0,
+            alpha: 1
+        ).cgColor
+        submitButton.layer.cornerRadius = 8
+    }
+
+    func setupBlurView() {
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    func setupActivityIndicator() {
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.color = .white
     }
 
     func showAlert(message: String, okAction: @escaping (UIAlertAction) -> Void) {

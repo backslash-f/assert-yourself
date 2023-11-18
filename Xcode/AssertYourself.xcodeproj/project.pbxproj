@@ -21,6 +21,7 @@
 		073DAACF2AEFFBA300BC854C /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		073DAAD32AF0036F00BC854C /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 073DAAD22AF0036F00BC854C /* ViewControllerPresentationSpy */; };
 		073DBFF92B09405B00F1DD83 /* ChangePasswordViewController+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E952A32B093FFD00BA703E /* ChangePasswordViewController+UITextField.swift */; };
+		073DBFFB2B09472000F1DD83 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073DBFFA2B09472000F1DD83 /* ChangePasswordViewModel.swift */; };
 		0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D13E2A7C039B00B3A6DF /* AppDelegate.swift */; };
 		0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1402A7C039B00B3A6DF /* SceneDelegate.swift */; };
 		0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1422A7C039B00B3A6DF /* ViewController.swift */; };
@@ -332,6 +333,7 @@
 		073DAAC62AEFFB7700BC854C /* AlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		073DAAC82AEFFB7700BC854C /* AlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTests.swift; sourceTree = "<group>"; };
 		073DAAD02AEFFBC400BC854C /* AlertTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AlertTests.xctestplan; sourceTree = "<group>"; };
+		073DBFFA2B09472000F1DD83 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		0748D13B2A7C039B00B3A6DF /* AssertYourself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssertYourself.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0748D13E2A7C039B00B3A6DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0748D1402A7C039B00B3A6DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -881,6 +883,7 @@
 			children = (
 				0792B0FB2B04102F00FC022C /* ChangePasswordViewController.swift */,
 				07E952A32B093FFD00BA703E /* ChangePasswordViewController+UITextField.swift */,
+				073DBFFA2B09472000F1DD83 /* ChangePasswordViewModel.swift */,
 			);
 			path = ChangePassword;
 			sourceTree = "<group>";
@@ -1585,6 +1588,7 @@
 				079C4CD92AF244C800E18D5B /* CodeNextViewController.swift in Sources */,
 				077353992B016C91009C0D98 /* TableViewController.swift in Sources */,
 				075F6C9A2A8D114D00C8269E /* XIBBasedViewController.swift in Sources */,
+				073DBFFB2B09472000F1DD83 /* ChangePasswordViewModel.swift in Sources */,
 				078463DB2A8E379B0030E0A8 /* ClosureInitializerViewController.swift in Sources */,
 				078463CF2A8E36D40030E0A8 /* ClosurePropertyViewController.swift in Sources */,
 				077353B32B0266C8009C0D98 /* PasswordChanger.swift in Sources */,

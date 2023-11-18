@@ -65,21 +65,11 @@ private extension ChangePasswordViewController {
             newPassword: newPasswordTextField.text ?? "",
 
             onSuccess: { [weak self] in
-                if let self {
-                    hideSpinner()
-                    showAlert(message: "Your password has been successfully changed.") { _ in
-                        self.dismiss(animated: true)
-                    }
-                }
+                self?.handleSuccess()
             },
 
             onFailure: { [weak self] message in
-                if let self {
-                    hideSpinner()
-                    showAlert(message: message) { _ in
-                        self.startOver()
-                    }
-                }
+                self?.handleFailure(message: message)
             }
         )
     }
@@ -108,14 +98,14 @@ private extension ChangePasswordViewController {
         }
 
         if newPasswordTextField.text?.isEmpty ?? true {
-            showAlert(message: "Please enter a new password.") { [weak self] _ in
+            showAlert(message: viewModel.enterNewPasswordMessage) { [weak self] _ in
                 self?.newPasswordTextField.becomeFirstResponder()
             }
             return false
         }
 
         if newPasswordTextField.text?.count ?? 0 < 6 {
-            showAlert(message: "The new password should have at least 6 characters.") { [weak self] _ in
+            showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] _ in
                 self?.resetNewPasswords()
             }
             return false
@@ -123,7 +113,7 @@ private extension ChangePasswordViewController {
 
         if newPasswordTextField.text != confirmPasswordTextField.text {
             showAlert(
-                message: "The new password and the confirmation password " + "don’t match. Please try again."
+                message: viewModel.confirmationPasswordDoesNotMatchMessage
             ) { [weak self] _ in
                 self?.resetNewPasswords()
             }
@@ -165,6 +155,20 @@ private extension ChangePasswordViewController {
         submitButton.layer.cornerRadius = 8
     }
 
+    func handleSuccess() {
+        hideSpinner()
+        showAlert(message: viewModel.successMessage) { [weak self] _ in
+            self?.dismiss(animated: true)
+        }
+    }
+
+    func handleFailure(message: String) {
+        hideSpinner()
+        showAlert(message: message) { [weak self] _ in
+            self?.startOver()
+        }
+    }
+
     func setupBlurView() {
         blurView.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -181,7 +185,7 @@ private extension ChangePasswordViewController {
             preferredStyle: .alert)
 
         let okButton = UIAlertAction(
-            title: "OK",
+            title: viewModel.okButtonLabel,
             style: .default,
             handler: okAction
         )

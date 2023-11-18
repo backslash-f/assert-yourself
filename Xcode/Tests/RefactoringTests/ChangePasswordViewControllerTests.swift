@@ -214,7 +214,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
         setUpPasswordEntries(isMismatch: true)
         tap(sut.submitButton)
         verifyAlertPresented(
-            message: "The new password and the confirmation password " + "don’t match. Please try again."
+            message: "The new password and the confirmation password don’t match. Please try again."
         )
     }
 

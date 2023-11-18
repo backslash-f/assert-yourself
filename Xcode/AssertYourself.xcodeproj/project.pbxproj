@@ -12,6 +12,7 @@
 		070C1D032A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D022A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift */; };
 		070C1D052A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D042A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift */; };
 		070C1D072A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */; };
+		07268CD82B095F1000AB668B /* ChangePasswordViewController+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */; };
 		0728DA332A9BE456000F5F01 /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 0728DA322A9BE456000F5F01 /* ViewControllerPresentationSpy */; };
 		0728DA352A9BE593000F5F01 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728DA342A9BE593000F5F01 /* TestError.swift */; };
 		073541212ADD1D5C00506146 /* ButtonTapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073541202ADD1D5C00506146 /* ButtonTapsTests.swift */; };
@@ -325,6 +326,7 @@
 		070C1D022A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancePropertyViewControllerTests.swift; sourceTree = "<group>"; };
 		070C1D042A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitializerViewControllerTests.swift; sourceTree = "<group>"; };
 		070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePropertyViewControllerTests.swift; sourceTree = "<group>"; };
+		07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Setup.swift"; sourceTree = "<group>"; };
 		0728DA342A9BE593000F5F01 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		073541172ADD1D2E00506146 /* ButtonTapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonTapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		073541202ADD1D5C00506146 /* ButtonTapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTapsTests.swift; sourceTree = "<group>"; };
@@ -882,6 +884,7 @@
 			isa = PBXGroup;
 			children = (
 				0792B0FB2B04102F00FC022C /* ChangePasswordViewController.swift */,
+				07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */,
 				07E952A32B093FFD00BA703E /* ChangePasswordViewController+UITextField.swift */,
 				073DBFFA2B09472000F1DD83 /* ChangePasswordViewModel.swift */,
 			);
@@ -1610,6 +1613,7 @@
 				078463C72A8E35540030E0A8 /* Analytics.swift in Sources */,
 				079C4CDB2AF246BB00E18D5B /* SegueNextViewController.swift in Sources */,
 				0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */,
+				07268CD82B095F1000AB668B /* ChangePasswordViewController+Setup.swift in Sources */,
 				078463CA2A8E35D40030E0A8 /* MySingletonAnalytics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

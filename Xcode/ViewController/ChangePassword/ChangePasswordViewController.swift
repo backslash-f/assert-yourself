@@ -46,6 +46,7 @@ class ChangePasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLabels()
         setupSubmitButton()
         setupBlurView()
         setupActivityIndicator()
@@ -144,17 +145,6 @@ private extension ChangePasswordViewController {
         cancelBarButton.isEnabled = true
     }
 
-    func setupSubmitButton() {
-        submitButton.layer.borderWidth = 1
-        submitButton.layer.borderColor = UIColor(
-            red: 55/255.0,
-            green: 147/255.0,
-            blue: 251/255.0,
-            alpha: 1
-        ).cgColor
-        submitButton.layer.cornerRadius = 8
-    }
-
     func handleSuccess() {
         hideSpinner()
         showAlert(message: viewModel.successMessage) { [weak self] _ in
@@ -167,15 +157,6 @@ private extension ChangePasswordViewController {
         showAlert(message: message) { [weak self] _ in
             self?.startOver()
         }
-    }
-
-    func setupBlurView() {
-        blurView.translatesAutoresizingMaskIntoConstraints = false
-    }
-
-    func setupActivityIndicator() {
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.color = .white
     }
 
     func showAlert(message: String, okAction: @escaping (UIAlertAction) -> Void) {

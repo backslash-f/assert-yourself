@@ -24,6 +24,8 @@ struct ChangePasswordViewModel {
 
     var isCancelButtonEnabled = true
 
+    var inputFocus: InputFocus = .noKeyboard
+
     init(title: String = "Change Password",
          okButtonLabel: String = "OK",
          submitButtonLabel: String = "Submit",

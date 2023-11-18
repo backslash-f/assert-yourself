@@ -13,6 +13,8 @@
 		070C1D052A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D042A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift */; };
 		070C1D072A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */; };
 		07268CD82B095F1000AB668B /* ChangePasswordViewController+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */; };
+		07268CDB2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CDA2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift */; };
+		07268CDD2B09658600AB668B /* ChangePasswordViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CDC2B09658600AB668B /* ChangePasswordViewController+Alert.swift */; };
 		0728DA332A9BE456000F5F01 /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 0728DA322A9BE456000F5F01 /* ViewControllerPresentationSpy */; };
 		0728DA352A9BE593000F5F01 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728DA342A9BE593000F5F01 /* TestError.swift */; };
 		073541212ADD1D5C00506146 /* ButtonTapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073541202ADD1D5C00506146 /* ButtonTapsTests.swift */; };
@@ -327,6 +329,8 @@
 		070C1D042A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitializerViewControllerTests.swift; sourceTree = "<group>"; };
 		070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePropertyViewControllerTests.swift; sourceTree = "<group>"; };
 		07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Setup.swift"; sourceTree = "<group>"; };
+		07268CDA2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewModel+InputFocus.swift"; sourceTree = "<group>"; };
+		07268CDC2B09658600AB668B /* ChangePasswordViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Alert.swift"; sourceTree = "<group>"; };
 		0728DA342A9BE593000F5F01 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		073541172ADD1D2E00506146 /* ButtonTapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonTapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		073541202ADD1D5C00506146 /* ButtonTapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTapsTests.swift; sourceTree = "<group>"; };
@@ -567,6 +571,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07268CD92B09653400AB668B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				073DBFFA2B09472000F1DD83 /* ChangePasswordViewModel.swift */,
+				07268CDA2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		073541122ADD1CDC00506146 /* ButtonTapsTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -883,10 +896,11 @@
 		07E952A22B093FE000BA703E /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
+				07268CD92B09653400AB668B /* ViewModel */,
 				0792B0FB2B04102F00FC022C /* ChangePasswordViewController.swift */,
+				07268CDC2B09658600AB668B /* ChangePasswordViewController+Alert.swift */,
 				07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */,
 				07E952A32B093FFD00BA703E /* ChangePasswordViewController+UITextField.swift */,
-				073DBFFA2B09472000F1DD83 /* ChangePasswordViewModel.swift */,
 			);
 			path = ChangePassword;
 			sourceTree = "<group>";
@@ -1600,6 +1614,7 @@
 				074E682E2A934E2E000B675E /* OutletConnectionsViewController.swift in Sources */,
 				0792B0FC2B04102F00FC022C /* ChangePasswordViewController.swift in Sources */,
 				075F6CA02A8D1E7700C8269E /* CodeBaseViewController.swift in Sources */,
+				07268CDD2B09658600AB668B /* ChangePasswordViewController+Alert.swift in Sources */,
 				078463D22A8E37570030E0A8 /* OverrideViewController.swift in Sources */,
 				0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */,
 				073DBFF92B09405B00F1DD83 /* ChangePasswordViewController+UITextField.swift in Sources */,
@@ -1610,6 +1625,7 @@
 				07D536B72A8A5C7200F1B152 /* MainWrapper.swift in Sources */,
 				077353B12B01893C009C0D98 /* SnapshotsViewController.swift in Sources */,
 				075F6C972A8D083C00C8269E /* StoryboardBasedViewController.swift in Sources */,
+				07268CDB2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift in Sources */,
 				078463C72A8E35540030E0A8 /* Analytics.swift in Sources */,
 				079C4CDB2AF246BB00E18D5B /* SegueNextViewController.swift in Sources */,
 				0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */,

@@ -94,13 +94,13 @@ private extension ChangePasswordViewController {
 
     func validateInputs() -> Bool {
         if oldPasswordTextField.text?.isEmpty ?? true {
-            oldPasswordTextField.becomeFirstResponder()
+            viewModel.inputFocus = .oldPassword
             return false
         }
 
         if newPasswordTextField.text?.isEmpty ?? true {
             showAlert(message: viewModel.enterNewPasswordMessage) { [weak self] _ in
-                self?.newPasswordTextField.becomeFirstResponder()
+                self?.viewModel.inputFocus = .newPassword
             }
             return false
         }
@@ -127,7 +127,7 @@ private extension ChangePasswordViewController {
     func resetNewPasswords() {
         newPasswordTextField.text = ""
         confirmPasswordTextField.text = ""
-        newPasswordTextField.becomeFirstResponder()
+        viewModel.inputFocus = .newPassword
     }
 
     func hideSpinner() {
@@ -139,7 +139,7 @@ private extension ChangePasswordViewController {
         oldPasswordTextField.text = ""
         newPasswordTextField.text = ""
         confirmPasswordTextField.text = ""
-        oldPasswordTextField.becomeFirstResponder()
+        viewModel.inputFocus = .oldPassword
         view.backgroundColor = .white
         blurView.removeFromSuperview()
         viewModel.isCancelButtonEnabled = true

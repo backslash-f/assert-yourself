@@ -30,6 +30,24 @@ struct ChangePasswordViewModel {
 
     var isActivityIndicatorShowing = false
 
+    var oldPassword = ""
+    var isOldPasswordEmpty: Bool {
+        oldPassword.isEmpty
+    }
+
+    var newPassword = ""
+    var isNewPasswordEmpty: Bool {
+        newPassword.isEmpty
+    }
+    var isNewPasswordTooShort: Bool {
+        newPassword.count < 6
+    }
+
+    var confirmPassword = ""
+    var isConfirmPasswordMismatched: Bool {
+        newPassword != confirmPassword
+    }
+
     init(title: String = "Change Password",
          okButtonLabel: String = "OK",
          submitButtonLabel: String = "Submit",

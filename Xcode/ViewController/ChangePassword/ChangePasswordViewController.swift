@@ -46,6 +46,7 @@ class ChangePasswordViewController: UIViewController {
     let activityIndicator = UIActivityIndicatorView(style: .large)
 
     @IBAction func changePassword() {
+        updateViewModelToTextFields()
         if validateInputs() {
             setupWaitingAppearance()
             attemptToChangePassword()
@@ -72,8 +73,8 @@ private extension ChangePasswordViewController {
     func attemptToChangePassword() {
         passwordChanger.change(
             securityToken: securityToken,
-            oldPassword: oldPasswordTextField.text ?? "",
-            newPassword: newPasswordTextField.text ?? "",
+            oldPassword: viewModel.oldPassword,
+            newPassword: viewModel.newPassword,
 
             onSuccess: { [weak self] in
                 self?.handleSuccess()
@@ -93,26 +94,26 @@ private extension ChangePasswordViewController {
     }
 
     func validateInputs() -> Bool {
-        if oldPasswordTextField.text?.isEmpty ?? true {
+        if viewModel.isOldPasswordEmpty {
             viewModel.inputFocus = .oldPassword
             return false
         }
 
-        if newPasswordTextField.text?.isEmpty ?? true {
+        if viewModel.isNewPasswordEmpty {
             showAlert(message: viewModel.enterNewPasswordMessage) { [weak self] _ in
                 self?.viewModel.inputFocus = .newPassword
             }
             return false
         }
 
-        if newPasswordTextField.text?.count ?? 0 < 6 {
+        if viewModel.isNewPasswordTooShort {
             showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] _ in
                 self?.resetNewPasswords()
             }
             return false
         }
 
-        if newPasswordTextField.text != confirmPasswordTextField.text {
+        if viewModel.isConfirmPasswordMismatched {
             showAlert(
                 message: viewModel.confirmationPasswordDoesNotMatchMessage
             ) { [weak self] _ in
@@ -192,5 +193,11 @@ private extension ChangePasswordViewController {
             activityIndicator.stopAnimating()
             activityIndicator.removeFromSuperview()
         }
+    }
+
+    func updateViewModelToTextFields() {
+        viewModel.oldPassword = oldPasswordTextField.text ?? ""
+        viewModel.newPassword = newPasswordTextField.text ?? ""
+        viewModel.confirmPassword = confirmPasswordTextField.text ?? ""
     }
 }

@@ -28,6 +28,8 @@ struct ChangePasswordViewModel {
 
     var isBlurViewShowing = false
 
+    var isActivityIndicatorShowing = false
+
     init(title: String = "Change Password",
          okButtonLabel: String = "OK",
          submitButtonLabel: String = "Submit",

@@ -35,6 +35,10 @@ class ChangePasswordViewController: UIViewController {
             if oldValue.isBlurViewShowing != viewModel.isBlurViewShowing {
                 updateBlurView()
             }
+
+            if oldValue.isActivityIndicatorShowing != viewModel.isActivityIndicatorShowing {
+                updateActivityIndicator()
+            }
         }
     }
 
@@ -85,13 +89,7 @@ private extension ChangePasswordViewController {
         viewModel.isBlurViewShowing = true
         viewModel.inputFocus = .noKeyboard
         viewModel.isCancelButtonEnabled = false
-
-        view.addSubview(activityIndicator)
-        NSLayoutConstraint.activate([
-            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-        activityIndicator.startAnimating()
+        viewModel.isActivityIndicatorShowing = true
     }
 
     func validateInputs() -> Bool {
@@ -132,11 +130,6 @@ private extension ChangePasswordViewController {
         viewModel.inputFocus = .newPassword
     }
 
-    func hideSpinner() {
-        activityIndicator.stopAnimating()
-        activityIndicator.removeFromSuperview()
-    }
-
     func startOver() {
         oldPasswordTextField.text = ""
         newPasswordTextField.text = ""
@@ -147,14 +140,14 @@ private extension ChangePasswordViewController {
     }
 
     func handleSuccess() {
-        hideSpinner()
+        viewModel.isActivityIndicatorShowing = false
         showAlert(message: viewModel.successMessage) { [weak self] _ in
             self?.dismiss(animated: true)
         }
     }
 
     func handleFailure(message: String) {
-        hideSpinner()
+        viewModel.isActivityIndicatorShowing = false
         showAlert(message: message) { [weak self] _ in
             self?.startOver()
         }
@@ -173,7 +166,7 @@ private extension ChangePasswordViewController {
         }
     }
 
-    private func updateBlurView() {
+    func updateBlurView() {
         if viewModel.isBlurViewShowing {
             view.backgroundColor = .clear
             view.addSubview(blurView)
@@ -184,6 +177,20 @@ private extension ChangePasswordViewController {
         } else {
             view.backgroundColor = .white
             blurView.removeFromSuperview()
+        }
+    }
+
+    func updateActivityIndicator() {
+        if viewModel.isActivityIndicatorShowing {
+            view.addSubview(activityIndicator)
+            NSLayoutConstraint.activate([
+                activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            ])
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+            activityIndicator.removeFromSuperview()
         }
     }
 }

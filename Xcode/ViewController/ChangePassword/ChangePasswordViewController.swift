@@ -41,13 +41,11 @@ class ChangePasswordViewController: UIViewController {
     }
 
     @IBAction private func cancel() {
-        oldPasswordTextField.resignFirstResponder()
-        newPasswordTextField.resignFirstResponder()
-        confirmPasswordTextField.resignFirstResponder()
+        view.endEditing(true)
         dismiss(animated: true)
     }
 
-    @IBAction private func changePassword() {
+    @IBAction func changePassword() {
         if validateInputs() {
             setupWaitingAppearance()
             attemptToChangePassword()
@@ -61,56 +59,29 @@ private extension ChangePasswordViewController {
             securityToken: securityToken,
             oldPassword: oldPasswordTextField.text ?? "",
             newPassword: newPasswordTextField.text ?? "",
+
             onSuccess: { [weak self] in
-                self?.activityIndicator.stopAnimating()
-                self?.activityIndicator.removeFromSuperview()
-
-                let alertController = UIAlertController(
-                    title: nil,
-                    message: "Your password has been successfully changed.",
-                    preferredStyle: .alert
-                )
-
-                let okButton = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
-                    self?.dismiss(animated: true)
+                if let self {
+                    hideSpinner()
+                    showAlert(message: "Your password has been successfully changed.") { _ in
+                        self.dismiss(animated: true)
+                    }
                 }
-
-                alertController.addAction(okButton)
-                alertController.preferredAction = okButton
-                self?.present(alertController, animated: true)
             },
+
             onFailure: { [weak self] message in
-                self?.activityIndicator.stopAnimating()
-                self?.activityIndicator.removeFromSuperview()
-
-                let alertController = UIAlertController(
-                    title: nil,
-                    message: message,
-                    preferredStyle: .alert
-                )
-
-                let okButton = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
-                    self?.oldPasswordTextField.text = ""
-                    self?.newPasswordTextField.text = ""
-                    self?.confirmPasswordTextField.text = ""
-                    self?.oldPasswordTextField.becomeFirstResponder()
-                    self?.view.backgroundColor = .white
-                    self?.blurView.removeFromSuperview()
-                    self?.cancelBarButton.isEnabled = true
+                if let self {
+                    hideSpinner()
+                    showAlert(message: message) { _ in
+                        self.startOver()
+                    }
                 }
-
-                alertController.addAction(okButton)
-                alertController.preferredAction = okButton
-
-                self?.present(alertController, animated: true)
             }
         )
     }
 
     func setupWaitingAppearance() {
-        oldPasswordTextField.resignFirstResponder()
-        newPasswordTextField.resignFirstResponder()
-        confirmPasswordTextField.resignFirstResponder()
+        view.endEditing(true)
         cancelBarButton.isEnabled = false
         view.backgroundColor = .clear
         view.addSubview(blurView)
@@ -122,6 +93,7 @@ private extension ChangePasswordViewController {
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+
         activityIndicator.startAnimating()
     }
 
@@ -140,9 +112,7 @@ private extension ChangePasswordViewController {
 
         if newPasswordTextField.text?.count ?? 0 < 6 {
             showAlert(message: "The new password should have at least 6 characters.") { [weak self] _ in
-                self?.newPasswordTextField.text = ""
-                self?.confirmPasswordTextField.text = ""
-                self?.newPasswordTextField.becomeFirstResponder()
+                self?.resetNewPasswords()
             }
             return false
         }
@@ -151,14 +121,33 @@ private extension ChangePasswordViewController {
             showAlert(
                 message: "The new password and the confirmation password " + "don’t match. Please try again."
             ) { [weak self] _ in
-                self?.newPasswordTextField.text = ""
-                self?.confirmPasswordTextField.text = ""
-                self?.newPasswordTextField.becomeFirstResponder()
+                self?.resetNewPasswords()
             }
             return false
         }
 
         return true
+    }
+
+    func resetNewPasswords() {
+        newPasswordTextField.text = ""
+        confirmPasswordTextField.text = ""
+        newPasswordTextField.becomeFirstResponder()
+    }
+
+    func hideSpinner() {
+        activityIndicator.stopAnimating()
+        activityIndicator.removeFromSuperview()
+    }
+
+    func startOver() {
+        oldPasswordTextField.text = ""
+        newPasswordTextField.text = ""
+        confirmPasswordTextField.text = ""
+        oldPasswordTextField.becomeFirstResponder()
+        view.backgroundColor = .white
+        blurView.removeFromSuperview()
+        cancelBarButton.isEnabled = true
     }
 
     func showAlert(message: String, okAction: @escaping (UIAlertAction) -> Void) {
@@ -176,20 +165,5 @@ private extension ChangePasswordViewController {
         alertController.addAction(okButton)
         alertController.preferredAction = okButton
         self.present(alertController, animated: true)
-    }
-}
-
-// MARK: - UITextFieldDelegate
-
-extension ChangePasswordViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField === oldPasswordTextField {
-            newPasswordTextField.becomeFirstResponder()
-        } else if textField === newPasswordTextField {
-            confirmPasswordTextField.becomeFirstResponder()
-        } else if textField === confirmPasswordTextField {
-            changePassword()
-        }
-        return true
     }
 }

@@ -20,6 +20,7 @@
 		073DAAC92AEFFB7700BC854C /* AlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073DAAC82AEFFB7700BC854C /* AlertTests.swift */; };
 		073DAACF2AEFFBA300BC854C /* TestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAA4A72A8A305600AE09DD /* TestAppDelegate.swift */; };
 		073DAAD32AF0036F00BC854C /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 073DAAD22AF0036F00BC854C /* ViewControllerPresentationSpy */; };
+		073DBFF92B09405B00F1DD83 /* ChangePasswordViewController+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E952A32B093FFD00BA703E /* ChangePasswordViewController+UITextField.swift */; };
 		0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D13E2A7C039B00B3A6DF /* AppDelegate.swift */; };
 		0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1402A7C039B00B3A6DF /* SceneDelegate.swift */; };
 		0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0748D1422A7C039B00B3A6DF /* ViewController.swift */; };
@@ -408,6 +409,7 @@
 		07D9F3B22B07A91E00EA1C18 /* TestHelpers+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestHelpers+UIKit.swift"; sourceTree = "<group>"; };
 		07D9F3C42B07A94700EA1C18 /* TestHelpers+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestHelpers+UITableView.swift"; sourceTree = "<group>"; };
 		07E9529C2B0811ED00BA703E /* ChangePasswordViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
+		07E952A32B093FFD00BA703E /* ChangePasswordViewController+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+UITextField.swift"; sourceTree = "<group>"; };
 		07EAA4962A8A2C1200AE09DD /* AppLaunch.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppLaunch.xctestplan; sourceTree = "<group>"; };
 		07EAA49E2A8A2C7D00AE09DD /* AppLaunchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppLaunchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EAA4A02A8A2C7D00AE09DD /* AppLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchTests.swift; sourceTree = "<group>"; };
@@ -659,6 +661,7 @@
 			isa = PBXGroup;
 			children = (
 				078463CD2A8E36C60030E0A8 /* Analytics */,
+				07E952A22B093FE000BA703E /* ChangePassword */,
 				079C4CD72AF242D700E18D5B /* Navigation */,
 				0748D1422A7C039B00B3A6DF /* ViewController.swift */,
 				075F6C962A8D083C00C8269E /* StoryboardBasedViewController.swift */,
@@ -667,7 +670,6 @@
 				074E682C2A934E2E000B675E /* OutletConnectionsViewController.swift */,
 				077353982B016C91009C0D98 /* TableViewController.swift */,
 				077353B02B01893C009C0D98 /* SnapshotsViewController.swift */,
-				0792B0FB2B04102F00FC022C /* ChangePasswordViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -872,6 +874,15 @@
 				07BC3BE52A82390800D1B1BA /* CodeCoverageTests.swift */,
 			);
 			path = CodeCoverageTests;
+			sourceTree = "<group>";
+		};
+		07E952A22B093FE000BA703E /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				0792B0FB2B04102F00FC022C /* ChangePasswordViewController.swift */,
+				07E952A32B093FFD00BA703E /* ChangePasswordViewController+UITextField.swift */,
+			);
+			path = ChangePassword;
 			sourceTree = "<group>";
 		};
 		07EAA4972A8A2C1700AE09DD /* AppLaunchTests */ = {
@@ -1584,6 +1595,7 @@
 				075F6CA02A8D1E7700C8269E /* CodeBaseViewController.swift in Sources */,
 				078463D22A8E37570030E0A8 /* OverrideViewController.swift in Sources */,
 				0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */,
+				073DBFF92B09405B00F1DD83 /* ChangePasswordViewController+UITextField.swift in Sources */,
 				078463CC2A8E36720030E0A8 /* InstancePropertyViewController.swift in Sources */,
 				078463D72A8E37860030E0A8 /* InstanceInitializerViewController.swift in Sources */,
 				0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */,

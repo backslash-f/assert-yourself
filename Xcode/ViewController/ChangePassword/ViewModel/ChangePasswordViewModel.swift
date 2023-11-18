@@ -26,6 +26,8 @@ struct ChangePasswordViewModel {
 
     var inputFocus: InputFocus = .noKeyboard
 
+    var isBlurViewShowing = false
+
     init(title: String = "Change Password",
          okButtonLabel: String = "OK",
          submitButtonLabel: String = "Submit",

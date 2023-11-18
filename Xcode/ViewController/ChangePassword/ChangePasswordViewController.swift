@@ -23,11 +23,17 @@ class ChangePasswordViewController: UIViewController {
     lazy var viewModel = ChangePasswordViewModel() {
         didSet {
             guard isViewLoaded else { return }
+
             if oldValue.isCancelButtonEnabled != viewModel.isCancelButtonEnabled {
                 cancelBarButton.isEnabled = viewModel.isCancelButtonEnabled
             }
+
             if oldValue.inputFocus != viewModel.inputFocus {
                 updateInputFocus()
+            }
+
+            if oldValue.isBlurViewShowing != viewModel.isBlurViewShowing {
+                updateBlurView()
             }
         }
     }
@@ -76,19 +82,15 @@ private extension ChangePasswordViewController {
     }
 
     func setupWaitingAppearance() {
+        viewModel.isBlurViewShowing = true
         viewModel.inputFocus = .noKeyboard
         viewModel.isCancelButtonEnabled = false
-        view.backgroundColor = .clear
-        view.addSubview(blurView)
-        view.addSubview(activityIndicator)
 
+        view.addSubview(activityIndicator)
         NSLayoutConstraint.activate([
-            blurView.heightAnchor.constraint(equalTo: view.heightAnchor),
-            blurView.widthAnchor.constraint(equalTo: view.widthAnchor),
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
-
         activityIndicator.startAnimating()
     }
 
@@ -140,9 +142,8 @@ private extension ChangePasswordViewController {
         newPasswordTextField.text = ""
         confirmPasswordTextField.text = ""
         viewModel.inputFocus = .oldPassword
-        view.backgroundColor = .white
-        blurView.removeFromSuperview()
         viewModel.isCancelButtonEnabled = true
+        viewModel.isBlurViewShowing = false
     }
 
     func handleSuccess() {
@@ -169,6 +170,20 @@ private extension ChangePasswordViewController {
             newPasswordTextField.becomeFirstResponder()
         case .confirmPassword:
             confirmPasswordTextField.becomeFirstResponder()
+        }
+    }
+
+    private func updateBlurView() {
+        if viewModel.isBlurViewShowing {
+            view.backgroundColor = .clear
+            view.addSubview(blurView)
+            NSLayoutConstraint.activate([
+                blurView.heightAnchor.constraint(equalTo: view.heightAnchor),
+                blurView.widthAnchor.constraint(equalTo: view.widthAnchor)
+            ])
+        } else {
+            view.backgroundColor = .white
+            blurView.removeFromSuperview()
         }
     }
 }

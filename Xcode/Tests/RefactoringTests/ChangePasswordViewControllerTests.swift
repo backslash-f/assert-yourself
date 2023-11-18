@@ -96,21 +96,21 @@ final class ChangePasswordViewControllerTests: XCTestCase {
     // MARK: - Behavior
 
     func test_tappingCancel_withFocusOnOldPassword_shouldResignThatFocus() {
-        putFocusOn(textField: sut.oldPasswordTextField)
+        putFocusOn(.oldPassword)
         XCTAssertTrue(sut.oldPasswordTextField.isFirstResponder, "precondition")
         tap(sut.cancelBarButton)
         XCTAssertFalse(sut.oldPasswordTextField.isFirstResponder)
     }
 
     func test_tappingCancel_withFocusOnNewPassword_shouldResignThatFocus() {
-        putFocusOn(textField: sut.newPasswordTextField)
+        putFocusOn(.newPassword)
         XCTAssertTrue(sut.newPasswordTextField.isFirstResponder, "precondition")
         tap(sut.cancelBarButton)
         XCTAssertFalse(sut.newPasswordTextField.isFirstResponder)
     }
 
     func test_tappingCancel_withFocusConfirmPassword_shouldResignThatFocus() {
-        putFocusOn(textField: sut.confirmPasswordTextField)
+        putFocusOn(.confirmPassword)
         XCTAssertTrue(sut.confirmPasswordTextField.isFirstResponder, "precondition")
         tap(sut.cancelBarButton)
         XCTAssertFalse(sut.confirmPasswordTextField.isFirstResponder)
@@ -245,7 +245,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
 
     func test_tappingSubmit_withValidFieldsFocusedOnOldPassword_resignsFocus() {
         setUpPasswordEntries()
-        putFocusOn(textField: sut.oldPasswordTextField)
+        putFocusOn(.oldPassword)
         XCTAssertTrue(sut.oldPasswordTextField.isFirstResponder, "precondition")
         tap(sut.submitButton)
         XCTAssertFalse(sut.oldPasswordTextField.isFirstResponder)
@@ -253,7 +253,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
 
     func test_tappingSubmit_withValidFieldsFocusedOnNewPassword_resignsFocus() {
         setUpPasswordEntries()
-        putFocusOn(textField: sut.newPasswordTextField)
+        putFocusOn(.newPassword)
         XCTAssertTrue(sut.newPasswordTextField.isFirstResponder, "precondition")
         tap(sut.submitButton)
         XCTAssertFalse(sut.newPasswordTextField.isFirstResponder)
@@ -261,7 +261,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
 
     func test_tappingSubmit_withValidFieldsFocusedOnConfirmPassword_resignsFocus() {
         setUpPasswordEntries()
-        putFocusOn(textField: sut.confirmPasswordTextField)
+        putFocusOn(.confirmPassword)
         XCTAssertTrue(sut.confirmPasswordTextField.isFirstResponder, "precondition")
         tap(sut.submitButton)
         XCTAssertFalse(sut.confirmPasswordTextField.isFirstResponder)
@@ -473,9 +473,9 @@ final class ChangePasswordViewControllerTests: XCTestCase {
 }
 
 private extension ChangePasswordViewControllerTests {
-    func putFocusOn(textField: UITextField) {
+    func putFocusOn(_ inputFocus: ChangePasswordViewModel.InputFocus) {
         putInViewHierarchy(sut)
-        textField.becomeFirstResponder()
+        sut.viewModel.inputFocus = inputFocus
     }
 
     func setUpPasswordEntries(isNewPasswordShort: Bool = false,

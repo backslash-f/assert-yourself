@@ -23,6 +23,10 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
         blurView.removeFromSuperview()
     }
 
+    func setCancelButtonEnabled(_ enabled: Bool) {
+        cancelBarButton.isEnabled = enabled
+    }
+
     func showActivityIndicator() {
         view.addSubview(activityIndicator)
         NSLayoutConstraint.activate([

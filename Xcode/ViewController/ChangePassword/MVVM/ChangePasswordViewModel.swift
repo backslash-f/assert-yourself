@@ -22,8 +22,6 @@ struct ChangePasswordViewModel {
     let confirmPasswordPlaceholder: String
     let confirmationPasswordDoesNotMatchMessage: String
 
-    var isCancelButtonEnabled = true
-
     var inputFocus: InputFocus = .noKeyboard
 
     var oldPassword = ""

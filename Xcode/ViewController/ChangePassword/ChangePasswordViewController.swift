@@ -24,10 +24,6 @@ class ChangePasswordViewController: UIViewController {
         didSet {
             guard isViewLoaded else { return }
 
-            if oldValue.isCancelButtonEnabled != viewModel.isCancelButtonEnabled {
-                cancelBarButton.isEnabled = viewModel.isCancelButtonEnabled
-            }
-
             if oldValue.inputFocus != viewModel.inputFocus {
                 updateInputFocus()
             }
@@ -84,7 +80,7 @@ private extension ChangePasswordViewController {
     func setupWaitingAppearance() {
         showBlurView()
         viewModel.inputFocus = .noKeyboard
-        viewModel.isCancelButtonEnabled = false
+        setCancelButtonEnabled(false)
         showActivityIndicator()
     }
 
@@ -131,7 +127,7 @@ private extension ChangePasswordViewController {
         newPasswordTextField.text = ""
         confirmPasswordTextField.text = ""
         viewModel.inputFocus = .oldPassword
-        viewModel.isCancelButtonEnabled = true
+        setCancelButtonEnabled(true)
         hideBlurView()
     }
 

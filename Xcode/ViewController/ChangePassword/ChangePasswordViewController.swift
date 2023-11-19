@@ -42,6 +42,8 @@ class ChangePasswordViewController: UIViewController {
         }
     }
 
+    private lazy var presenter = ChangePasswordPresenter(view: self)
+
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     let activityIndicator = UIActivityIndicatorView(style: .large)
 

@@ -13,6 +13,13 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
         dismiss(animated: true)
     }
 
+    func handleFailure(message: String) {
+        hideActivityIndicator()
+        showAlert(message: message) { [weak self] in
+            self?.startOver()
+        }
+    }
+
     func hideActivityIndicator() {
         activityIndicator.stopAnimating()
         activityIndicator.removeFromSuperview()
@@ -69,6 +76,12 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
 // MARK: - Private
 
 private extension ChangePasswordViewController {
+    func clearAllPasswordFields() {
+        oldPasswordTextField.text = ""
+        newPasswordTextField.text = ""
+        confirmPasswordTextField.text = ""
+    }
+
     func showAlert(message: String, okAction: @escaping (UIAlertAction) -> Void) {
         let alertController = UIAlertController(
             title: nil,
@@ -84,5 +97,12 @@ private extension ChangePasswordViewController {
         alertController.addAction(okButton)
         alertController.preferredAction = okButton
         present(alertController, animated: true)
+    }
+
+    func startOver() {
+        clearAllPasswordFields()
+        updateInputFocus(.oldPassword)
+        setCancelButtonEnabled(true)
+        hideBlurView()
     }
 }

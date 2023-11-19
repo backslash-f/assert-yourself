@@ -114,22 +114,6 @@ private extension ChangePasswordViewController {
         updateInputFocus(.newPassword)
     }
 
-    func startOver() {
-        oldPasswordTextField.text = ""
-        newPasswordTextField.text = ""
-        confirmPasswordTextField.text = ""
-        updateInputFocus(.oldPassword)
-        setCancelButtonEnabled(true)
-        hideBlurView()
-    }
-
-    func handleFailure(message: String) {
-        hideActivityIndicator()
-        showAlert(message: message) { [weak self] in
-            self?.startOver()
-        }
-    }
-
     func updateViewModelToTextFields() {
         viewModel.oldPassword = oldPasswordTextField.text ?? ""
         viewModel.newPassword = newPasswordTextField.text ?? ""

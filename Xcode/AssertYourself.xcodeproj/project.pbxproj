@@ -333,7 +333,7 @@
 		070C1D022A8FBADD00800D89 /* InstancePropertyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstancePropertyViewControllerTests.swift; sourceTree = "<group>"; };
 		070C1D042A8FBC4400800D89 /* ClosureInitializerViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitializerViewControllerTests.swift; sourceTree = "<group>"; };
 		070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePropertyViewControllerTests.swift; sourceTree = "<group>"; };
-		0713B6532B0A4680008AF507 /* TDD */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TDD; path = ../TDD; sourceTree = "<group>"; };
+		0713B6562B0A4BF8008AF507 /* TDD */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TDD; sourceTree = "<group>"; };
 		07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Setup.swift"; sourceTree = "<group>"; };
 		07268CDF2B09EEF300AB668B /* ChangePasswordViewCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewCommands.swift; sourceTree = "<group>"; };
 		07268CE12B09EF1900AB668B /* ChangePasswordViewController+Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Presenter.swift"; sourceTree = "<group>"; };
@@ -640,7 +640,7 @@
 		0748D1322A7C039B00B3A6DF = {
 			isa = PBXGroup;
 			children = (
-				0713B6532B0A4680008AF507 /* TDD */,
+				0713B6562B0A4BF8008AF507 /* TDD */,
 				0751D7EB2A7D531C00F900BF /* Core */,
 				0748D16E2A7C03CA00B3A6DF /* View */,
 				0748D1702A7C03F300B3A6DF /* ViewController */,

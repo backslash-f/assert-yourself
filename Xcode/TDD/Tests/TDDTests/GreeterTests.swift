@@ -12,5 +12,9 @@ final class GreeterTests: XCTestCase {
             XCTFail("Could not create date from components: \(components)")
             return
         }
+
+        let result: String = sut.greet(time: time)
+
+        XCTAssertEqual(result, "Good morning.")
     }
 }

@@ -1,13 +1,16 @@
 import Foundation
 
 struct Greeter {
-    init(name: String) {
-    }
-
+    init(name: String) {}
+    
     func greet(time: Date) -> String {
         let theHour = hour(for: time)
         if 12 <= theHour && theHour <= 16 {
             return "Good afternoon."
+        }
+        if 0 <= theHour && theHour <= 4
+            || 17 <= theHour && theHour <= 23 {
+            return "Good evening."
         }
         return "Good morning."
     }

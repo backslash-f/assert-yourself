@@ -51,6 +51,19 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
             blurView.widthAnchor.constraint(equalTo: view.widthAnchor)
         ])
     }
+
+    func updateInputFocus(_ inputFocus: ChangePasswordViewModel.InputFocus) {
+        switch inputFocus {
+        case .noKeyboard:
+            view.endEditing(true)
+        case .oldPassword:
+            oldPasswordTextField.becomeFirstResponder()
+        case .newPassword:
+            newPasswordTextField.becomeFirstResponder()
+        case .confirmPassword:
+            confirmPasswordTextField.becomeFirstResponder()
+        }
+    }
 }
 
 // MARK: - Private

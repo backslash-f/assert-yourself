@@ -6,5 +6,20 @@
 //
 
 import Foundation
+import UIKit
 
-extension ChangePasswordViewController: ChangePasswordViewCommands {}
+extension ChangePasswordViewController: ChangePasswordViewCommands {
+    func hideActivityIndicator() {
+        activityIndicator.stopAnimating()
+        activityIndicator.removeFromSuperview()
+    }
+
+    func showActivityIndicator() {
+        view.addSubview(activityIndicator)
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        activityIndicator.startAnimating()
+    }
+}

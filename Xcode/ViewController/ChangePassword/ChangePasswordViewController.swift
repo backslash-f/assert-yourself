@@ -185,15 +185,9 @@ private extension ChangePasswordViewController {
 
     func updateActivityIndicator() {
         if viewModel.isActivityIndicatorShowing {
-            view.addSubview(activityIndicator)
-            NSLayoutConstraint.activate([
-                activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-            ])
-            activityIndicator.startAnimating()
+            showActivityIndicator()
         } else {
-            activityIndicator.stopAnimating()
-            activityIndicator.removeFromSuperview()
+            hideActivityIndicator()
         }
     }
 

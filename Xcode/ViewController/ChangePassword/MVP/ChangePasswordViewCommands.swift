@@ -7,4 +7,7 @@
 
 import Foundation
 
-protocol ChangePasswordViewCommands: AnyObject {}
+protocol ChangePasswordViewCommands: AnyObject {
+    func hideActivityIndicator()
+    func showActivityIndicator()
+}

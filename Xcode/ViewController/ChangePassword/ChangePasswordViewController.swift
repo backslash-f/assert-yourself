@@ -57,13 +57,6 @@ private extension ChangePasswordViewController {
         dismissModal()
     }
 
-    func setupWaitingAppearance() {
-        showBlurView()
-        updateInputFocus(.noKeyboard)
-        setCancelButtonEnabled(false)
-        showActivityIndicator()
-    }
-
     func validateInputs() -> Bool {
         if viewModel.isOldPasswordEmpty {
             updateInputFocus(.oldPassword)
@@ -94,12 +87,6 @@ private extension ChangePasswordViewController {
         }
 
         return true
-    }
-
-    func resetNewPasswords() {
-        newPasswordTextField.text = ""
-        confirmPasswordTextField.text = ""
-        updateInputFocus(.newPassword)
     }
 
     func updateViewModelToTextFields() {

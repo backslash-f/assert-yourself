@@ -39,8 +39,20 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
         blurView.removeFromSuperview()
     }
 
+    func resetNewPasswords() {
+        clearNewPasswordFields()
+        updateInputFocus(.newPassword)
+    }
+
     func setCancelButtonEnabled(_ enabled: Bool) {
         cancelBarButton.isEnabled = enabled
+    }
+
+    func setupWaitingAppearance() {
+        showBlurView()
+        updateInputFocus(.noKeyboard)
+        setCancelButtonEnabled(false)
+        showActivityIndicator()
     }
 
     func showActivityIndicator() {
@@ -87,6 +99,11 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
 private extension ChangePasswordViewController {
     func clearAllPasswordFields() {
         oldPasswordTextField.text = ""
+        newPasswordTextField.text = ""
+        confirmPasswordTextField.text = ""
+    }
+
+    func clearNewPasswordFields() {
         newPasswordTextField.text = ""
         confirmPasswordTextField.text = ""
     }

@@ -5,17 +5,17 @@ This is a repository for the hands-on part of the book ["iOS Unit Testing By Exa
 The project was created with Xcode 15 and conveniently groups all the exercises, TDD package, and third-party dependencies in a single repository.
 
 ## Storyboard
-The Main Storyboard holds all the target screens/UI elements.
+The Main Storyboard holds all the target screens/UI elements:
 
 ![Storyboard](Images/xcode-storyboard.png)
 
 ## Test Plans
-Change the default test plan to be triggered by `⌘ + u`:
+Change the default test plan to be triggered with `⌘ + u` by editing the `AssertYourself` scheme:
 
 ![Test Plans](Images/xcode-schema-testplan.png)
 
 
 ## TDD
-Switch to the `TDD` scheme to run TDD tests.
+Switch to the `TDD` scheme to run TDD tests with `⌘ + u`:
 
 ![TDD](Images/xcode-tdd.png)

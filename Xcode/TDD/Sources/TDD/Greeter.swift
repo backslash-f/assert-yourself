@@ -1,27 +1,24 @@
 import Foundation
 
 struct Greeter {
+    private let greetingTimes: [(from: Int, greeting: String)] = [
+        (0, "Good evening."),
+        (5, "Good morning."),
+        (12, "Good afternoon."),
+        (17, "Good evening."),
+        (24, "SENTINEL")
+    ]
+
     init(name: String) {}
 
     func greet(time: Date) -> String {
         let theHour = hour(for: time)
-
-        if 0 <= theHour && theHour < 5 {
-            return "Good evening."
+        for (index, greetingTime) in greetingTimes.enumerated() {
+            if greetingTime.from <= theHour
+                && theHour < greetingTimes[index + 1].from {
+                return greetingTime.greeting
+            }
         }
-
-        if 5 <= theHour && theHour < 12 {
-            return "Good morning."
-        }
-
-        if 12 <= theHour && theHour < 17 {
-            return "Good afternoon."
-        }
-
-        if 17 <= theHour && theHour < 24 {
-            return "Good evening."
-        }
-
         return ""
     }
 }

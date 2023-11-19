@@ -90,8 +90,8 @@ private extension ChangePasswordViewController {
     }
 
     func updateViewModelToTextFields() {
-        viewModel.oldPassword = oldPasswordTextField.text ?? ""
-        viewModel.newPassword = newPasswordTextField.text ?? ""
-        viewModel.confirmPassword = confirmPasswordTextField.text ?? ""
+        viewModel.passwordInputs.oldPassword = oldPasswordTextField.text ?? ""
+        viewModel.passwordInputs.newPassword = newPasswordTextField.text ?? ""
+        viewModel.passwordInputs.confirmPassword = confirmPasswordTextField.text ?? ""
     }
 }

@@ -22,22 +22,21 @@ struct ChangePasswordViewModel {
     let confirmPasswordPlaceholder: String
     let confirmationPasswordDoesNotMatchMessage: String
 
-    var oldPassword = ""
+    var passwordInputs = PasswordInputs()
+
     var isOldPasswordEmpty: Bool {
-        oldPassword.isEmpty
+        passwordInputs.oldPassword.isEmpty
     }
 
-    var newPassword = ""
     var isNewPasswordEmpty: Bool {
-        newPassword.isEmpty
+        passwordInputs.newPassword.isEmpty
     }
     var isNewPasswordTooShort: Bool {
-        newPassword.count < 6
+        passwordInputs.newPassword.count < 6
     }
 
-    var confirmPassword = ""
     var isConfirmPasswordMismatched: Bool {
-        newPassword != confirmPassword
+        passwordInputs.newPassword != passwordInputs.confirmPassword
     }
 
     init(title: String = "Change Password",

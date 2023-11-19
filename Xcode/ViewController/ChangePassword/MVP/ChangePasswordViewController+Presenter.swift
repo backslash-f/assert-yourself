@@ -12,8 +12,8 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
     func attemptToChangePassword() {
         passwordChanger.change(
             securityToken: securityToken,
-            oldPassword: viewModel.oldPassword,
-            newPassword: viewModel.newPassword,
+            oldPassword: viewModel.passwordInputs.oldPassword,
+            newPassword: viewModel.passwordInputs.newPassword,
 
             onSuccess: { [weak self] in
                 self?.handleSuccess()

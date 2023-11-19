@@ -15,7 +15,7 @@
 		07268CD82B095F1000AB668B /* ChangePasswordViewController+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */; };
 		07268CDB2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CDA2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift */; };
 		07268CE02B09EEF300AB668B /* ChangePasswordViewCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CDF2B09EEF300AB668B /* ChangePasswordViewCommands.swift */; };
-		07268CE22B09EF1900AB668B /* ChangePasswordViewController+Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CE12B09EF1900AB668B /* ChangePasswordViewController+Commands.swift */; };
+		07268CE22B09EF1900AB668B /* ChangePasswordViewController+Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CE12B09EF1900AB668B /* ChangePasswordViewController+Presenter.swift */; };
 		07268CE42B09EF3A00AB668B /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CE32B09EF3A00AB668B /* ChangePasswordPresenter.swift */; };
 		0728DA332A9BE456000F5F01 /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 0728DA322A9BE456000F5F01 /* ViewControllerPresentationSpy */; };
 		0728DA352A9BE593000F5F01 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728DA342A9BE593000F5F01 /* TestError.swift */; };
@@ -333,7 +333,7 @@
 		07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Setup.swift"; sourceTree = "<group>"; };
 		07268CDA2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewModel+InputFocus.swift"; sourceTree = "<group>"; };
 		07268CDF2B09EEF300AB668B /* ChangePasswordViewCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewCommands.swift; sourceTree = "<group>"; };
-		07268CE12B09EF1900AB668B /* ChangePasswordViewController+Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Commands.swift"; sourceTree = "<group>"; };
+		07268CE12B09EF1900AB668B /* ChangePasswordViewController+Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Presenter.swift"; sourceTree = "<group>"; };
 		07268CE32B09EF3A00AB668B /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
 		0728DA342A9BE593000F5F01 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		073541172ADD1D2E00506146 /* ButtonTapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonTapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -588,7 +588,7 @@
 			isa = PBXGroup;
 			children = (
 				07268CDF2B09EEF300AB668B /* ChangePasswordViewCommands.swift */,
-				07268CE12B09EF1900AB668B /* ChangePasswordViewController+Commands.swift */,
+				07268CE12B09EF1900AB668B /* ChangePasswordViewController+Presenter.swift */,
 				07268CE32B09EF3A00AB668B /* ChangePasswordPresenter.swift */,
 			);
 			path = MVP;
@@ -1642,7 +1642,7 @@
 				075F6C972A8D083C00C8269E /* StoryboardBasedViewController.swift in Sources */,
 				07268CDB2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift in Sources */,
 				078463C72A8E35540030E0A8 /* Analytics.swift in Sources */,
-				07268CE22B09EF1900AB668B /* ChangePasswordViewController+Commands.swift in Sources */,
+				07268CE22B09EF1900AB668B /* ChangePasswordViewController+Presenter.swift in Sources */,
 				079C4CDB2AF246BB00E18D5B /* SegueNextViewController.swift in Sources */,
 				0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */,
 				07268CD82B095F1000AB668B /* ChangePasswordViewController+Setup.swift in Sources */,

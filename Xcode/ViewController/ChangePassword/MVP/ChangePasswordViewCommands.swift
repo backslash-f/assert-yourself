@@ -10,6 +10,8 @@ import Foundation
 protocol ChangePasswordViewCommands: AnyObject {
     func dismissModal()
     func hideActivityIndicator()
+    func hideBlurView()
     func showActivityIndicator()
+    func showBlurView()
     func showAlert(message: String, action: @escaping () -> Void)
 }

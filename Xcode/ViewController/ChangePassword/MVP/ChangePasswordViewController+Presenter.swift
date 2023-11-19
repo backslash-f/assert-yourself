@@ -9,9 +9,18 @@ import Foundation
 import UIKit
 
 extension ChangePasswordViewController: ChangePasswordViewCommands {
+    func dismissModal() {
+        dismiss(animated: true)
+    }
+
     func hideActivityIndicator() {
         activityIndicator.stopAnimating()
         activityIndicator.removeFromSuperview()
+    }
+
+    func hideBlurView() {
+        view.backgroundColor = .white
+        blurView.removeFromSuperview()
     }
 
     func showActivityIndicator() {
@@ -23,15 +32,20 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
         activityIndicator.startAnimating()
     }
 
-    func dismissModal() {
-        dismiss(animated: true)
-    }
-
     func showAlert(message: String, action: @escaping () -> Void) {
         let wrappedAction: (UIAlertAction) -> Void = { _ in action() }
         showAlert(message: message) {
             wrappedAction($0)
         }
+    }
+
+    func showBlurView() {
+        view.backgroundColor = .clear
+        view.addSubview(blurView)
+        NSLayoutConstraint.activate([
+            blurView.heightAnchor.constraint(equalTo: view.heightAnchor),
+            blurView.widthAnchor.constraint(equalTo: view.widthAnchor)
+        ])
     }
 }
 

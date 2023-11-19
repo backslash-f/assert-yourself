@@ -26,8 +26,6 @@ struct ChangePasswordViewModel {
 
     var inputFocus: InputFocus = .noKeyboard
 
-    var isBlurViewShowing = false
-
     var oldPassword = ""
     var isOldPasswordEmpty: Bool {
         oldPassword.isEmpty

@@ -92,6 +92,38 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
             confirmPasswordTextField.becomeFirstResponder()
         }
     }
+
+    func validateInputs(passwordInputs: PasswordInputs) -> Bool {
+        if passwordInputs.isOldPasswordEmpty {
+            updateInputFocus(.oldPassword)
+            return false
+        }
+
+        if passwordInputs.isNewPasswordEmpty {
+            showAlert(message: viewModel.enterNewPasswordMessage) { [weak self] in
+                self?.updateInputFocus(.newPassword)
+            }
+            return false
+        }
+
+        if passwordInputs.isNewPasswordTooShort {
+            showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] in
+                self?.resetNewPasswords()
+            }
+            return false
+        }
+
+        if passwordInputs.isConfirmPasswordMismatched {
+            showAlert(
+                message: viewModel.confirmationPasswordDoesNotMatchMessage
+            ) { [weak self] in
+                self?.resetNewPasswords()
+            }
+            return false
+        }
+
+        return true
+    }
 }
 
 // MARK: - Private

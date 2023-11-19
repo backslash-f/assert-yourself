@@ -19,6 +19,7 @@ protocol ChangePasswordViewCommands: AnyObject {
     func showBlurView()
     func showAlert(message: String, action: @escaping () -> Void)
     func updateInputFocus(_ inputFocus: InputFocus)
+    func validateInputs(passwordInputs: PasswordInputs) -> Bool
 }
 
 enum InputFocus {

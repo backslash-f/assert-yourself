@@ -34,7 +34,7 @@ class ChangePasswordViewController: UIViewController {
 
     @IBAction func changePassword() {
         updateViewModelToTextFields()
-        if validateInputs() {
+        if validateInputs(passwordInputs: viewModel.passwordInputs) {
             setupWaitingAppearance()
             attemptToChangePassword()
         }
@@ -55,38 +55,6 @@ private extension ChangePasswordViewController {
     @IBAction private func cancel() {
         updateInputFocus(.noKeyboard)
         dismissModal()
-    }
-
-    func validateInputs() -> Bool {
-        if viewModel.isOldPasswordEmpty {
-            updateInputFocus(.oldPassword)
-            return false
-        }
-
-        if viewModel.isNewPasswordEmpty {
-            showAlert(message: viewModel.enterNewPasswordMessage) { [weak self] in
-                self?.updateInputFocus(.newPassword)
-            }
-            return false
-        }
-
-        if viewModel.isNewPasswordTooShort {
-            showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] in
-                self?.resetNewPasswords()
-            }
-            return false
-        }
-
-        if viewModel.isConfirmPasswordMismatched {
-            showAlert(
-                message: viewModel.confirmationPasswordDoesNotMatchMessage
-            ) { [weak self] in
-                self?.resetNewPasswords()
-            }
-            return false
-        }
-
-        return true
     }
 
     func updateViewModelToTextFields() {

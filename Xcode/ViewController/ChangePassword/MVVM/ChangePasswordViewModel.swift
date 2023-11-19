@@ -24,21 +24,6 @@ struct ChangePasswordViewModel {
 
     var passwordInputs = PasswordInputs()
 
-    var isOldPasswordEmpty: Bool {
-        passwordInputs.oldPassword.isEmpty
-    }
-
-    var isNewPasswordEmpty: Bool {
-        passwordInputs.newPassword.isEmpty
-    }
-    var isNewPasswordTooShort: Bool {
-        passwordInputs.newPassword.count < 6
-    }
-
-    var isConfirmPasswordMismatched: Bool {
-        passwordInputs.newPassword != passwordInputs.confirmPassword
-    }
-
     init(title: String = "Change Password",
          okButtonLabel: String = "OK",
          submitButtonLabel: String = "Submit",

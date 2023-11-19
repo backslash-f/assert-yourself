@@ -35,10 +35,6 @@ class ChangePasswordViewController: UIViewController {
             if oldValue.isBlurViewShowing != viewModel.isBlurViewShowing {
                 updateBlurView()
             }
-
-            if oldValue.isActivityIndicatorShowing != viewModel.isActivityIndicatorShowing {
-                updateActivityIndicator()
-            }
         }
     }
 
@@ -92,7 +88,7 @@ private extension ChangePasswordViewController {
         viewModel.isBlurViewShowing = true
         viewModel.inputFocus = .noKeyboard
         viewModel.isCancelButtonEnabled = false
-        viewModel.isActivityIndicatorShowing = true
+        showActivityIndicator()
     }
 
     func validateInputs() -> Bool {
@@ -143,14 +139,14 @@ private extension ChangePasswordViewController {
     }
 
     func handleSuccess() {
-        viewModel.isActivityIndicatorShowing = false
+        hideActivityIndicator()
         showAlert(message: viewModel.successMessage) { [weak self] _ in
             self?.dismiss(animated: true)
         }
     }
 
     func handleFailure(message: String) {
-        viewModel.isActivityIndicatorShowing = false
+        hideActivityIndicator()
         showAlert(message: message) { [weak self] _ in
             self?.startOver()
         }
@@ -180,14 +176,6 @@ private extension ChangePasswordViewController {
         } else {
             view.backgroundColor = .white
             blurView.removeFromSuperview()
-        }
-    }
-
-    func updateActivityIndicator() {
-        if viewModel.isActivityIndicatorShowing {
-            showActivityIndicator()
-        } else {
-            hideActivityIndicator()
         }
     }
 

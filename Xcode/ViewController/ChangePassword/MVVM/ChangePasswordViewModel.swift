@@ -28,8 +28,6 @@ struct ChangePasswordViewModel {
 
     var isBlurViewShowing = false
 
-    var isActivityIndicatorShowing = false
-
     var oldPassword = ""
     var isOldPasswordEmpty: Bool {
         oldPassword.isEmpty

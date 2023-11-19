@@ -45,7 +45,7 @@ final class GreeterWithoutNameTests: XCTestCase {
         let result = sut.greet(time: date(hour: 14, minute: 00))
         XCTAssertEqual(result, "Good afternoon.")
     }
-    
+
     func test_greet_with5pm_shouldSayGoodEvening() {
         let result = sut.greet(time: date(hour: 17, minute: 00))
         XCTAssertEqual(result, "Good evening.")

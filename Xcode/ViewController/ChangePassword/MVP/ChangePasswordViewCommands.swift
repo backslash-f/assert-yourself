@@ -8,6 +8,8 @@
 import Foundation
 
 protocol ChangePasswordViewCommands: AnyObject {
+    func dismissModal()
     func hideActivityIndicator()
     func showActivityIndicator()
+    func showAlert(message: String, action: @escaping () -> Void)
 }

@@ -65,7 +65,7 @@ class ChangePasswordViewController: UIViewController {
 private extension ChangePasswordViewController {
     @IBAction private func cancel() {
         viewModel.inputFocus = .noKeyboard
-        dismiss(animated: true)
+        dismissModal()
     }
 
     func attemptToChangePassword() {
@@ -98,14 +98,14 @@ private extension ChangePasswordViewController {
         }
 
         if viewModel.isNewPasswordEmpty {
-            showAlert(message: viewModel.enterNewPasswordMessage) { [weak self] _ in
+            showAlert(message: viewModel.enterNewPasswordMessage) { [weak self] in
                 self?.viewModel.inputFocus = .newPassword
             }
             return false
         }
 
         if viewModel.isNewPasswordTooShort {
-            showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] _ in
+            showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] in
                 self?.resetNewPasswords()
             }
             return false
@@ -114,7 +114,7 @@ private extension ChangePasswordViewController {
         if viewModel.isConfirmPasswordMismatched {
             showAlert(
                 message: viewModel.confirmationPasswordDoesNotMatchMessage
-            ) { [weak self] _ in
+            ) { [weak self] in
                 self?.resetNewPasswords()
             }
             return false
@@ -140,14 +140,14 @@ private extension ChangePasswordViewController {
 
     func handleSuccess() {
         hideActivityIndicator()
-        showAlert(message: viewModel.successMessage) { [weak self] _ in
-            self?.dismiss(animated: true)
+        showAlert(message: viewModel.successMessage) { [weak self] in
+            self?.dismissModal()
         }
     }
 
     func handleFailure(message: String) {
         hideActivityIndicator()
-        showAlert(message: message) { [weak self] _ in
+        showAlert(message: message) { [weak self] in
             self?.startOver()
         }
     }

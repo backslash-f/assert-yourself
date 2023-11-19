@@ -14,7 +14,6 @@
 		070C1D072A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */; };
 		07268CD82B095F1000AB668B /* ChangePasswordViewController+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */; };
 		07268CDB2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CDA2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift */; };
-		07268CDD2B09658600AB668B /* ChangePasswordViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CDC2B09658600AB668B /* ChangePasswordViewController+Alert.swift */; };
 		07268CE02B09EEF300AB668B /* ChangePasswordViewCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CDF2B09EEF300AB668B /* ChangePasswordViewCommands.swift */; };
 		07268CE22B09EF1900AB668B /* ChangePasswordViewController+Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CE12B09EF1900AB668B /* ChangePasswordViewController+Commands.swift */; };
 		07268CE42B09EF3A00AB668B /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CE32B09EF3A00AB668B /* ChangePasswordPresenter.swift */; };
@@ -333,7 +332,6 @@
 		070C1D062A8FBDA500800D89 /* ClosurePropertyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosurePropertyViewControllerTests.swift; sourceTree = "<group>"; };
 		07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Setup.swift"; sourceTree = "<group>"; };
 		07268CDA2B09654300AB668B /* ChangePasswordViewModel+InputFocus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewModel+InputFocus.swift"; sourceTree = "<group>"; };
-		07268CDC2B09658600AB668B /* ChangePasswordViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Alert.swift"; sourceTree = "<group>"; };
 		07268CDF2B09EEF300AB668B /* ChangePasswordViewCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewCommands.swift; sourceTree = "<group>"; };
 		07268CE12B09EF1900AB668B /* ChangePasswordViewController+Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Commands.swift"; sourceTree = "<group>"; };
 		07268CE32B09EF3A00AB668B /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
@@ -915,7 +913,6 @@
 				07268CD92B09653400AB668B /* MVVM */,
 				07268CDE2B09EECF00AB668B /* MVP */,
 				0792B0FB2B04102F00FC022C /* ChangePasswordViewController.swift */,
-				07268CDC2B09658600AB668B /* ChangePasswordViewController+Alert.swift */,
 				07268CD72B095F1000AB668B /* ChangePasswordViewController+Setup.swift */,
 				07E952A32B093FFD00BA703E /* ChangePasswordViewController+UITextField.swift */,
 			);
@@ -1632,7 +1629,6 @@
 				074E682E2A934E2E000B675E /* OutletConnectionsViewController.swift in Sources */,
 				0792B0FC2B04102F00FC022C /* ChangePasswordViewController.swift in Sources */,
 				075F6CA02A8D1E7700C8269E /* CodeBaseViewController.swift in Sources */,
-				07268CDD2B09658600AB668B /* ChangePasswordViewController+Alert.swift in Sources */,
 				078463D22A8E37570030E0A8 /* OverrideViewController.swift in Sources */,
 				0748D1432A7C039B00B3A6DF /* ViewController.swift in Sources */,
 				073DBFF92B09405B00F1DD83 /* ChangePasswordViewController+UITextField.swift in Sources */,

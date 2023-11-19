@@ -22,4 +22,36 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
         ])
         activityIndicator.startAnimating()
     }
+
+    func dismissModal() {
+        dismiss(animated: true)
+    }
+
+    func showAlert(message: String, action: @escaping () -> Void) {
+        let wrappedAction: (UIAlertAction) -> Void = { _ in action() }
+        showAlert(message: message) {
+            wrappedAction($0)
+        }
+    }
+}
+
+// MARK: - Private
+
+private extension ChangePasswordViewController {
+    func showAlert(message: String, okAction: @escaping (UIAlertAction) -> Void) {
+        let alertController = UIAlertController(
+            title: nil,
+            message: message,
+            preferredStyle: .alert)
+
+        let okButton = UIAlertAction(
+            title: viewModel.okButtonLabel,
+            style: .default,
+            handler: okAction
+        )
+
+        alertController.addAction(okButton)
+        alertController.preferredAction = okButton
+        present(alertController, animated: true)
+    }
 }

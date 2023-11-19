@@ -8,20 +8,22 @@
 import Foundation
 
 struct PasswordInputs {
-    var oldPassword = ""
+    let oldPassword: String
+    let newPassword: String
+    let confirmPassword: String
+
     var isOldPasswordEmpty: Bool {
         oldPassword.isEmpty
     }
 
-    var newPassword = ""
     var isNewPasswordEmpty: Bool {
         newPassword.isEmpty
     }
+
     var isNewPasswordTooShort: Bool {
         newPassword.count < 6
     }
 
-    var confirmPassword = ""
     var isConfirmPasswordMismatched: Bool {
         newPassword != confirmPassword
     }

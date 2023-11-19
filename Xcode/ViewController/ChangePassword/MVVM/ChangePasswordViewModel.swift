@@ -22,8 +22,6 @@ struct ChangePasswordViewModel {
     let confirmPasswordPlaceholder: String
     let confirmationPasswordDoesNotMatchMessage: String
 
-    var passwordInputs = PasswordInputs()
-
     init(title: String = "Change Password",
          okButtonLabel: String = "OK",
          submitButtonLabel: String = "Submit",

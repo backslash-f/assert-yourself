@@ -9,20 +9,11 @@ import Foundation
 import UIKit
 
 extension ChangePasswordViewController: ChangePasswordViewCommands {
-    func attemptToChangePassword() {
-        passwordChanger.change(
-            securityToken: securityToken,
-            oldPassword: viewModel.passwordInputs.oldPassword,
-            newPassword: viewModel.passwordInputs.newPassword,
-
-            onSuccess: { [weak self] in
-                self?.handleSuccess()
-            },
-
-            onFailure: { [weak self] message in
-                self?.handleFailure(message: message)
-            }
-        )
+    func startOver() {
+        clearAllPasswordFields()
+        updateInputFocus(.oldPassword)
+        setCancelButtonEnabled(true)
+        hideBlurView()
     }
 
     func dismissModal() {
@@ -92,38 +83,6 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
             confirmPasswordTextField.becomeFirstResponder()
         }
     }
-
-    func validateInputs(passwordInputs: PasswordInputs) -> Bool {
-        if passwordInputs.isOldPasswordEmpty {
-            updateInputFocus(.oldPassword)
-            return false
-        }
-
-        if passwordInputs.isNewPasswordEmpty {
-            showAlert(message: viewModel.enterNewPasswordMessage) { [weak self] in
-                self?.updateInputFocus(.newPassword)
-            }
-            return false
-        }
-
-        if passwordInputs.isNewPasswordTooShort {
-            showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] in
-                self?.resetNewPasswords()
-            }
-            return false
-        }
-
-        if passwordInputs.isConfirmPasswordMismatched {
-            showAlert(
-                message: viewModel.confirmationPasswordDoesNotMatchMessage
-            ) { [weak self] in
-                self?.resetNewPasswords()
-            }
-            return false
-        }
-
-        return true
-    }
 }
 
 // MARK: - Private
@@ -138,20 +97,6 @@ private extension ChangePasswordViewController {
     func clearNewPasswordFields() {
         newPasswordTextField.text = ""
         confirmPasswordTextField.text = ""
-    }
-
-    func handleFailure(message: String) {
-        hideActivityIndicator()
-        showAlert(message: message) { [weak self] in
-            self?.startOver()
-        }
-    }
-
-    func handleSuccess() {
-        hideActivityIndicator()
-        showAlert(message: viewModel.successMessage) { [weak self] in
-            self?.dismissModal()
-        }
     }
 
     func showAlert(message: String, okAction: @escaping (UIAlertAction) -> Void) {
@@ -169,12 +114,5 @@ private extension ChangePasswordViewController {
         alertController.addAction(okButton)
         alertController.preferredAction = okButton
         present(alertController, animated: true)
-    }
-
-    func startOver() {
-        clearAllPasswordFields()
-        updateInputFocus(.oldPassword)
-        setCancelButtonEnabled(true)
-        hideBlurView()
     }
 }

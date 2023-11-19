@@ -33,10 +33,14 @@ class ChangePasswordViewController: UIViewController {
     let activityIndicator = UIActivityIndicatorView(style: .large)
 
     @IBAction func changePassword() {
-        updateViewModelToTextFields()
-        if validateInputs(passwordInputs: viewModel.passwordInputs) {
+        let passwordInputs = PasswordInputs(
+            oldPassword: oldPasswordTextField.text ?? "",
+            newPassword: newPasswordTextField.text ?? "",
+            confirmPassword: confirmPasswordTextField.text ?? ""
+        )
+        if presenter.validateInputs(passwordInputs: passwordInputs) {
             setupWaitingAppearance()
-            attemptToChangePassword()
+            presenter.attemptToChangePassword(passwordInputs: passwordInputs)
         }
     }
 
@@ -51,15 +55,11 @@ class ChangePasswordViewController: UIViewController {
     }
 }
 
+// MARK: - Private
+
 private extension ChangePasswordViewController {
     @IBAction private func cancel() {
         updateInputFocus(.noKeyboard)
         dismissModal()
-    }
-
-    func updateViewModelToTextFields() {
-        viewModel.passwordInputs.oldPassword = oldPasswordTextField.text ?? ""
-        viewModel.passwordInputs.newPassword = newPasswordTextField.text ?? ""
-        viewModel.passwordInputs.confirmPassword = confirmPasswordTextField.text ?? ""
     }
 }

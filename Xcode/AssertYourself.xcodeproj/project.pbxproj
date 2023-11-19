@@ -17,6 +17,8 @@
 		07268CE22B09EF1900AB668B /* ChangePasswordViewController+Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CE12B09EF1900AB668B /* ChangePasswordViewController+Presenter.swift */; };
 		07268CE42B09EF3A00AB668B /* ChangePasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CE32B09EF3A00AB668B /* ChangePasswordPresenter.swift */; };
 		07268CE62B0A0EE100AB668B /* PasswordInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CE52B0A0EE100AB668B /* PasswordInputs.swift */; };
+		07268CE92B0A151900AB668B /* ChangePasswordPresenter+InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CE82B0A151900AB668B /* ChangePasswordPresenter+InputValidation.swift */; };
+		07268CEB2B0A169C00AB668B /* ChangePasswordPresenter+ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07268CEA2B0A169C00AB668B /* ChangePasswordPresenter+ChangePassword.swift */; };
 		0728DA332A9BE456000F5F01 /* ViewControllerPresentationSpy in Frameworks */ = {isa = PBXBuildFile; productRef = 0728DA322A9BE456000F5F01 /* ViewControllerPresentationSpy */; };
 		0728DA352A9BE593000F5F01 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728DA342A9BE593000F5F01 /* TestError.swift */; };
 		073541212ADD1D5C00506146 /* ButtonTapsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073541202ADD1D5C00506146 /* ButtonTapsTests.swift */; };
@@ -335,6 +337,8 @@
 		07268CE12B09EF1900AB668B /* ChangePasswordViewController+Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+Presenter.swift"; sourceTree = "<group>"; };
 		07268CE32B09EF3A00AB668B /* ChangePasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordPresenter.swift; sourceTree = "<group>"; };
 		07268CE52B0A0EE100AB668B /* PasswordInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordInputs.swift; sourceTree = "<group>"; };
+		07268CE82B0A151900AB668B /* ChangePasswordPresenter+InputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordPresenter+InputValidation.swift"; sourceTree = "<group>"; };
+		07268CEA2B0A169C00AB668B /* ChangePasswordPresenter+ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordPresenter+ChangePassword.swift"; sourceTree = "<group>"; };
 		0728DA342A9BE593000F5F01 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
 		073541172ADD1D2E00506146 /* ButtonTapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonTapsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		073541202ADD1D5C00506146 /* ButtonTapsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTapsTests.swift; sourceTree = "<group>"; };
@@ -586,12 +590,22 @@
 		07268CDE2B09EECF00AB668B /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				07268CE72B0A150000AB668B /* ChangePasswordPresenter */,
 				07268CDF2B09EEF300AB668B /* ChangePasswordViewCommands.swift */,
 				07268CE12B09EF1900AB668B /* ChangePasswordViewController+Presenter.swift */,
-				07268CE32B09EF3A00AB668B /* ChangePasswordPresenter.swift */,
 				07268CE52B0A0EE100AB668B /* PasswordInputs.swift */,
 			);
 			path = MVP;
+			sourceTree = "<group>";
+		};
+		07268CE72B0A150000AB668B /* ChangePasswordPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				07268CE32B09EF3A00AB668B /* ChangePasswordPresenter.swift */,
+				07268CE82B0A151900AB668B /* ChangePasswordPresenter+InputValidation.swift */,
+				07268CEA2B0A169C00AB668B /* ChangePasswordPresenter+ChangePassword.swift */,
+			);
+			path = ChangePasswordPresenter;
 			sourceTree = "<group>";
 		};
 		073541122ADD1CDC00506146 /* ButtonTapsTests */ = {
@@ -1634,6 +1648,7 @@
 				073DBFF92B09405B00F1DD83 /* ChangePasswordViewController+UITextField.swift in Sources */,
 				078463CC2A8E36720030E0A8 /* InstancePropertyViewController.swift in Sources */,
 				078463D72A8E37860030E0A8 /* InstanceInitializerViewController.swift in Sources */,
+				07268CEB2B0A169C00AB668B /* ChangePasswordPresenter+ChangePassword.swift in Sources */,
 				0748D13F2A7C039B00B3A6DF /* AppDelegate.swift in Sources */,
 				07BC3BEE2A82742900D1B1BA /* CoveredClass.swift in Sources */,
 				07268CE02B09EEF300AB668B /* ChangePasswordViewCommands.swift in Sources */,
@@ -1647,6 +1662,7 @@
 				0748D1412A7C039B00B3A6DF /* SceneDelegate.swift in Sources */,
 				07268CD82B095F1000AB668B /* ChangePasswordViewController+Setup.swift in Sources */,
 				078463CA2A8E35D40030E0A8 /* MySingletonAnalytics.swift in Sources */,
+				07268CE92B0A151900AB668B /* ChangePasswordPresenter+InputValidation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,12 @@
 import Foundation
 
 class ChangePasswordPresenter {
-    private unowned var view: ChangePasswordViewCommands!
+    unowned var view: ChangePasswordViewCommands!
 
-    private var viewModel: ChangePasswordViewModel
-    private let securityToken: String
-    private let passwordChanger: PasswordChanging
+    var viewModel: ChangePasswordViewModel
+
+    let securityToken: String
+    let passwordChanger: PasswordChanging
 
     init(view: ChangePasswordViewCommands,
          viewModel: ChangePasswordViewModel,

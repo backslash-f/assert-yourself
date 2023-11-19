@@ -8,7 +8,6 @@
 import Foundation
 
 protocol ChangePasswordViewCommands: AnyObject {
-    func attemptToChangePassword()
     func dismissModal()
     func hideActivityIndicator()
     func hideBlurView()
@@ -18,8 +17,8 @@ protocol ChangePasswordViewCommands: AnyObject {
     func showActivityIndicator()
     func showBlurView()
     func showAlert(message: String, action: @escaping () -> Void)
+    func startOver()
     func updateInputFocus(_ inputFocus: InputFocus)
-    func validateInputs(passwordInputs: PasswordInputs) -> Bool
 }
 
 enum InputFocus {

@@ -5,7 +5,8 @@ struct Greeter {
     }
 
     func greet(time: Date) -> String {
-        if hour(for: time) == 12 {
+        let theHour = hour(for: time)
+        if 12 <= theHour && theHour <= 16 {
             return "Good afternoon."
         }
         return "Good morning."

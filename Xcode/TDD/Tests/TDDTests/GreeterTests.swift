@@ -17,24 +17,22 @@ final class GreeterWithoutNameTests: XCTestCase {
     }
 
     func test_greet_with1159am_shouldSayGoodMorning() throws {
-        guard let time = date(hour: 11, minute: 59) else {
-            XCTFail("Could not create a valid date")
-            return
-        }
-
-        let result = sut.greet(time: time)
-
+        let result = sut.greet(time: date(hour: 11, minute: 59))
         XCTAssertEqual(result, "Good morning.")
     }
 
     func test_greet_with1200pm_shouldSayGoodAfternoon() {
-        guard let time = date(hour: 12, minute: 00) else {
-            XCTFail("Could not create a valid date")
-            return
-        }
+        let result = sut.greet(time: date(hour: 12, minute: 00))
+        XCTAssertEqual(result, "Good afternoon.")
+    }
 
-        let result = sut.greet(time: time)
+    func test_greet_with459pm_shouldSayGoodAfternoon() {
+        let result = sut.greet(time: date(hour: 16, minute: 59))
+        XCTAssertEqual(result, "Good afternoon.")
+    }
 
+    func test_greet_with2pm_shouldSayGoodAfternoon() {
+        let result = sut.greet(time: date(hour: 14, minute: 00))
         XCTAssertEqual(result, "Good afternoon.")
     }
 }

@@ -38,7 +38,8 @@ class ChangePasswordViewController: UIViewController {
         }
     }
 
-    private lazy var presenter = ChangePasswordPresenter(view: self)
+    private lazy var presenter = ChangePasswordPresenter(view: self,
+                                                         viewModel: viewModel)
 
     let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     let activityIndicator = UIActivityIndicatorView(style: .large)
@@ -75,7 +76,7 @@ private extension ChangePasswordViewController {
             newPassword: viewModel.newPassword,
 
             onSuccess: { [weak self] in
-                self?.handleSuccess()
+                self?.presenter.handleSuccess()
             },
 
             onFailure: { [weak self] message in
@@ -136,13 +137,6 @@ private extension ChangePasswordViewController {
         viewModel.inputFocus = .oldPassword
         viewModel.isCancelButtonEnabled = true
         viewModel.isBlurViewShowing = false
-    }
-
-    func handleSuccess() {
-        hideActivityIndicator()
-        showAlert(message: viewModel.successMessage) { [weak self] in
-            self?.dismissModal()
-        }
     }
 
     func handleFailure(message: String) {

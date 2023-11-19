@@ -473,7 +473,7 @@ final class ChangePasswordViewControllerTests: XCTestCase {
 }
 
 private extension ChangePasswordViewControllerTests {
-    func putFocusOn(_ inputFocus: ChangePasswordViewModel.InputFocus) {
+    func putFocusOn(_ inputFocus: InputFocus) {
         putInViewHierarchy(sut)
         sut.updateInputFocus(inputFocus)
     }

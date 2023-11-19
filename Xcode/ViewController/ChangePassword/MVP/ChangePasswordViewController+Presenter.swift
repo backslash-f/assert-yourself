@@ -52,7 +52,7 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
         ])
     }
 
-    func updateInputFocus(_ inputFocus: ChangePasswordViewModel.InputFocus) {
+    func updateInputFocus(_ inputFocus: InputFocus) {
         switch inputFocus {
         case .noKeyboard:
             view.endEditing(true)

@@ -15,5 +15,12 @@ protocol ChangePasswordViewCommands: AnyObject {
     func showActivityIndicator()
     func showBlurView()
     func showAlert(message: String, action: @escaping () -> Void)
-    func updateInputFocus(_ inputFocus: ChangePasswordViewModel.InputFocus)
+    func updateInputFocus(_ inputFocus: InputFocus)
+}
+
+enum InputFocus {
+    case noKeyboard
+    case oldPassword
+    case newPassword
+    case confirmPassword
 }

@@ -9,15 +9,24 @@ import Foundation
 import UIKit
 
 extension ChangePasswordViewController: ChangePasswordViewCommands {
-    func dismissModal() {
-        dismiss(animated: true)
+    func attemptToChangePassword() {
+        passwordChanger.change(
+            securityToken: securityToken,
+            oldPassword: viewModel.oldPassword,
+            newPassword: viewModel.newPassword,
+
+            onSuccess: { [weak self] in
+                self?.handleSuccess()
+            },
+
+            onFailure: { [weak self] message in
+                self?.handleFailure(message: message)
+            }
+        )
     }
 
-    func handleFailure(message: String) {
-        hideActivityIndicator()
-        showAlert(message: message) { [weak self] in
-            self?.startOver()
-        }
+    func dismissModal() {
+        dismiss(animated: true)
     }
 
     func hideActivityIndicator() {
@@ -80,6 +89,20 @@ private extension ChangePasswordViewController {
         oldPasswordTextField.text = ""
         newPasswordTextField.text = ""
         confirmPasswordTextField.text = ""
+    }
+
+    func handleFailure(message: String) {
+        hideActivityIndicator()
+        showAlert(message: message) { [weak self] in
+            self?.startOver()
+        }
+    }
+
+    func handleSuccess() {
+        hideActivityIndicator()
+        showAlert(message: viewModel.successMessage) { [weak self] in
+            self?.dismissModal()
+        }
     }
 
     func showAlert(message: String, okAction: @escaping (UIAlertAction) -> Void) {

@@ -8,8 +8,8 @@
 import Foundation
 
 protocol ChangePasswordViewCommands: AnyObject {
+    func attemptToChangePassword()
     func dismissModal()
-    func handleFailure(message: String)
     func hideActivityIndicator()
     func hideBlurView()
     func setCancelButtonEnabled(_ enabled: Bool)

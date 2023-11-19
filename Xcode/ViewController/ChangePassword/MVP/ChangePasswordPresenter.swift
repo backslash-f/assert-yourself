@@ -11,17 +11,16 @@ class ChangePasswordPresenter {
     private unowned var view: ChangePasswordViewCommands!
 
     private var viewModel: ChangePasswordViewModel
+    private let securityToken: String
+    private let passwordChanger: PasswordChanging
 
     init(view: ChangePasswordViewCommands,
-         viewModel: ChangePasswordViewModel) {
+         viewModel: ChangePasswordViewModel,
+         securityToken: String,
+         passwordChanger: PasswordChanging) {
         self.view = view
         self.viewModel = viewModel
-    }
-
-    func handleSuccess() {
-        view.hideActivityIndicator()
-        view.showAlert(message: viewModel.successMessage) { [weak self] in
-            self?.view.dismissModal()
-        }
+        self.securityToken = securityToken
+        self.passwordChanger = passwordChanger
     }
 }

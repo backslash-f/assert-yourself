@@ -22,23 +22,26 @@ struct Greeter {
 
 extension Greeter {
     func greet(time: Date) -> String {
-        let theHour = hour(for: time)
-        for (index, greetingTime) in greetingTimes.enumerated() {
-            if greetingTime.from <= theHour
-                && theHour < greetingTimes[index + 1].from {
-                if !name.isEmpty {
-                    return "\(greetingTime.greeting), \(name)."
-                }
-                return greetingTime.greeting + "."
-            }
-        }
-        return ""
+        let hello = greeting(for: time)
+        return name.isEmpty ?
+        "\(hello)." :
+        "\(hello), \(name)."
     }
 }
 
 // MARK: - Private
 
 private extension Greeter {
+    func greeting(for time: Date) -> String {
+        let theHour = hour(for: time)
+        for (index, greetingTime) in greetingTimes.enumerated() {
+            if greetingTime.from <= theHour &&
+                theHour < greetingTimes[index + 1].from {
+                return greetingTime.greeting }
+        }
+        return ""
+    }
+
     func hour(for time: Date) -> Int {
         let components = Calendar.current.dateComponents([.hour], from: time)
         return components.hour ?? 0

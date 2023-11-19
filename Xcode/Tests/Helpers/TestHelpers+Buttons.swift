@@ -16,9 +16,13 @@ func tap(_ button: UIBarButtonItem) {
     _ = button.target?.perform(button.action, with: nil)
 }
 
-func systemItem(for barButtonItem: UIBarButtonItem) -> UIBarButtonItem.SystemItem {
-    let systemItemNumber = barButtonItem.value(forKey: "systemItem") as! Int
-    return UIBarButtonItem.SystemItem(rawValue: systemItemNumber)!
+func systemItem(for barButtonItem: UIBarButtonItem) -> UIBarButtonItem.SystemItem? {
+    if let systemItemNumber = barButtonItem.value(forKey: "systemItem") as? Int,
+       let button = UIBarButtonItem.SystemItem(rawValue: systemItemNumber) {
+        return button
+    } else {
+        return nil
+    }
 }
 
 extension UIBarButtonItem.SystemItem: CustomStringConvertible {

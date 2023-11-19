@@ -5,6 +5,6 @@ struct Greeter {
     }
 
     func greet(time: Date) -> String {
-        return "BOGUS"
+        return "Good morning."
     }
 }

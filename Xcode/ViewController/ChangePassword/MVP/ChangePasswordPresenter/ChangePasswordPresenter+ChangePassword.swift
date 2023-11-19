@@ -8,6 +8,13 @@
 import Foundation
 
 extension ChangePasswordPresenter {
+    func changePassword(passwordInputs: PasswordInputs) {
+        if validateInputs(passwordInputs: passwordInputs) {
+            setupWaitingAppearance()
+            attemptToChangePassword(passwordInputs: passwordInputs)
+        }
+    }
+
     func attemptToChangePassword(passwordInputs: PasswordInputs) {
         passwordChanger.change(
             securityToken: securityToken,
@@ -23,6 +30,11 @@ extension ChangePasswordPresenter {
             }
         )
     }
+
+    func cancel() {
+        view.updateInputFocus(.noKeyboard)
+        view.dismissModal()
+    }
 }
 
 // MARK: - Private
@@ -31,14 +43,21 @@ private extension ChangePasswordPresenter {
     func handleFailure(message: String) {
         view.hideActivityIndicator()
         view.showAlert(message: message) { [weak self] in
-            self?.view.startOver()
+            self?.startOver()
         }
     }
 
     func handleSuccess() {
         view.hideActivityIndicator()
-        view.showAlert(message: viewModel.successMessage) { [weak self] in
+        view.showAlert(message: labels.successMessage) { [weak self] in
             self?.view.dismissModal()
         }
+    }
+
+    func startOver() {
+        view.clearAllPasswordFields()
+        view.updateInputFocus(.oldPassword)
+        view.setCancelButtonEnabled(true)
+        view.hideBlurView()
     }
 }

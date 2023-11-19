@@ -10,11 +10,11 @@ import UIKit
 
 extension ChangePasswordViewController {
     func setupLabels() {
-        navigationBar.topItem?.title = viewModel.title
-        oldPasswordTextField.placeholder = viewModel.oldPasswordPlaceholder
-        newPasswordTextField.placeholder = viewModel.newPasswordPlaceholder
-        confirmPasswordTextField.placeholder = viewModel.confirmPasswordPlaceholder
-        submitButton.setTitle(viewModel.submitButtonLabel, for: .normal)
+        navigationBar.topItem?.title = labels.title
+        oldPasswordTextField.placeholder = labels.oldPasswordPlaceholder
+        newPasswordTextField.placeholder = labels.newPasswordPlaceholder
+        confirmPasswordTextField.placeholder = labels.confirmPasswordPlaceholder
+        submitButton.setTitle(labels.submitButtonLabel, for: .normal)
     }
 
     func setupSubmitButton() {

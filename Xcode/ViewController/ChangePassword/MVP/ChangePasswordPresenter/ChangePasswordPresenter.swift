@@ -10,17 +10,17 @@ import Foundation
 class ChangePasswordPresenter {
     unowned var view: ChangePasswordViewCommands!
 
-    var viewModel: ChangePasswordViewModel
+    var labels: ChangePasswordLabels
 
     let securityToken: String
     let passwordChanger: PasswordChanging
 
     init(view: ChangePasswordViewCommands,
-         viewModel: ChangePasswordViewModel,
+         labels: ChangePasswordLabels,
          securityToken: String,
          passwordChanger: PasswordChanging) {
         self.view = view
-        self.viewModel = viewModel
+        self.labels = labels
         self.securityToken = securityToken
         self.passwordChanger = passwordChanger
     }

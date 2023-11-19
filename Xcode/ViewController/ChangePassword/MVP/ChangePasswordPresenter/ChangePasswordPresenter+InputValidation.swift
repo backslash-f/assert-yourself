@@ -15,28 +15,37 @@ extension ChangePasswordPresenter {
         }
 
         if passwordInputs.isNewPasswordEmpty {
-            view.showAlert(message: viewModel.enterNewPasswordMessage) { [weak self] in
+            view.showAlert(message: labels.enterNewPasswordMessage) { [weak self] in
                 self?.view.updateInputFocus(.newPassword)
             }
             return false
         }
 
         if passwordInputs.isNewPasswordTooShort {
-            view.showAlert(message: viewModel.newPasswordTooShortMessage) { [weak self] in
-                self?.view.resetNewPasswords()
+            view.showAlert(message: labels.newPasswordTooShortMessage) { [weak self] in
+                self?.resetNewPasswords()
             }
             return false
         }
 
         if passwordInputs.isConfirmPasswordMismatched {
             view.showAlert(
-                message: viewModel.confirmationPasswordDoesNotMatchMessage
+                message: labels.confirmationPasswordDoesNotMatchMessage
             ) { [weak self] in
-                self?.view.resetNewPasswords()
+                self?.resetNewPasswords()
             }
             return false
         }
 
         return true
+    }
+}
+
+// MARK: - Private
+
+private extension ChangePasswordPresenter {
+    func resetNewPasswords() {
+        view.clearNewPasswordFields()
+        view.updateInputFocus(.newPassword)
     }
 }

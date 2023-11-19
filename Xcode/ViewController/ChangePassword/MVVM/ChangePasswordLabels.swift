@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChangePasswordViewModel {
+struct ChangePasswordLabels {
     let title: String
     let okButtonLabel: String
     let submitButtonLabel: String

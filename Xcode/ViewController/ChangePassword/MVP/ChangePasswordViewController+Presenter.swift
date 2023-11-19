@@ -9,11 +9,15 @@ import Foundation
 import UIKit
 
 extension ChangePasswordViewController: ChangePasswordViewCommands {
-    func startOver() {
-        clearAllPasswordFields()
-        updateInputFocus(.oldPassword)
-        setCancelButtonEnabled(true)
-        hideBlurView()
+    func clearAllPasswordFields() {
+        oldPasswordTextField.text = ""
+        newPasswordTextField.text = ""
+        confirmPasswordTextField.text = ""
+    }
+
+    func clearNewPasswordFields() {
+        newPasswordTextField.text = ""
+        confirmPasswordTextField.text = ""
     }
 
     func dismissModal() {
@@ -30,20 +34,8 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
         blurView.removeFromSuperview()
     }
 
-    func resetNewPasswords() {
-        clearNewPasswordFields()
-        updateInputFocus(.newPassword)
-    }
-
     func setCancelButtonEnabled(_ enabled: Bool) {
         cancelBarButton.isEnabled = enabled
-    }
-
-    func setupWaitingAppearance() {
-        showBlurView()
-        updateInputFocus(.noKeyboard)
-        setCancelButtonEnabled(false)
-        showActivityIndicator()
     }
 
     func showActivityIndicator() {
@@ -88,17 +80,6 @@ extension ChangePasswordViewController: ChangePasswordViewCommands {
 // MARK: - Private
 
 private extension ChangePasswordViewController {
-    func clearAllPasswordFields() {
-        oldPasswordTextField.text = ""
-        newPasswordTextField.text = ""
-        confirmPasswordTextField.text = ""
-    }
-
-    func clearNewPasswordFields() {
-        newPasswordTextField.text = ""
-        confirmPasswordTextField.text = ""
-    }
-
     func showAlert(message: String, okAction: @escaping (UIAlertAction) -> Void) {
         let alertController = UIAlertController(
             title: nil,
@@ -106,7 +87,7 @@ private extension ChangePasswordViewController {
             preferredStyle: .alert)
 
         let okButton = UIAlertAction(
-            title: viewModel.okButtonLabel,
+            title: labels.okButtonLabel,
             style: .default,
             handler: okAction
         )

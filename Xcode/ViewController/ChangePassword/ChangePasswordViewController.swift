@@ -18,31 +18,18 @@ class ChangePasswordViewController: UIViewController {
 
     var securityToken = ""
 
+    let activityIndicator = UIActivityIndicatorView(style: .large)
+    let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+    let labels = ChangePasswordLabels()
+
     lazy var passwordChanger: PasswordChanging = PasswordChanger()
 
-    lazy var viewModel = ChangePasswordViewModel()
-
-    private lazy var presenter = ChangePasswordPresenter(
+    lazy var presenter = ChangePasswordPresenter(
         view: self,
-        viewModel: viewModel,
+        labels: labels,
         securityToken: securityToken,
         passwordChanger: passwordChanger
     )
-
-    let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
-    let activityIndicator = UIActivityIndicatorView(style: .large)
-
-    @IBAction func changePassword() {
-        let passwordInputs = PasswordInputs(
-            oldPassword: oldPasswordTextField.text ?? "",
-            newPassword: newPasswordTextField.text ?? "",
-            confirmPassword: confirmPasswordTextField.text ?? ""
-        )
-        if presenter.validateInputs(passwordInputs: passwordInputs) {
-            setupWaitingAppearance()
-            presenter.attemptToChangePassword(passwordInputs: passwordInputs)
-        }
-    }
 
     // MARK: - Lifecycle
 
@@ -53,13 +40,20 @@ class ChangePasswordViewController: UIViewController {
         setupBlurView()
         setupActivityIndicator()
     }
-}
 
-// MARK: - Private
+    // MARK: - IBActions
 
-private extension ChangePasswordViewController {
     @IBAction private func cancel() {
-        updateInputFocus(.noKeyboard)
-        dismissModal()
+        presenter.cancel()
+    }
+
+    @IBAction func changePassword() {
+        presenter.changePassword(
+            passwordInputs: .init(
+                oldPassword: oldPasswordTextField.text ?? "",
+                newPassword: newPasswordTextField.text ?? "",
+                confirmPassword: confirmPasswordTextField.text ?? ""
+            )
+        )
     }
 }

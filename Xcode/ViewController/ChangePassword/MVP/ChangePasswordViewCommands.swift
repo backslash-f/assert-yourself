@@ -8,16 +8,15 @@
 import Foundation
 
 protocol ChangePasswordViewCommands: AnyObject {
+    func clearAllPasswordFields()
+    func clearNewPasswordFields()
     func dismissModal()
     func hideActivityIndicator()
     func hideBlurView()
-    func resetNewPasswords()
     func setCancelButtonEnabled(_ enabled: Bool)
-    func setupWaitingAppearance()
     func showActivityIndicator()
     func showBlurView()
     func showAlert(message: String, action: @escaping () -> Void)
-    func startOver()
     func updateInputFocus(_ inputFocus: InputFocus)
 }
 
